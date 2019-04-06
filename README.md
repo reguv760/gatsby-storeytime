@@ -37,3 +37,10 @@ Here is an example of using the grid, for a 3 column layout:
     </div>
 </div>
 ```
+
+## Plugins Used
+
+**eslint-config-react-app**
+Linting tool for Gatsby Projects
+
+`npm install --save-dev eslint-config-react-app`
