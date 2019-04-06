@@ -5,6 +5,9 @@
 ///
 
 /* Basic */
+  html {
+    height: 100%;
+  }
 
 	// MSIE: Required for IEMobile.
 		@-ms-viewport {
@@ -25,6 +28,7 @@
 
 	body {
 		background: _palette(bg);
+    height: 100%;
 
 		// Prevents animation/transition "flicker" on page load.
 		// Automatically added/removed by js/main.js.
