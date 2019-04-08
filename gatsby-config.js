@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Forty V2",
-    author: "Hunter Chang",
-    description: "A Gatsby.js V2 Starter based on Forty by HTML5 UP"
+    title: `Storeytime Online`,
+    description: `Storeytime Description`,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify-cms`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -19,6 +20,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
   ],
 }
