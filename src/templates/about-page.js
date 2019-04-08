@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/Content'
 
+//this is the container for CMS data for About.
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
@@ -31,6 +32,7 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 }
 
+// this is the page container for about
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
 
