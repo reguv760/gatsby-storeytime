@@ -2,43 +2,43 @@
 
 1. Reggie
 
-   - Home/Index:
+   a. Home/Index:
 
-   1. Reformat page structure to load content from Netlify CMS.
-   2. Have Banner component toggle from visible/invisble from Netlify CMS
-   3. Banner content can be edited from the back-end.
+   - Reformat page structure to load content from Netlify CMS.
+   - Have Banner component toggle from visible/invisble from Netlify CMS
+   - Banner content can be edited from the back-end.<br/>
 
-   - Videos:
+   b. Videos:
 
-   1. Create basic page to hold two or more Youtube videos.
-   2. (Optional) Redesign to have video(s) load from a playlist based on schema from CMS.
+   - Create basic page to hold two or more Youtube videos.
+   - (Optional) Redesign to have video(s) load from a playlist based on schema from CMS.<br/>
 
-   - Create Paypal Button component
+   c. Create Paypal Button component
 
-   1. Used by Events + Contact pages
-   2. Conditional rendering for Fundraiser component based currentPage === "Contact"
+   - Used by Events + Contact pages
+   - Conditional rendering for Fundraiser component based currentPage === "Contact"<br/>
 
 2) Phil
 
-   - Events
+   a. Events
 
-   1. Where's the data for these events really coming from or are these just reformatted "blog posts"?
-   2. Newest / Upcoming / More Info (per event) nested links
+   - Where's the data for these events really coming from or are these just reformatted "blog posts"?
+   - Newest / Upcoming / More Info (per event) nested links
 
 3) Aaron
 
-   - Donate
+   a. Donate
 
-   1. Create page with one state { currentPage: ''}
+   - Create page with one state { currentPage: ''}<br/>
 
-   - Contact
-     Let's use Netlify's own [form handling](https://www.netlify.com/docs/form-handling/) to produce a better version.
+   b. Contact
+   Let's use Netlify's own form handling ([https://www.netlify.com/docs/form-handling/](https://www.netlify.com/docs/form-handling/)) to produce a better version.<br/>
 
-   1. Create basic form + error checking and response on inputs and submit
-   2. Integrate Captcha if possible
-   3. Feedback upon submission (i.e. message was sent!)
-   4. (Optional) Toggle button to send a copy of form submission to sender.
-   5. Once working, let me know if Contact should be a section in the index or it's own route/page.
+   - Create basic form + error checking and response on inputs and submit
+   - Integrate Captcha if possible
+   - Feedback upon submission (i.e. message was sent!)
+   - (Optional) Toggle button to send a copy of form submission to sender.
+   - Once working, let me know if Contact should be a section in the index or it's own route/page.
 
 # gatsby-starter-forty
 
