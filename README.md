@@ -1,3 +1,45 @@
+# Instructions / To-do:
+
+1. Reggie
+
+   - Home/Index:
+
+   1. Reformat page structure to load content from Netlify CMS.
+   2. Have Banner component toggle from visible/invisble from Netlify CMS
+   3. Banner content can be edited from the back-end.
+
+   - Videos:
+
+   1. Create basic page to hold two or more Youtube videos.
+   2. (Optional) Redesign to have video(s) load from a playlist based on schema from CMS.
+
+   - Create Paypal Button component
+
+   1. Used by Events + Contact pages
+   2. Conditional rendering for Fundraiser component based currentPage === "Contact"
+
+2) Phil
+
+   - Events
+
+   1. Where's the data for these events really coming from or are these just reformatted "blog posts"?
+   2. Newest / Upcoming / More Info (per event) nested links
+
+3) Aaron
+
+   - Donate
+
+   1. Create page with one state { currentPage: ''}
+
+   - Contact
+     Let's use Netlify's own [form handling](https://www.netlify.com/docs/form-handling/) to produce a better version.
+
+   1. Create basic form + error checking and response on inputs and submit
+   2. Integrate Captcha if possible
+   3. Feedback upon submission (i.e. message was sent!)
+   4. (Optional) Toggle button to send a copy of form submission to sender.
+   5. Once working, let me know if Contact should be a section in the index or it's own route/page.
+
 # gatsby-starter-forty
 
 **This is a starter for Gatsby.js V2.**
@@ -41,16 +83,19 @@ Here is an example of using the grid, for a 3 column layout:
 ## Plugins Used
 
 **eslint-config-react-app**
+
 Linting tool for Gatsby Projects
 
 `npm install --save-dev eslint-config-react-app`
 
-**netlify-cms**
-[Netlify CMS](https://www.netlifycms.org/) is an open source content management system for your Git workflow that enables you to provide editors with a friendly UI and intuitive workflows. You can use it with any static site generator to create faster, more flexible web projects. Content is stored in your Git repository alongside your code for easier versioning, multi-channel publishing, and the option to handle content updates directly in Git.
+**gatsby-plugin-netlify-cms**
 
-`npm install --save-dev gatsby-plugin-gtag`
+[gatsby-plugin-netlify-cms](https://www.gatsbyjs.org/packages/gatsby-plugin-netlify-cms/)Automatically generates an admin/index.html with a default [Netlify CMS](https://www.netlifycms.org/) implementation.
+
+`npm install --save-dev gatsby-plugin-netlify-cms`
 
 **gatsby-plugin-google-analytics**
+
 Add Google Analytics by using [gtag.js](https://developers.google.com/analytics/devguides/collection/gtagjs/)
 
 `npm install --save gatsby-plugin-gtag`
