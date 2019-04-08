@@ -5,6 +5,7 @@
   "author": "Hunter Chang",
   "dependencies": {
     "gatsby": "^2.2.9",
+    "gatsby-plugin-gtag": "^1.0.10",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-netlify-cms": "^3.0.17",
     "gatsby-plugin-offline": "^2.0.25",
