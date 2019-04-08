@@ -44,3 +44,13 @@ Here is an example of using the grid, for a 3 column layout:
 Linting tool for Gatsby Projects
 
 `npm install --save-dev eslint-config-react-app`
+
+**netlify-cms**
+[Netlify CMS](https://www.netlifycms.org/) is an open source content management system for your Git workflow that enables you to provide editors with a friendly UI and intuitive workflows. You can use it with any static site generator to create faster, more flexible web projects. Content is stored in your Git repository alongside your code for easier versioning, multi-channel publishing, and the option to handle content updates directly in Git.
+
+`npm install --save-dev gatsby-plugin-gtag`
+
+**gatsby-plugin-google-analytics**
+Add Google Analytics by using [gtag.js](https://developers.google.com/analytics/devguides/collection/gtagjs/)
+
+`npm install --save gatsby-plugin-gtag`
