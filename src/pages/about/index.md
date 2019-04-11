@@ -1,6 +1,6 @@
 ---
 templateKey: about-page
-title: I like thus a lot
+title: Hey Reggie. What do you think?
 ---
 ### Shade-grown 
 
