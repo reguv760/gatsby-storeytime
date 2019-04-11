@@ -16,6 +16,23 @@ collections:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
 
+  - name: banner
+    label: 'Banner Component'
+    files:
+      - file: 'src/components/banner/index.md'
+        label: 'Home Page banner'
+        name: 'banner'
+        create: true
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'bannerComponent',
+            }
+          - { label: 'Title', name: 'bannerTitle', widget: 'string' }
+          - { label: 'Text', name: 'bannerText', widget: 'string' }
+
   - name: 'pages'
     label: 'Pages'
     files:
