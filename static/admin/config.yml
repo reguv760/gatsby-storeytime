@@ -32,16 +32,19 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
+  - name: 'banner'
+    label: 'Banner Component'
+    files:
       - file: 'src/pages/index.md'
-        label: 'Home Page banner'
-        name: 'index'
-        create: true
+        label: 'Banner Component'
+        name: 'banner'
         fields:
           - {
               label: 'Template Key',
               name: 'templateKey',
-              widget: 'hidden',
+              widget: 'string',
               default: 'index-page',
             }
-          - { label: 'Title', name: 'bannerTitle', widget: 'string' }
-          - { label: 'Text', name: 'bannerText', widget: 'string' }
+          - label: 'Banner'
+            name: 'text'
+            widget: bannerComponent

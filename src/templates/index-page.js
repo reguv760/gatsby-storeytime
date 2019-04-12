@@ -9,13 +9,11 @@ import HomeNav from './../components/HomeNav'
 import HomeContent from './../components/HomeContent'
 
 //this is my template for CMS:::
-export const HomePageTemplate = ({ bannerTitle, bannerText }) => {
-  //const PageContent = contentComponent || Content
-  // console.log(bannerText + ' is my bannerText')
+export const HomePageTemplate = ({ bannerData }) => {
   return (
     <>
       <div>
-        <Banner bannerTitle={bannerTitle} bannerText={bannerText} />
+        <Banner bannerData={bannerData} />
         <div id="main">
           <HomeNav />
           <HomeContent />
@@ -26,8 +24,7 @@ export const HomePageTemplate = ({ bannerTitle, bannerText }) => {
 }
 
 HomePageTemplate.propTypes = {
-  bannerTitle: PropTypes.string.isRequired,
-  bannerText: PropTypes.string,
+  bannerData: PropTypes.object,
 }
 
 //this is my component:::
@@ -45,10 +42,7 @@ const HomeIndex = ({ data }) => {
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
-      <HomePageTemplate
-        bannerTitle={post.frontmatter.bannerTitle}
-        bannerText={post.frontmatter.bannerText}
-      />
+      <HomePageTemplate bannerData={post.frontmatter} />
     </Layout>
   )
 }
