@@ -9,11 +9,15 @@ import HomeNav from './../components/HomeNav'
 import HomeContent from './../components/HomeContent'
 
 //this is my template for CMS:::
+//to access child component, parent component
+//has to be accessible.
 export const HomePageTemplate = ({ bannerData }) => {
+  const bannedEnabled = bannerData.bannedEnabled
+
   return (
     <>
       <div>
-        <Banner bannerData={bannerData} />
+        {bannedEnabled && <Banner bannerData={bannerData} />}
         <div id="main">
           <HomeNav />
           <HomeContent />
@@ -23,6 +27,7 @@ export const HomePageTemplate = ({ bannerData }) => {
   )
 }
 
+//define custom data object from graphQL
 HomePageTemplate.propTypes = {
   bannerData: PropTypes.object,
 }
@@ -58,10 +63,12 @@ HomeIndex.propTypes = {
 
 export default HomeIndex
 
+//find the data for child component
 export const homeQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
+        bannerEnabled
         bannerTitle
         bannerText
       }

@@ -47,5 +47,6 @@ collections:
               widget: 'hidden',
               default: 'index-page',
             }
+          - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
