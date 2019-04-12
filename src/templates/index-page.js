@@ -12,8 +12,8 @@ import HomeContent from './../components/HomeContent'
 //to access child component, parent component
 //has to be accessible.
 export const HomePageTemplate = ({ bannerData }) => {
-  const bannedEnabled = bannerData.bannedEnabled
-
+  const bannedEnabled = bannerData.bannerEnabled
+  console.log(bannedEnabled)
   return (
     <>
       <div>
