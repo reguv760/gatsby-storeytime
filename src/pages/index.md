@@ -1,6 +1,7 @@
 ---
 templateKey: index-page
-bannerEnabled: false
+bannerEnabled: true
 bannerTitle: Hello Chicagooooo!!!
 bannerText: This is a test...
 ---
+
