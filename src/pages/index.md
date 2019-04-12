@@ -1,5 +1,12 @@
 ---
 templateKey: index-page
-bannerTitle: Banner Title!
-bannerText: Sint fugiat laboris do elit laborum sit. Pariatur nulla occaecat laboris tempor mollit in anim ea proident occaecat sunt consectetur. Nostrud elit reprehenderit officia ipsum culpa ad proident. Adipisicing qui qui officia sit reprehenderit sint ut ad commodo eiusmod consequat labore sint. Adipisicing cupidatat qui mollit commodo exercitation aliqua laboris sunt do ipsum adipisicing do voluptate duis. Deserunt quis occaecat laboris labore. Est pariatur exercitation et nulla ullamco.
+title: Hello Los Angeles!!!
+text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum
+  vitae eros nec consequat. Sed arcu neque, hendrerit vel elementum nec, rhoncus
+  a tortor. Sed urna enim, sagittis at malesuada eu, vehicula eget diam. In
+  interdum tempor eleifend. Suspendisse nec leo vel lorem cursus accumsan.
+  Quisque vestibulum tortor nec diam fringilla, nec dapibus justo blandit.
+  Suspendisse sed augue ut nunc posuere varius ultricies rhoncus orci. Morbi
+  ligula ligula, lobortis a enim non, pharetra tempus urna. Quisque ex erat,
+  accumsan eu accumsan id, venenatis tincidunt augue.
 ---
