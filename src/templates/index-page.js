@@ -13,15 +13,12 @@ import HomeContent from './../components/HomeContent'
 //has to be accessible.
 export const HomePageTemplate = ({ bannerData }) => {
   const bannedEnabled = bannerData.bannerEnabled
-  console.log(bannedEnabled)
   return (
     <>
-      <div>
-        {bannedEnabled && <Banner bannerData={bannerData} />}
-        <div id="main">
-          <HomeNav />
-          <HomeContent />
-        </div>
+      {bannedEnabled && <Banner bannerData={bannerData} />}
+      <div id="main">
+        <HomeNav />
+        <HomeContent />
       </div>
     </>
   )

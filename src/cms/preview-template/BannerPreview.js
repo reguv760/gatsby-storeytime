@@ -6,8 +6,7 @@ import { BannerTemplate } from './../../components/banner'
 
 const BannerPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
-  console.log('banner preview!')
-  return <BannerTemplate data={data} />
+  return <BannerTemplate bannerData={data} />
 }
 
 BannerPreview.propTypes = {
