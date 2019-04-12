@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
+  branch: banner2
 
 media_folder: static/assets
 public_folder: assets
@@ -34,6 +35,7 @@ collections:
 
   - name: 'banner'
     label: 'Banner Component'
+    delete: false
     files:
       - file: 'src/pages/index.md'
         label: 'Banner Component'
@@ -45,6 +47,5 @@ collections:
               widget: 'string',
               default: 'index-page',
             }
-          - label: 'Banner'
-            name: 'text'
-            widget: bannerComponent
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Text', name: 'text', widget: 'string' }
