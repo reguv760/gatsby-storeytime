@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
@@ -32,6 +32,7 @@ HomePageTemplate.propTypes = {
 //this is my component:::
 const HomeIndex = ({ data }) => {
   //store data as markdownRemarks: post
+
   const { markdownRemark: post } = data
 
   //post.frontmatter to access data object:::
