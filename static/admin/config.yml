@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
-  branch: videos
 
 media_folder: static/assets
 public_folder: assets
@@ -33,7 +32,6 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
-
       - file: 'src/pages/videos/index.md'
         label: 'Video Content'
         name: 'videoContent'
@@ -55,7 +53,7 @@ collections:
                   widget: 'string',
                 }
 
-       - file: 'src/pages/singers/index.md'
+      - file: 'src/pages/singers/index.md'
         label: 'Singers'
         name: 'singers'
         fields:
@@ -63,11 +61,11 @@ collections:
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
-              default: 'singer-page'
+              default: 'singer-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-        
+
       - file: 'src/pages/events/index.md'
         label: 'Events'
         name: 'event'

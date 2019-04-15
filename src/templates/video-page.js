@@ -5,8 +5,6 @@ import Helmet from 'react-helmet'
 
 import Layout from './../components/layout'
 import { VideoList } from './../components/videolist'
-import HomeNav from './../components/HomeNav'
-import HomeContent from './../components/HomeContent'
 
 //this is my template for CMS:::
 //to access child component, parent component
@@ -23,7 +21,7 @@ export const VideoPageTemplate = ({ videoListData }) => {
 
 //define custom data object from graphQL
 VideoPageTemplate.propTypes = {
-  videoPlaylist: PropTypes.object,
+  videoListData: PropTypes.object,
 }
 
 //this is my component:::

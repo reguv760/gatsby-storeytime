@@ -18,6 +18,10 @@
    - Used by Events + Contact pages
    - Conditional rendering for Fundraiser component based currentPage === "Contact"<br/>
 
+   d. Once Aaron completes Contact form component, make it editable from CMS
+
+   - Email, Phone and Address editable as "Contact Information"
+
 2) Phil
 
    a. Events
@@ -38,12 +42,25 @@
    - Integrate Captcha if possible
    - Feedback upon submission (i.e. message was sent!)
    - (Optional) Toggle button to send a copy of form submission to sender.
-   - Once working, let me know if Contact should be a section in the index or it's own route/page.
+
+b. Add Scrollable Anchor animation for Contact component in index from "Contact" in Nav.
+
+Up for grabs
+
+1. Make Navigation component based on CMS
+2. Make Footer component editable from CMS
+   - Copyright information based on company name
+   - Social icons should:
+     a) Icon appear based on Enable/Disable conditions
+     or
+     b) Icon appear based if there's a URL
 
 # CMS Features
-## use this [link](https://github.com/netlify-templates/gatsby-starter-netlify-cms/blob/master/static/admin/config.yml) for yml features
 
-- Editable Homepage Banner
+1. ### use this [link](https://github.com/netlify-templates/gatsby-starter-netlify-cms/blob/master/static/admin/config.yml) for yml features
+
+2. Editable Homepage Banner
+   - Enable/Disable banner on homepage
 
 # gatsby-starter-forty
 

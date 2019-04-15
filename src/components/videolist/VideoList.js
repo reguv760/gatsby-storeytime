@@ -14,8 +14,6 @@ export const VideoListTemplate = ({ videoListData }) => {
           <div className="col-4" key={videos.videoTitle + index}>
             <iframe
               title={`${videos.videoTitle}`}
-              width="320"
-              height="240"
               src={`${videos.videoLink}`}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
