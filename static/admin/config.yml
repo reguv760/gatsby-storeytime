@@ -69,5 +69,6 @@ collections:
               name: 'video',
               widget: 'list',
               field:
-                { label: 'Youtube URL', name: 'videoLink', widget: 'string' },
+                { label: 'Video Title', name: 'videoTitle', widget: 'string' }
+                { label: 'Youtube URL', name: 'videoLink', widget: 'string' }
             }
