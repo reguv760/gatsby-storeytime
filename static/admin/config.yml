@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
+  branch: videos
 
 media_folder: static/assets
 public_folder: assets
@@ -49,3 +50,24 @@ collections:
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
+
+  - name: 'videos'
+    label: 'Video Page'
+    files:
+      - file: 'src/pages/videos/index.md'
+        label: 'Video Playlist'
+        name: 'videoList'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'video-page',
+            }
+          - {
+              label: 'Video',
+              name: 'video',
+              widget: 'list',
+              field:
+                { label: 'Youtube URL', name: 'videoLink', widget: 'string' },
+            }
