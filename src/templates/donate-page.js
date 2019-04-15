@@ -9,8 +9,9 @@ export const DonatePageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
+    <div id="main" className="alt">
     <section className="section section--gradient">
-      <div className="container">
+        <div className="inner">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="section">
@@ -21,8 +22,9 @@ export const DonatePageTemplate = ({ title, content, contentComponent }) => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </section>
+    </div>
   )
 }
 

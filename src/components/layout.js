@@ -40,16 +40,16 @@ class Layout extends React.Component {
     }
 
     return (
-      <div>
-        <div id="wrapper" style={{ height: '100%' }}>
+      <>
           <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
           <SideDrawer show={sideDrawerOpen} />
+        <div id="wrapper" style={{ height: '100%' }}>
           {backdrop}
           {children}
           <Contact />
           <Footer />
         </div>
-      </div>
+      </>
     )
   }
 }
