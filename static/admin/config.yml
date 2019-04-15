@@ -48,7 +48,11 @@ collections:
             widget: 'list'
             fields:
               - { label: 'Video Title', name: 'videoTitle', widget: 'string' }
-              - { label: 'Youtube URL', name: 'videoLink', widget: 'string' }
+              - {
+                  label: 'Youtube Embed URL',
+                  name: 'videoLink',
+                  widget: 'string',
+                }
 
   - name: 'banner'
     label: 'Banner Component'

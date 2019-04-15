@@ -1,11 +1,10 @@
 ---
 templateKey: video-page
 videos:
-  - videoLink: 'https://www.youtube.com/watch?v=3CYJC7eZjoE'
+  - videoLink: 'https://www.youtube.com/embed/3CYJC7eZjoE'
     videoTitle: Arkham Asylum
-  - videoLink: 'https://www.youtube.com/watch?v=6A4-SVUHQYI'
+  - videoLink: 'https://www.youtube.com/embed/6A4-SVUHQYI'
     videoTitle: Doom
-  - videoLink: 'https://www.youtube.com/watch?v=gzkrzfeRwPg'
+  - videoLink: 'https://www.youtube.com/embed/gzkrzfeRwPg'
     videoTitle: Game of Thrones Season 8
 ---
-

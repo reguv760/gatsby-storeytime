@@ -14,9 +14,9 @@ import HomeContent from './../components/HomeContent'
 export const VideoPageTemplate = ({ videoListData }) => {
   return (
     <>
-      <div id="main">
+      <section className="section section--gradient">
         <VideoList videoListData={videoListData} />
-      </div>
+      </section>
     </>
   )
 }

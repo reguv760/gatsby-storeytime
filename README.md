@@ -2,7 +2,7 @@
 
 1. Reggie
 
-   a. Home/Index:
+   ~~a. Home/Index:~~
 
    - ~~Reformat page structure to load content from Netlify CMS.~~
    - ~~Have Banner component toggle from visible/invisble from Netlify CMS~~
@@ -10,7 +10,7 @@
 
    b. Videos:
 
-   - Create basic page to hold two or more Youtube videos.
+   - ~~Create basic page to hold two or more Youtube videos.~~
    - (Optional) Redesign to have video(s) load from a playlist based on schema from CMS.<br/>
 
    c. Create Paypal Button component
@@ -25,13 +25,13 @@
    - Where's the data for these events really coming from or are these just reformatted "blog posts"?
    - Newest / Upcoming / More Info (per event) nested links
 
+   ~~b. Create Pages for Donate, Singers, About and Events~~
+   ~~- Template pages~~
+   ~~- index.md for Netlify CMS~~
+
 3) Aaron
 
-   a. Donate
-
-   - Create page with one state { currentPage: ''}<br/>
-
-   b. Contact
+   a. Contact
    Let's use Netlify's own form handling ([https://www.netlify.com/docs/form-handling/](https://www.netlify.com/docs/form-handling/)) to produce a better version.<br/>
 
    - Create basic form + error checking and response on inputs and submit
