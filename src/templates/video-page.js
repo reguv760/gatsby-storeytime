@@ -64,7 +64,7 @@ export const homeQuery = graphql`
   query VideoTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "video-page" } }) {
       frontmatter {
-        videoPlaylist {
+        videos {
           videoTitle
           videoLink
         }

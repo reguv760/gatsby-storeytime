@@ -43,8 +43,8 @@ collections:
               widget: 'hidden',
               default: 'video-page',
             }
-          - label: 'Video List'
-            name: 'videoList'
+          - label: 'Videos'
+            name: 'videos'
             widget: 'list'
             fields:
               - { label: 'Video Title', name: 'videoTitle', widget: 'string' }
