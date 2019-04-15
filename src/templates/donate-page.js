@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/Content'
 
 //this is the container for CMS data for About.
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const DonatePageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -25,23 +25,22 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         </div>
     </section>
     </div>
-
   )
 }
 
-AboutPageTemplate.propTypes = {
+DonatePageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-// this is the page container for about
-const AboutPage = ({ data }) => {
+// this is the page container for Donate
+const DonatePage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
+      <DonatePageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -50,14 +49,14 @@ const AboutPage = ({ data }) => {
   )
 }
 
-AboutPage.propTypes = {
+DonatePage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default DonatePage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const donatePageQuery = graphql`
+  query DonatePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

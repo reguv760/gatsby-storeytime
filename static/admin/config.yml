@@ -33,6 +33,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
+
       - file: 'src/pages/videos/index.md'
         label: 'Video Content'
         name: 'videoContent'
@@ -53,6 +54,45 @@ collections:
                   name: 'videoLink',
                   widget: 'string',
                 }
+
+       - file: 'src/pages/singers/index.md'
+        label: 'Singers'
+        name: 'singers'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'singer-page'
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+        
+      - file: 'src/pages/events/index.md'
+        label: 'Events'
+        name: 'event'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'event-page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+      - file: 'src/pages/donate/index.md'
+        label: 'Donate'
+        name: 'donate'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'donate-page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'banner'
     label: 'Banner Component'

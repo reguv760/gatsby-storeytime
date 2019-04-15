@@ -41,6 +41,7 @@
    - Once working, let me know if Contact should be a section in the index or it's own route/page.
 
 # CMS Features
+## use this [link](https://github.com/netlify-templates/gatsby-starter-netlify-cms/blob/master/static/admin/config.yml) for yml features
 
 - Editable Homepage Banner
 
