@@ -4,19 +4,18 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Layout from './../components/layout'
-//import { Banner } from './../components/banner'
+import { VideoList } from './../components/videolist'
 import HomeNav from './../components/HomeNav'
 import HomeContent from './../components/HomeContent'
 
 //this is my template for CMS:::
 //to access child component, parent component
 //has to be accessible.
-export const VideoPageTemplate = ({ videoPlaylist }) => {
+export const VideoPageTemplate = ({ videoListData }) => {
   return (
     <>
       <div id="main">
-        <HomeNav />
-        <HomeContent />
+        <VideoList videoListData={videoListData} />
       </div>
     </>
   )
@@ -43,7 +42,7 @@ const VideoPage = ({ data }) => {
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
-      <VideoPageTemplate />
+      <VideoPageTemplate videoListData={post.frontmatter} />
     </Layout>
   )
 }
@@ -60,7 +59,7 @@ VideoPage.propTypes = {
 export default VideoPage
 
 //find the data for child component
-export const homeQuery = graphql`
+export const videoListQuery = graphql`
   query VideoTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "video-page" } }) {
       frontmatter {
