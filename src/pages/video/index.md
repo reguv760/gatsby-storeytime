@@ -1,9 +1,9 @@
 ---
 templateKey: video-page
-videoPlaylist:
-  - videoTitle: 'Some title'
-    videoLink: 'https://www.youtube.com/watch?v=6TZfnNytHvA'
-
-  - videoTitle: 'Some Other Title'
-    videoLink: 'https://www.youtube.com/watch?v=f2FT-2tFzzk'
+videoList:
+  - videoLink: 'https://www.youtube.com/watch?v=3CYJC7eZjoE'
+    videoTitle: Arkham Asylum
+  - videoLink: 'https://www.youtube.com/watch?v=6A4-SVUHQYI'
+    videoTitle: Doom
 ---
+
