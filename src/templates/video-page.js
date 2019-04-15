@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Layout from './../components/layout'
-import { Banner } from './../components/banner'
+//import { Banner } from './../components/banner'
 import HomeNav from './../components/HomeNav'
 import HomeContent from './../components/HomeContent'
 
@@ -28,7 +28,7 @@ VideoPageTemplate.propTypes = {
 }
 
 //this is my component:::
-const Video = ({ data }) => {
+const VideoPage = ({ data }) => {
   //store data as markdownRemarks: post
 
   const { markdownRemark: post } = data
@@ -49,7 +49,7 @@ const Video = ({ data }) => {
 }
 
 //assign frontmatter content as a data prop
-Video.propTypes = {
+VideoPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -57,7 +57,7 @@ Video.propTypes = {
   }),
 }
 
-export default Video
+export default VideoPage
 
 //find the data for child component
 export const homeQuery = graphql`

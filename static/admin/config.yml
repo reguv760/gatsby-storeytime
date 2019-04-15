@@ -33,6 +33,23 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
+      - file: 'src/pages/video/index.md'
+        label: 'Video Content'
+        name: 'videoContent'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'video-page',
+            }
+          - label: 'Video List'
+            name: 'videoList'
+            widget: 'list'
+            fields:
+              - { label: 'Video Title', name: 'videoTitle', widget: 'string' }
+              - { label: 'Youtube URL', name: 'videoLink', widget: 'string' }
+
   - name: 'banner'
     label: 'Banner Component'
     delete: false
@@ -50,25 +67,3 @@ collections:
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
-
-  - name: 'videos'
-    label: 'Video Page'
-    files:
-      - file: 'src/pages/video/index.md'
-        label: 'Video Playlist'
-        name: 'videoList'
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'video-page',
-            }
-          - {
-              label: 'Video',
-              name: 'video',
-              widget: 'list',
-              field:
-                { label: 'Video Title', name: 'videoTitle', widget: 'string' },
-              { label: 'Youtube URL', name: 'videoLink', widget: 'string' },
-            }
