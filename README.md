@@ -4,9 +4,9 @@
 
    a. Home/Index:
 
-   - Reformat page structure to load content from Netlify CMS.
-   - Have Banner component toggle from visible/invisble from Netlify CMS
-   - Banner content can be edited from the back-end.<br/>
+   - ~~Reformat page structure to load content from Netlify CMS.~~
+   - ~~Have Banner component toggle from visible/invisble from Netlify CMS~~
+   - ~~Banner content can be edited from the back-end.<br/>~~
 
    b. Videos:
 
@@ -39,6 +39,10 @@
    - Feedback upon submission (i.e. message was sent!)
    - (Optional) Toggle button to send a copy of form submission to sender.
    - Once working, let me know if Contact should be a section in the index or it's own route/page.
+
+# CMS Features
+
+- Editable Homepage Banner
 
 # gatsby-starter-forty
 
