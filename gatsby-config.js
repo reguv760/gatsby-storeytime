@@ -56,18 +56,18 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-gtag`,
       options: {
         // your google analytics tracking id
         trackingId: `UA-6371690-27`,
         // Puts tracking script in the head instead of the body
         head: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
   ],
