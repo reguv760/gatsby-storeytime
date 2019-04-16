@@ -47,7 +47,7 @@ b. Add Scrollable Anchor animation for Contact component in index from "Contact"
 
 Up for grabs
 
-1. Make Navigation component based on CMS
+1. Make Navigation component editable from CMS
 2. Make Footer component editable from CMS
    - Copyright information based on company name
    - Social icons should:

@@ -33,8 +33,8 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/videos/index.md'
-        label: 'Video Content'
-        name: 'videoContent'
+        label: 'Video List'
+        name: 'videoList'
         fields:
           - {
               label: 'Template Key',
