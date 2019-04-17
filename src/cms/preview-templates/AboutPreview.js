@@ -6,10 +6,8 @@ import { AboutPageTemplate } from './../../templates/about-page'
 
 const AboutPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
-
   const { title, body } = data
-  //const { AboutData } = data.body
-  //  console.log({ AboutData })
+
   return (
     <div className="previewPanel">
       <AboutPageTemplate
