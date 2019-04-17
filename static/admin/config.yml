@@ -93,7 +93,7 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'banner'
-    label: 'Banner Component'
+    label: 'Homepage Banner'
     delete: false
     files:
       - file: 'src/pages/index.md'
