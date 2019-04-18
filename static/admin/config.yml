@@ -64,8 +64,8 @@ collections:
               widget: 'hidden',
               default: 'singer-page',
             }
-          - label: 'Singers'
-            name: singers
+          - label: 'Singer'
+            name: singer
             widget: 'list'
             fields:
               - { label: 'Name', name: 'name', widget: 'string' }

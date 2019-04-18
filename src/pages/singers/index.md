@@ -1,6 +1,6 @@
 ---
 templateKey: singer-page
-singers:
+singer:
   - body: >-
       Qui pariatur laboris nostrud duis ea id ex proident. Sit cupidatat nisi
       labore tempor amet ipsum dolor Lorem ea qui deserunt tempor magna. Labore
@@ -18,4 +18,3 @@ singers:
     image: /assets/pic04.jpg
     name: Another Singer name
 ---
-

@@ -55,7 +55,7 @@ export const singerPageQuery = graphql`
   query SingerPage {
     markdownRemark(frontmatter: { templateKey: { eq: "singer-page" } }) {
       frontmatter {
-        singers {
+        singer {
           name
           image
           body
