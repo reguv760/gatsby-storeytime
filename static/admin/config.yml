@@ -69,7 +69,7 @@ collections:
             widget: 'list'
             fields:
               - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Image', name: 'image', widget: 'immage' }
+              - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/events/index.md'

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { BannerTemplate } from './../../components/banner'
 
-const BannerPreview = ({ PreviewStyle, entry }) => {
+const BannerPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
   return (
     <div className="previewPanel">
