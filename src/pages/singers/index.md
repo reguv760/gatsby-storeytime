@@ -15,7 +15,7 @@ singers:
       Incididunt excepteur minim laborum magna ut enim esse non sint. Et veniam
       sunt ea cillum nulla nostrud eiusmod aliqua exercitation adipisicing. Duis
       mollit dolor mollit aliquip culpa.
-    image: /assets/patrick-on-mic.png
+    image: /assets/pic04.jpg
     name: Another Singer name
 ---
 
