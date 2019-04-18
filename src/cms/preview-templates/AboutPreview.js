@@ -8,7 +8,8 @@ const AboutPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
   const { title, body } = data
 
-  console.log(data)
+  console.log(body)
+
   return (
     <div className="previewPanel">
       <AboutPageTemplate
