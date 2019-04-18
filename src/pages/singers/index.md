@@ -1,9 +1,11 @@
 ---
 templateKey: singer-page
-title: Singers
+singers:
+  - name: 'Singer name'
+    image: ''
+    body: 'Qui pariatur laboris nostrud duis ea id ex proident. Sit cupidatat nisi labore tempor amet ipsum dolor Lorem ea qui deserunt tempor magna. Labore do veniam dolor sit magna aliqua mollit duis do eiusmod do cupidatat. Tempor id exercitation anim voluptate cillum sit exercitation commodo id quis magna exercitation.<br/>Incididunt excepteur minim laborum magna ut enim esse non sint. Et veniam sunt ea cillum nulla nostrud eiusmod aliqua exercitation adipisicing. Duis mollit dolor mollit aliquip culpa.'
+
+  - name: 'Another Singer name'
+    image: ''
+    body: 'Incididunt excepteur minim laborum magna ut enim esse non sint. Et veniam sunt ea cillum nulla nostrud eiusmod aliqua exercitation adipisicing. Duis mollit dolor mollit aliquip culpa.'
 ---
-### Singers
-
-Storeytime is a 5-voice group centered around Patrick Storey, an autistic singer with an incredible musical gift. The group shows what is possible for people with autism and other learning differences. Audiences are treated to an incredible, interactive performance where they can experience how Patrick communicates and thrives through his love for music. Through their inspiring presentation, audiences learn about patience, acceptance, nurturing, gratitude and more.
-
-Storeytime shares their story, music and message at autism events, schools and more. Contact Us to book Storeytime for your school or event.

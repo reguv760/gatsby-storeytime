@@ -55,8 +55,8 @@ collections:
                 }
 
       - file: 'src/pages/singers/index.md'
-        label: 'Singers'
-        name: 'singers'
+        label: 'Singer List'
+        name: 'singerList'
         fields:
           - {
               label: 'Template Key',
@@ -64,8 +64,13 @@ collections:
               widget: 'hidden',
               default: 'singer-page',
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'Singers'
+            name: singers
+            widget: 'list'
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'immage' }
+              - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/events/index.md'
         label: 'Events'
