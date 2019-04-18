@@ -5,10 +5,8 @@ import { HTMLContent } from './../../components/Content'
 import { AboutPageTemplate } from './../../templates/about-page'
 
 const AboutPreview = ({ entry }) => {
-  const aboutTitle = entry.getIn(['data', 'aboutTitle'])
-  const aboutBody = entry.getIn(['data', 'aboutBody'])
-
-  console.log(data)
+  const data = entry.getIn(['data']).toJS()
+  const { aboutTitle, aboutBody } = data
 
   return (
     <div className="previewPanel">
