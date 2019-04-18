@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 //grab template subcomponent from videolist
 import { SingerListTemplate } from './../../components/singerlist'
 
-const SingerPageTemplate = ({ entry }) => {
+const SingerPreviewTemplate = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
 
   return (
@@ -16,10 +16,10 @@ const SingerPageTemplate = ({ entry }) => {
   )
 }
 
-SingerPageTemplate.propTypes = {
+SingerPreviewTemplate.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
 }
 
-export default SingerPageTemplate
+export default SingerPreviewTemplate

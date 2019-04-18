@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 //grab template subcomponent from videolist
 import { VideoListTemplate } from './../../components/videolist'
 
-const VideoPageTemplate = ({ PreviewStyle, entry }) => {
+const VideoPageTemplate = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
   return (
     <div className="previewPanel">

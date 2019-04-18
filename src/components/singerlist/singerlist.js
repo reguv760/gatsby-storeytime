@@ -15,11 +15,22 @@ export const SingerListTemplate = ({ singerListData }) => {
         style={{ listStyle: 'none', margin: '1rem' }}
       >
         {singerItems.map((singers, index) => (
-          <div className="col-12" key={singers.name + index}>
-            <h2>{singers.name}</h2>
-
-            {singers.image.length > 0 && <img src={`${singers.image}`} />}
-            <PageContent className="singerDesc" content={singers.body} />
+          <div
+            className="col-12"
+            key={singers.name + index}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              margin: '1rem 0',
+            }}
+          >
+            <div className="col-6" style={{ padding: '0 1rem' }}>
+              {singers.image.length > 0 && <img src={`${singers.image}`} />}
+            </div>
+            <div className="col-6" style={{ padding: '0 1rem' }}>
+              <h2>{singers.name}</h2>
+              <PageContent className="singerDesc" content={singers.body} />
+            </div>
           </div>
         ))}
       </div>
