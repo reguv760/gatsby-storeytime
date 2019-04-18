@@ -30,8 +30,8 @@ collections:
               widget: 'hidden',
               default: 'about-page',
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Title', name: 'aboutTitle', widget: 'string' }
+          - { label: 'Body', name: 'aboutBody', widget: 'markdown' }
 
       - file: 'src/pages/videos/index.md'
         label: 'Video List'

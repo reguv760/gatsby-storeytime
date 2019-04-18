@@ -42,8 +42,8 @@ const AboutPage = ({ data }) => {
     <Layout>
       <AboutPageTemplate
         contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={post.frontmatter.aboutTitle}
+        content={post.frontmatter.aboutBody}
       />
     </Layout>
   )
@@ -58,9 +58,9 @@ export default AboutPage
 export const aboutPageQuery = graphql`
   query AboutPage {
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
-      html
       frontmatter {
-        title
+        aboutTitle
+        aboutBody
       }
     }
   }

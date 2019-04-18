@@ -3,9 +3,8 @@ import { HTMLContent } from './../Content'
 
 export const SingerListTemplate = ({ singerListData }) => {
   //this is my video array data location
-  const singerItems = [singerListData.singers][0]
+  const singerItems = [singerListData.singer][0]
 
-  //console.log(singerItems)
   const PageContent = HTMLContent
 
   return (
