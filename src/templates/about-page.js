@@ -5,8 +5,8 @@ import Layout from '../components/layout'
 import { HTMLContent } from '../components/Content'
 
 //this is the container for CMS data for About.
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent
+export const AboutPageTemplate = ({ title, content }) => {
+  const PageContent = HTMLContent
 
   return (
     <div id="main" className="alt">
@@ -31,7 +31,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
 }
 
 // this is the page container for about
@@ -40,11 +39,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
+      <AboutPageTemplate title={post.frontmatter.title} content={post.body} />
     </Layout>
   )
 }
@@ -58,9 +53,9 @@ export default AboutPage
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         title
+        aboutBody
       }
     }
   }
