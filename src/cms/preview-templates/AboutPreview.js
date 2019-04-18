@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { HTMLContent } from './../../components/Content'
 import { AboutPageTemplate } from './../../templates/about-page'
 
 const AboutPreview = ({ entry }) => {
@@ -10,7 +11,11 @@ const AboutPreview = ({ entry }) => {
   console.log(data)
   return (
     <div className="previewPanel">
-      <AboutPageTemplate title={title} content={body} />
+      <AboutPageTemplate
+        contentComponent={HTMLContent}
+        title={title}
+        content={body}
+      />
     </div>
   )
 }
