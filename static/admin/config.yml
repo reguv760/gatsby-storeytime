@@ -115,3 +115,32 @@ collections:
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
+
+  - name: 'footer'
+    label: 'Homepage Footer'
+    delete: false
+    files:
+      - file: 'src/components/footer/index.md'
+        label: 'Homepage Footer Component'
+        name: 'footer'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'footer-component',
+            }
+
+          - label: 'Social Icons'
+            name: social
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Enable Icon',
+                  name: 'socialIconEnabled',
+                  widget: 'boolean',
+                }
+              - { label: 'Link', name: 'socialLink', widget: 'string' }
+
+          - { label: 'Designed By', name: 'designedBy', widget: 'string' }
+          - { label: 'Design Link', name: 'designLink', widget: 'string' }

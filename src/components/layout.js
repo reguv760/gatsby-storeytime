@@ -8,7 +8,7 @@ import Navbar from './Navbar'
 import SideDrawer from './sidedrawer/SideDrawer'
 import Backdrop from './backdrop/Backdrop'
 import Contact from './Contact'
-import Footer from './Footer'
+import { Footer } from './footer/'
 
 class Layout extends React.Component {
   state = {
@@ -41,8 +41,8 @@ class Layout extends React.Component {
 
     return (
       <>
-          <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
-          <SideDrawer show={sideDrawerOpen} />
+        <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+        <SideDrawer show={sideDrawerOpen} />
         <div id="wrapper" style={{ height: '100%' }}>
           {backdrop}
           {children}
