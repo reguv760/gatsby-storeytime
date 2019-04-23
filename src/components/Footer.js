@@ -73,15 +73,15 @@ const FooterTemplate = ({ socialIconData, designBy, designLink }) => {
 
 const Footer = ({ footerData, copyrightData }) => {
   //const { socialIcons } = footerData
-  const { designedBy, designLink } = copyrightData
+  //const { designedBy, designLink } = copyrightData
 
   //console.log(footerData.socialIcons)
   return (
     <footer id="footer">
       <FooterTemplate
         socialIconData={footerData.socialIcons}
-        designBy={designedBy}
-        designLink={designLink}
+        designBy={copyrightData.designedBy}
+        designLink={copyrightData.designLink}
       />
     </footer>
   )
