@@ -66,9 +66,7 @@ export const homeQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {
       frontmatter {
-        bannerEnabled
-        bannerTitle
-        bannerText
+        footerData
       }
     }
   }
