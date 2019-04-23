@@ -13,7 +13,6 @@ bannerText: >-
   quis sapien gravida, condimentum ante id, interdum erat. In ultricies diam in
   tortor convallis, ac ultrices tortor sollicitudin. Phasellus porta enim et
   metus mattis, a sagittis nisi finibus. Ut non ligula metus.
-
 footerData:
   socialIcons:
     - socialEnabled: true

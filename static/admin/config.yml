@@ -133,7 +133,7 @@ collections:
             fields:
               - {
                   label: 'Enable Icon',
-                  name: 'socialIconEnabled',
+                  name: 'socialEnabled',
                   widget: 'boolean',
                 }
               - { label: 'Link', name: 'socialLink', widget: 'string' }
