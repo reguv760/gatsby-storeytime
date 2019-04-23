@@ -21,7 +21,7 @@ footerData:
       socialLink: 'http://facebook.com'
     - socialEnabled: true
       socialLink: 'http://instagram.com'
-    - socialEnabled: true
+    - socialEnabled: false
       socialLink: 'http://github.com'
     - socialEnabled: true
       socialLink: 'http://linkedin.com'

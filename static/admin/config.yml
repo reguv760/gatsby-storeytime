@@ -115,18 +115,8 @@ collections:
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
-          
-        label: 'Footer Component'
-        name: 'footer'
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'footer-component',
-            }
 
-          - label: 'Social Icons'
+          - label: 'Footer Component'
             name: social
             widget: 'list'
             fields:
