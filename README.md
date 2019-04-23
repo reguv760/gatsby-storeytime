@@ -18,7 +18,20 @@
    - Used by Events + Contact pages
    - Conditional rendering for Fundraiser component based currentPage === "Contact"<br/>
 
-   d. Once Aaron completes Contact form component, make it editable from CMS
+   d. Singers
+
+   - ~~Populate page with 2 singers~~
+   - ~~Singer Details can be edited from the back-end~~
+
+   e. Footer component editable from CMS
+
+   - Company information editable
+   - Social icons should:
+     a) Icon appear based on Enable/Disable conditions
+     and/or
+     b) Icon appear based if there's a URL
+
+   e. Once Aaron completes Contact form component, make it editable from CMS
 
    - Email, Phone and Address editable as "Contact Information"
 
@@ -48,12 +61,6 @@ b. Add Scrollable Anchor animation for Contact component in index from "Contact"
 Up for grabs
 
 1. Make Navigation component editable from CMS
-2. Make Footer component editable from CMS
-   - Copyright information based on company name
-   - Social icons should:
-     a) Icon appear based on Enable/Disable conditions
-     or
-     b) Icon appear based if there's a URL
 
 # CMS Features
 
