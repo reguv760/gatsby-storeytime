@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 export const FooterTemplate = () => {
   return (
@@ -40,7 +41,8 @@ export const FooterTemplate = () => {
   )
 }
 
-const Footer = () => {
+const Footer = ({ footerData }) => {
+  console.log(footerData + ' is my data')
   return (
     <footer id="footer">
       <FooterTemplate />

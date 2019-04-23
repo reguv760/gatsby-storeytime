@@ -8,7 +8,7 @@ import Navbar from './Navbar'
 import SideDrawer from './sidedrawer/SideDrawer'
 import Backdrop from './backdrop/Backdrop'
 import Contact from './Contact'
-import { Footer } from './Footer'
+import { Footer } from './footer/'
 
 export const LayoutTemplate = ({ bg, children, sideDrawer, drawToggle }) => {
   return (
@@ -66,3 +66,19 @@ class Layout extends React.Component {
 }
 
 export default Layout
+
+export const layoutQuery = graphql`
+  fragment LayoutFragment on Query {
+    footerData: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "footer-component" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            footerData
+          }
+        }
+      }
+    }
+  }
+`
