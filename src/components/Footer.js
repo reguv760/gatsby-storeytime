@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FooterTemplate = () => {
+export const FooterTemplate = () => {
   return (
     <div className="inner">
       <ul className="icons">
