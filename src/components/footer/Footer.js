@@ -2,7 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 export const FooterTemplate = ({ socialIconData, designBy, designLink }) => {
-  //console.log(socialIconData)
+  //console.log(socialIconData + ' is my socialIcon')
+
+  //const { socialIcons } = socialIconData
+  //console.log(socialIcons)
 
   return (
     <div className="inner">
@@ -74,14 +77,13 @@ export const FooterTemplate = ({ socialIconData, designBy, designLink }) => {
 }
 
 const Footer = ({ footerData, copyrightData }) => {
-  const { socialIcons } = footerData
   const { designedBy, designLink } = copyrightData
 
-  //console.log(footerData.socialIcons)
+  //console.log(footerData + ' is my footerData')
   return (
     <footer id="footer">
       <FooterTemplate
-        socialIconData={socialIcons}
+        socialIconData={footerData}
         designBy={designedBy}
         designLink={designLink}
       />
