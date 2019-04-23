@@ -21,7 +21,7 @@ export const LayoutTemplate = ({ footerData, children, backdrop }) => {
         {backdrop}
         {children}
         <Contact />
-        <Footer />
+        <Footer footerData={footerData} />
       </div>
     </>
   )
@@ -83,7 +83,9 @@ export default Layout
 export const layoutQuery = graphql`
   query LayoutTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "footer-component" } }) {
-      frontmatter
+      frontmatter {
+        templateKey
+      }
     }
   }
 `

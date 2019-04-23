@@ -1,5 +1,5 @@
 ---
-templateKey: "footer-component'
+templateKey: "footer-component"
 footerData:
     socialIcons: 
         - socialEnabled: true
