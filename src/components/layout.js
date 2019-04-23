@@ -55,6 +55,9 @@ class Layout extends React.Component {
     const { children } = this.props
     const { sideDrawerOpen } = this.state
 
+    const footerData = this.props.footerData
+    const copyrightData = this.props.copyrightData
+
     let backdrop
 
     if (sideDrawerOpen) {
@@ -67,8 +70,8 @@ class Layout extends React.Component {
         bg={backdrop}
         sideDrawer={sideDrawerOpen}
         drawToggle={this.drawerToggleClickHandler}
-        footerData={this.props.footerData}
-        copyrightData={this.props.copyrightData}
+        footerData={footerData}
+        copyrightData={copyrightData}
       />
     )
   }
