@@ -8,29 +8,7 @@ import Navbar from './Navbar'
 import SideDrawer from './sidedrawer/SideDrawer'
 import Backdrop from './backdrop/Backdrop'
 import Contact from './Contact'
-import { Footer } from './Footer'
-
-export const LayoutTemplate = ({
-  bg,
-  children,
-  sideDrawer,
-  drawToggle,
-  footerData,
-  copyrightData,
-}) => {
-  return (
-    <>
-      <Navbar drawerClickHandler={drawToggle} />
-      <SideDrawer show={sideDrawer} />
-      <div id="wrapper" style={{ height: '100%' }}>
-        {bg}
-        {children}
-        <Contact />
-        <Footer footerData={footerData} copyrightData={copyrightData} />
-      </div>
-    </>
-  )
-}
+import { Footer } from './footer/'
 
 class Layout extends React.Component {
   state = {
@@ -65,14 +43,16 @@ class Layout extends React.Component {
     }
 
     return (
-      <LayoutTemplate
-        children={children}
-        bg={backdrop}
-        sideDrawer={sideDrawerOpen}
-        drawToggle={this.drawerToggleClickHandler}
-        footerData={footerData}
-        copyrightData={copyrightData}
-      />
+      <>
+        <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+        <SideDrawer show={sideDrawerOpen} />
+        <div id="wrapper" style={{ height: '100%' }}>
+          {backdrop}
+          {children}
+          <Contact />
+          <Footer footerData={footerData} copyrightData={copyrightData} />
+        </div>
+      </>
     )
   }
 }

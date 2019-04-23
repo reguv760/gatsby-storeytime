@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-const FooterTemplate = ({ socialIconData, designBy, designLink }) => {
-  console.log(socialIconData)
+export const FooterTemplate = ({ socialIconData, designBy, designLink }) => {
+  //console.log(socialIconData)
 
   return (
     <div className="inner">
       <ul className="icons">
-        {/* {socialIconData[0].socialEnabled && (
+        {socialIconData[0].socialEnabled && (
           <li>
             <a
               href={`${socialIconData[0].socialLink}`}
@@ -60,7 +60,7 @@ const FooterTemplate = ({ socialIconData, designBy, designLink }) => {
               <span className="label">LinkedIn</span>
             </a>
           </li>
-        )} */}
+        )}
       </ul>
       <ul className="copyright">
         <li>&copy; Untitled</li>

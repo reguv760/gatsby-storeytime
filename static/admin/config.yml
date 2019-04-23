@@ -103,7 +103,7 @@ collections:
     delete: false
     files:
       - file: 'src/pages/index.md'
-        label: 'Banner Component'
+        label: 'Banner + Footer Components'
         name: 'banner'
         fields:
           - {
