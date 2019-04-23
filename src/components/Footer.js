@@ -1,7 +1,6 @@
 import React from 'react'
-import { HTMLContent } from '../Content'
 
-const FooterTemplate = ({ footerData }) => {
+const FooterTemplate = () => {
   return (
     <div className="inner">
       <ul className="icons">
@@ -41,10 +40,10 @@ const FooterTemplate = ({ footerData }) => {
   )
 }
 
-const Footer = ({ footerData }) => {
+const Footer = () => {
   return (
     <footer id="footer">
-      <FooterTemplate footerData={footerData} />
+      <FooterTemplate />
     </footer>
   )
 }
