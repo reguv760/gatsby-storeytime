@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
+  branch: cms
 
 media_folder: static/assets
 public_folder: assets
@@ -29,8 +30,8 @@ collections:
               widget: 'hidden',
               default: 'about-page',
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Title', name: 'aboutTitle', widget: 'string' }
+          - { label: 'Body', name: 'aboutBody', widget: 'markdown' }
 
       - file: 'src/pages/videos/index.md'
         label: 'Video List'
@@ -54,8 +55,8 @@ collections:
                 }
 
       - file: 'src/pages/singers/index.md'
-        label: 'Singers'
-        name: 'singers'
+        label: 'Singer List'
+        name: 'singerList'
         fields:
           - {
               label: 'Template Key',
@@ -63,8 +64,13 @@ collections:
               widget: 'hidden',
               default: 'singer-page',
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'Singer'
+            name: singer
+            widget: 'list'
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/events/index.md'
         label: 'Events'
@@ -93,7 +99,7 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'banner'
-    label: 'Banner Component'
+    label: 'Homepage Banner'
     delete: false
     files:
       - file: 'src/pages/index.md'
@@ -104,8 +110,37 @@ collections:
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
-              default: 'index-page',
+              default: 'index',
             }
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
+
+  - name: 'footer'
+    label: 'Homepage Footer'
+    delete: false
+    files:
+      - file: 'src/components/footer/index.md'
+        label: 'Homepage Footer Component'
+        name: 'footer'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'footer-component',
+            }
+
+          - label: 'Social Icons'
+            name: social
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Enable Icon',
+                  name: 'socialIconEnabled',
+                  widget: 'boolean',
+                }
+              - { label: 'Link', name: 'socialLink', widget: 'string' }
+
+          - { label: 'Designed By', name: 'designedBy', widget: 'string' }
+          - { label: 'Design Link', name: 'designLink', widget: 'string' }

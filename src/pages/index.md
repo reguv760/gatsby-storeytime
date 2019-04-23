@@ -1,5 +1,5 @@
 ---
-templateKey: index-page
+templateKey: index
 bannerEnabled: true
 bannerTitle: Hello Los Angeles!!!
 bannerText: >-
@@ -14,4 +14,3 @@ bannerText: >-
   tortor convallis, ac ultrices tortor sollicitudin. Phasellus porta enim et
   metus mattis, a sagittis nisi finibus. Ut non ligula metus.
 ---
-

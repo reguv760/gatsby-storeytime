@@ -64,7 +64,7 @@ export default HomeIndex
 //find the data for child component
 export const homeQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {
       frontmatter {
         bannerEnabled
         bannerTitle

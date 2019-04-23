@@ -4,21 +4,22 @@ import PropTypes from 'prop-types'
 //this is the container used by the CMS:::
 
 //grab template subcomponent from videolist
-import { VideoListTemplate } from './../../components/videolist'
+import { SingerListTemplate } from './../../components/singerlist'
 
-const VideoPageTemplate = ({ entry }) => {
+const SingerPreviewTemplate = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
+
   return (
     <div className="previewPanel">
-      <VideoListTemplate videoListData={data} />
+      <SingerListTemplate singerListData={data} />
     </div>
   )
 }
 
-VideoPageTemplate.propTypes = {
+SingerPreviewTemplate.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
 }
 
-export default VideoPageTemplate
+export default SingerPreviewTemplate

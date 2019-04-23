@@ -55,6 +55,7 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
