@@ -98,8 +98,8 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: 'banner'
-    label: 'Homepage Banner'
+  - name: 'layout'
+    label: 'Page Layout'
     delete: false
     files:
       - file: 'src/pages/index.md'
@@ -116,12 +116,8 @@ collections:
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
 
-  - name: 'footer'
-    label: 'Homepage Footer'
-    delete: false
-    files:
       - file: 'src/components/footer/index.md'
-        label: 'Homepage Footer Component'
+        label: 'Footer Component'
         name: 'footer'
         fields:
           - {

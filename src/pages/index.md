@@ -13,4 +13,20 @@ bannerText: >-
   quis sapien gravida, condimentum ante id, interdum erat. In ultricies diam in
   tortor convallis, ac ultrices tortor sollicitudin. Phasellus porta enim et
   metus mattis, a sagittis nisi finibus. Ut non ligula metus.
+
+footerData:
+  socialIcons:
+    - socialEnabled: true
+      socialLink: 'http://twitter.com'
+    - socialEnabled: true
+      socialLink: 'http://facebook.com'
+    - socialEnabled: true
+      socialLink: 'http://instagram.com'
+    - socialEnabled: true
+      socialLink: 'http://github.com'
+    - socialEnabled: true
+      socialLink: 'http://linkedin.com'
+copyright:
+  designedBy: 'some company'
+  designLink: 'http://google.com'
 ---

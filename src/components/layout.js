@@ -66,19 +66,3 @@ class Layout extends React.Component {
 }
 
 export default Layout
-
-// export const layoutQuery = graphql`
-//   fragment LayoutFragment on Query {
-//     footerData: allMarkdownRemark(
-//       filter: { frontmatter: { templateKey: { eq: "footer-component" } } }
-//     ) {
-//       edges {
-//         node {
-//           frontmatter {
-//             footerData
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
