@@ -25,13 +25,10 @@
 
    e. Footer component editable from CMS
 
-   - Company information editable
-   - Social icons should:
-     a) Icon appear based on Enable/Disable conditions
-     and/or
-     b) Icon appear based if there's a URL
+   - ~~Company information editable~~
+   - ~~Social icons should appear based on Enable/Disable conditions~~
 
-   e. Once Aaron completes Contact form component, make it editable from CMS
+   f. Once Aaron completes Contact form component, make it editable from CMS
 
    - Email, Phone and Address editable as "Contact Information"
 
