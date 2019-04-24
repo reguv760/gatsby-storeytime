@@ -46,11 +46,7 @@ collections:
             name: 'videos'
             widget: 'list'
           - { label: 'Video Title', name: 'videoTitle', widget: 'string' }
-          - {
-              label: 'Youtube Embed URL',
-              name: 'videoLink',
-              widget: 'string',
-             }
+          - { label: 'Youtube Embed URL', name: 'videoLink', widget: 'string' }
 
       - file: 'src/pages/singers/index.md'
         label: 'Singer List'
@@ -81,8 +77,20 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-          - { label: 'Event Date', name: 'eventdate', widget: 'date', default: '', format: 'MMM Do YY' }
-          - { label: "Start time", name: "starttime", widget: "datetime", default: "", format: "LLL" }
+          - {
+              label: 'Event Date',
+              name: 'eventdate',
+              widget: 'date',
+              default: '',
+              format: 'MMM Do YY',
+            }
+          - {
+              label: 'Start time',
+              name: 'starttime',
+              widget: 'datetime',
+              default: '',
+              format: 'LLL',
+            }
 
       - file: 'src/pages/donate/index.md'
         label: 'Donate'
@@ -118,11 +126,13 @@ collections:
           - label: 'Social Media Icons'
             name: 'socialIcons'
             widget: 'list'
-          - {
-               label: 'Enable Icon',
-               name: 'socialEnabled',
-               widget: 'boolean',
-             }
-          - { label: 'Link', name: 'socialLink', widget: 'string' }
+            fields:
+              - {
+                  label: 'Enable Icon',
+                  name: 'socialEnabled',
+                  widget: 'boolean',
+                }
+              - { label: 'Link', name: 'socialLink', widget: 'string' }
+
           - { label: 'Designed By', name: 'designedBy', widget: 'string' }
           - { label: 'Design Link', name: 'designLink', widget: 'string' }
