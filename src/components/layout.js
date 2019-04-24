@@ -10,6 +10,8 @@ import Backdrop from './backdrop/Backdrop'
 import Contact from './Contact'
 import { Footer } from './footer/'
 
+//use staticquery for layout!!!
+
 export const LayoutTemplate = ({
   currentPage,
   bg,
