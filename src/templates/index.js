@@ -12,10 +12,10 @@ import HomeContent from './../components/HomeContent'
 //to access child component, parent component
 //has to be accessible.
 export const HomePageTemplate = ({ bannerData }) => {
-  const bannedEnabled = bannerData.bannerEnabled
+  const bannerEnabled = bannerData.bannerEnabled
   return (
     <>
-      {bannedEnabled && <Banner bannerData={bannerData} />}
+      {bannerEnabled && <Banner bannerData={bannerData} />}
       <div id="main">
         <HomeNav />
         <HomeContent />
@@ -32,9 +32,9 @@ HomePageTemplate.propTypes = {
 //this is my component:::
 const HomeIndex = ({ data }) => {
   //store data as markdownRemarks: post
-
   const { markdownRemark: post } = data
 
+  //console.log(post.frontmatter.footerData.socialIcons + ' is my data')
   //post.frontmatter to access data object:::
   return (
     <Layout>
@@ -62,6 +62,7 @@ HomeIndex.propTypes = {
 export default HomeIndex
 
 //find the data for child component
+//query for layout component to pass down to footer
 export const homeQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {
