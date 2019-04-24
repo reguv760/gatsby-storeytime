@@ -81,8 +81,11 @@ collections:
               widget: 'hidden',
               default: 'event-page',
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Body', name: 'body', widget: 'markdown' }
+              - { label: 'Event Date', name: 'eventdate', widget: 'date', default: '', format: 'MMM Do YY'
+              - { label: "Start time", name: "starttime", widget: "datetime", default: "", format: "LLL" }
 
       - file: 'src/pages/donate/index.md'
         label: 'Donate'

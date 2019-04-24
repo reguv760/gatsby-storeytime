@@ -1,66 +1,66 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/Content'
 
-//this is the container for CMS data for About.
-export const EventPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+import { EventList } from './../components/eventlist'
 
+//this is the container for CMS data for Event.
+export const EventPageTemplate = ({ eventListData }) => {
   return (
-    <div id="main" className="alt">
-    <section className="section section--gradient">
-        <div className="inner">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-        </div>
-    </section>
-    </div>
+    <>
+      <section className="section section--gradient">
+        <EventList eventListData={eventListData} />
+      </section>
+    </>
   )
 }
 
 EventPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  eventListData: PropTypes.object,
 }
 
-// this is the page container for Event
+// this is the page container for Singer
 const EventPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <EventPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+      <Helmet
+        title="Gatsby Starter - Forty"
+        meta={[
+          { name: 'description', content: 'Sample' },
+          { name: 'keywords', content: 'sample, something' },
+        ]}
       />
+      <EventPageTemplate eventListData={post.frontmatter} />
     </Layout>
   )
 }
 
 EventPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default EventPage
 
 export const eventPageQuery = graphql`
-  query EventPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+  query eventPage {
+    markdownRemark(frontmatter: { templateKey: { eq: "event-page" } }) {
       frontmatter {
-        title
+        event {
+          name
+          image
+          body
+          eventdate
+          starttime
+        }
       }
     }
   }
