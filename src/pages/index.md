@@ -25,7 +25,6 @@ footerData:
       socialLink: 'http://github.com'
     - socialEnabled: true
       socialLink: 'http://linkedin.com'
-copyright:
-  designedBy: 'some company'
-  designLink: 'http://google.com'
+designedBy: 'some company'
+designLink: 'http://google.com'
 ---

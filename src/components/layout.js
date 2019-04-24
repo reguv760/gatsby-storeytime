@@ -33,8 +33,8 @@ class Layout extends React.Component {
     const { children } = this.props
     const { sideDrawerOpen } = this.state
 
-    const footerData = this.props.footerData
-    const copyrightData = this.props.copyrightData
+    const footerData = this.props.layoutData.footerData
+    const { designedBy, designLink } = this.props.layoutData
 
     let backdrop
 
@@ -50,7 +50,11 @@ class Layout extends React.Component {
           {backdrop}
           {children}
           <Contact />
-          <Footer footerData={footerData} copyrightData={copyrightData} />
+          <Footer
+            footerData={footerData}
+            designedBy={designedBy}
+            designLink={designLink}
+          />
         </div>
       </>
     )

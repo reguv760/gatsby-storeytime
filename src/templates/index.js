@@ -37,10 +37,7 @@ const HomeIndex = ({ data }) => {
   //console.log(post.frontmatter.footerData.socialIcons + ' is my data')
   //post.frontmatter to access data object:::
   return (
-    <Layout
-      footerData={post.frontmatter.footerData.socialIcons}
-      copyrightData={post.frontmatter.copyright}
-    >
+    <Layout layoutData={post.frontmatter}>
       <Helmet
         title="Gatsby Starter - Forty"
         meta={[
@@ -79,10 +76,8 @@ export const homeQuery = graphql`
             socialLink
           }
         }
-        copyright {
-          designedBy
-          designLink
-        }
+        designedBy
+        designLink
       }
     }
   }
