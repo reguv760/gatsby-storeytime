@@ -66,10 +66,9 @@ collections:
           - label: 'Singer'
             name: singer
             widget: 'list'
-            fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/events/index.md'
         label: 'Events'
@@ -81,11 +80,8 @@ collections:
               widget: 'hidden',
               default: 'event-page',
             }
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Body', name: 'body', widget: 'markdown' }
-              - { label: 'Event Date', name: 'eventdate', widget: 'date', default: '', format: 'MMM Do YY'
-              - { label: "Start time", name: "starttime", widget: "datetime", default: "", format: "LLL" }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/donate/index.md'
         label: 'Donate'
