@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { StaticQuery, graphql } from 'gatsby'
 // custom styles
 import '../assets/scss/main.scss'
 
@@ -9,6 +9,48 @@ import SideDrawer from './sidedrawer/SideDrawer'
 import Backdrop from './backdrop/Backdrop'
 import Contact from './Contact'
 import { Footer } from './footer/'
+
+export const LayoutTemplate = ({
+  currentPage,
+  bg,
+  isDrawerOpen,
+  drawToggle,
+}) => (
+  <StaticQuery
+    query={graphql`
+      query layoutTemplate {
+        markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {
+          frontmatter {
+            footerData {
+              socialIcons {
+                socialEnabled
+                socialLink
+              }
+            }
+            designedBy
+            designLink
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <Navbar drawerClickHandler={drawToggle} />
+        <SideDrawer show={isDrawerOpen} />
+        <div id="wrapper" style={{ height: '100%' }}>
+          {bg}
+          {currentPage}
+          <Contact />
+          <Footer
+            footerData={data.markdownRemark.frontmatter.footerData}
+            designedBy={data.markdownRemark.frontmatter.designedBy}
+            designLink={data.markdownRemark.frontmatter.designLink}
+          />
+        </div>
+      </>
+    )}
+  />
+)
 
 class Layout extends React.Component {
   state = {
@@ -33,9 +75,6 @@ class Layout extends React.Component {
     const { children } = this.props
     const { sideDrawerOpen } = this.state
 
-    const footerData = this.props.layoutData.footerData
-    const { designedBy, designLink } = this.props.layoutData
-
     let backdrop
 
     if (sideDrawerOpen) {
@@ -43,20 +82,12 @@ class Layout extends React.Component {
     }
 
     return (
-      <>
-        <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={sideDrawerOpen} />
-        <div id="wrapper" style={{ height: '100%' }}>
-          {backdrop}
-          {children}
-          <Contact />
-          <Footer
-            footerData={footerData}
-            designedBy={designedBy}
-            designLink={designLink}
-          />
-        </div>
-      </>
+      <LayoutTemplate
+        currentPage={children}
+        bg={backdrop}
+        isDrawerOpen={sideDrawerOpen}
+        drawToggle={this.drawerToggleClickHandler}
+      />
     )
   }
 }

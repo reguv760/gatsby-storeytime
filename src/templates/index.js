@@ -37,7 +37,7 @@ const HomeIndex = ({ data }) => {
   //console.log(post.frontmatter.footerData.socialIcons + ' is my data')
   //post.frontmatter to access data object:::
   return (
-    <Layout layoutData={post.frontmatter}>
+    <Layout>
       <Helmet
         title="Gatsby Starter - Forty"
         meta={[
