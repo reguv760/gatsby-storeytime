@@ -77,15 +77,13 @@ export const FooterTemplate = ({ socialIconData, designBy, designLink }) => {
 }
 
 const Footer = ({ footerData, copyrightData }) => {
-  const { designedBy, designLink } = copyrightData
-
   //console.log(footerData + ' is my footerData')
   return (
     <footer id="footer">
       <FooterTemplate
         socialIconData={footerData}
-        designBy={designedBy}
-        designLink={designLink}
+        designBy={copyrightData.designedBy}
+        designLink={copyrightData.designLink}
       />
     </footer>
   )
