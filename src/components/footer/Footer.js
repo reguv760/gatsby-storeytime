@@ -2,8 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 export const FooterTemplate = ({ socialIconData, designedBy, designLink }) => {
-  //const socialIcon = socialIconData.socialIcons
-  //console.log(socialIcon)
   return (
     <div className="inner">
       <ul className="icons">

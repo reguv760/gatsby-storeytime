@@ -36,7 +36,6 @@
 
    a. Events
 
-   - Where's the data for these events really coming from or are these just reformatted "blog posts"?
    - Newest / Upcoming / More Info (per event) nested links
 
    ~~b. Create Pages for Donate, Singers, About and Events~~

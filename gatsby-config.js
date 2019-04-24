@@ -5,7 +5,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -69,6 +68,8 @@ module.exports = {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
+        enableIdentityWidget: false,
+        htmlTitle: 'StoreyTime CMS',
       },
     },
   ],

@@ -34,7 +34,6 @@ const HomeIndex = ({ data }) => {
   //store data as markdownRemarks: post
   const { markdownRemark: post } = data
 
-  //console.log(post.frontmatter.footerData.socialIcons + ' is my data')
   //post.frontmatter to access data object:::
   return (
     <Layout>
