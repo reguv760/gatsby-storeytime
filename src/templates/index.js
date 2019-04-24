@@ -70,14 +70,6 @@ export const homeQuery = graphql`
         bannerEnabled
         bannerTitle
         bannerText
-        footerData {
-          socialIcons {
-            socialEnabled
-            socialLink
-          }
-        }
-        designedBy
-        designLink
       }
     }
   }
