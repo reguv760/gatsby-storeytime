@@ -23,11 +23,9 @@ export const LayoutTemplate = ({
       query layoutTemplate {
         markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {
           frontmatter {
-            footerData {
-              socialIcons {
-                socialEnabled
-                socialLink
-              }
+            socialIcons {
+              socialEnabled
+              socialLink
             }
             designedBy
             designLink
@@ -44,7 +42,7 @@ export const LayoutTemplate = ({
           {currentPage}
           <Contact />
           <Footer
-            footerData={data.markdownRemark.frontmatter.footerData}
+            footerData={data.markdownRemark.frontmatter.socialIcons}
             designedBy={data.markdownRemark.frontmatter.designedBy}
             designLink={data.markdownRemark.frontmatter.designLink}
           />

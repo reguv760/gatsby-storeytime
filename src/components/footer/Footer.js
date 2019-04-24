@@ -2,15 +2,15 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 export const FooterTemplate = ({ socialIconData, designedBy, designLink }) => {
-  const socialIcon = socialIconData.socialIcons
+  //const socialIcon = socialIconData.socialIcons
   //console.log(socialIcon)
   return (
     <div className="inner">
       <ul className="icons">
-        {socialIcon[0].socialEnabled && (
+        {socialIconData[0].socialEnabled && (
           <li>
             <a
-              href={`${socialIcon[0].socialLink}`}
+              href={`${socialIconData[0].socialLink}`}
               className="icon alt fa-twitter"
             >
               <span className="label">Twitter</span>
@@ -18,10 +18,10 @@ export const FooterTemplate = ({ socialIconData, designedBy, designLink }) => {
           </li>
         )}
 
-        {socialIcon[1].socialEnabled && (
+        {socialIconData[1].socialEnabled && (
           <li>
             <a
-              href={`${socialIcon[1].socialLink}`}
+              href={`${socialIconData[1].socialLink}`}
               className="icon alt fa-facebook"
             >
               <span className="label">Facebook</span>
@@ -29,10 +29,10 @@ export const FooterTemplate = ({ socialIconData, designedBy, designLink }) => {
           </li>
         )}
 
-        {socialIcon[2].socialEnabled && (
+        {socialIconData[2].socialEnabled && (
           <li>
             <a
-              href={`${socialIcon[2].socialLink}`}
+              href={`${socialIconData[2].socialLink}`}
               className="icon alt fa-instagram"
             >
               <span className="label">Instagram</span>
@@ -40,10 +40,10 @@ export const FooterTemplate = ({ socialIconData, designedBy, designLink }) => {
           </li>
         )}
 
-        {socialIcon[3].socialEnabled && (
+        {socialIconData[3].socialEnabled && (
           <li>
             <a
-              href={`${socialIcon[3].socialLink}`}
+              href={`${socialIconData[3].socialLink}`}
               className="icon alt fa-github"
             >
               <span className="label">GitHub</span>
@@ -51,10 +51,10 @@ export const FooterTemplate = ({ socialIconData, designedBy, designLink }) => {
           </li>
         )}
 
-        {socialIcon[4].socialEnabled && (
+        {socialIconData[4].socialEnabled && (
           <li>
             <a
-              href={`${socialIcon[4].socialLink}`}
+              href={`${socialIconData[4].socialLink}`}
               className="icon alt fa-linkedin"
             >
               <span className="label">LinkedIn</span>
