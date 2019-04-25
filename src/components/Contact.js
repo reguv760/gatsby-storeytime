@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Contact = props => (
+  console.log(props);
   <section id="contact">
     <div className="inner">
       <section>

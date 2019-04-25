@@ -30,6 +30,9 @@ export const LayoutTemplate = ({
             }
             designedBy
             designLink
+            contactPhone
+            contactEmail
+            contactAddress
           }
         }
       }
@@ -42,7 +45,13 @@ export const LayoutTemplate = ({
           {bg}
           {currentPage}
 
-          {contactEnabled && <Contact />}
+          {contactEnabled && (
+            <Contact
+              contactPhone={data.markdownRemark.frontmatter.contactPhone}
+              contactEmail={data.markdownRemark.frontmatter.contactEmail}
+              contactAddress={data.markdownRemark.frontmatter.contactAddress}
+            />
+          )}
           <Footer
             footerData={data.markdownRemark.frontmatter.socialIcons}
             designedBy={data.markdownRemark.frontmatter.designedBy}
