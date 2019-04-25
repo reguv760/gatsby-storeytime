@@ -28,7 +28,7 @@ const SingerPage = ({ data }) => {
 
   //console.log(post.frontmatter)
   return (
-    <Layout>
+    <Layout contactEnabled={true}>
       <Helmet
         title="Gatsby Starter - Forty"
         meta={[

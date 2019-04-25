@@ -27,7 +27,7 @@ const EventPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <Layout contactEnabled={true}>
       <Helmet
         title="Gatsby Starter - Forty"
         meta={[

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { BannerTemplate } from './../../components/banner'
+import { ContactInfo } from './../../components/Contact'
 import { FooterTemplate } from './../../components/footer'
 
 const BannerPreview = ({ entry }) => {
@@ -20,6 +21,10 @@ const BannerPreview = ({ entry }) => {
         designedBy={designedBy}
         designLink={designLink}
       />
+
+      <br />
+
+      <ContactInfo contactInfoData={data} />
     </div>
   )
 }

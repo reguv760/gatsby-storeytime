@@ -110,7 +110,7 @@ collections:
     delete: false
     files:
       - file: 'src/pages/index.md'
-        label: 'Banner + Footer Components'
+        label: 'Banner + Footer + Contact Components'
         name: 'home'
         fields:
           - {
@@ -136,3 +136,11 @@ collections:
 
           - { label: 'Designed By', name: 'designedBy', widget: 'string' }
           - { label: 'Design Link', name: 'designLink', widget: 'string' }
+
+          - { label: 'Contact Phone', name: 'contactPhone', widget: 'string' }
+          - { label: 'Contact Email', name: 'contactEmail', widget: 'string' }
+          - {
+              label: 'Contact Address',
+              name: 'contactAddress',
+              widget: 'markdown',
+            }
