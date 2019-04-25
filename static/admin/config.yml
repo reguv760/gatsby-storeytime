@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
+  branch: cms2
 
 media_folder: static/assets
 public_folder: assets
@@ -111,7 +112,7 @@ collections:
     files:
       - file: 'src/pages/index.md'
         label: 'Banner + Footer Components'
-        name: 'banner'
+        name: 'home'
         fields:
           - {
               label: 'Template Key',
