@@ -7,8 +7,9 @@ const Contact = props => (
         <form
           method="POST"
           data-netlify="true"
-          action="/Success"
+          action="/success"
           name="contact"
+          data-netlify-recaptcha="true"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="field half first">
@@ -25,7 +26,7 @@ const Contact = props => (
           </div>
 
           <div className="field">
-            <div data-netlify-recaptcha="true" />
+            <div data-netlify-recaptcha="true">{''}</div>
           </div>
           <ul className="actions">
             <li>
