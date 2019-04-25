@@ -36,7 +36,7 @@ const HomeIndex = ({ data }) => {
 
   //post.frontmatter to access data object:::
   return (
-    <Layout>
+    <Layout contactEnabled={true}>
       <Helmet
         title="Gatsby Starter - Forty"
         meta={[

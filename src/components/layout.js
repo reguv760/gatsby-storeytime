@@ -17,6 +17,7 @@ export const LayoutTemplate = ({
   bg,
   isDrawerOpen,
   drawToggle,
+  contactEnabled,
 }) => (
   <StaticQuery
     query={graphql`
@@ -40,7 +41,8 @@ export const LayoutTemplate = ({
         <div id="wrapper" style={{ height: '100%' }}>
           {bg}
           {currentPage}
-          <Contact />
+
+          {contactEnabled && <Contact />}
           <Footer
             footerData={data.markdownRemark.frontmatter.socialIcons}
             designedBy={data.markdownRemark.frontmatter.designedBy}
@@ -73,7 +75,7 @@ class Layout extends React.Component {
 
   render() {
     const { children } = this.props
-    const { sideDrawerOpen } = this.state
+    const { sideDrawerOpen, contactEnabled } = this.state
 
     let backdrop
 
@@ -87,6 +89,7 @@ class Layout extends React.Component {
         bg={backdrop}
         isDrawerOpen={sideDrawerOpen}
         drawToggle={this.drawerToggleClickHandler}
+        contactEnabled={this.props.contactEnabled}
       />
     )
   }
