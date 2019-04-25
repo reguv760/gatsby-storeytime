@@ -26,7 +26,13 @@ socialIcons:
     socialLink: 'http://linkedin.com'
 designedBy: some company
 designLink: 'http://google.com'
-contactPhone: +00 123 456 7890
-contactEmail: company@email.com
-contactAddress: '12345 Some Street<br/>P.O Box 1234<br/>Some State, Some City, Some Country'
+contactPhone: 999 321 1234
+contactEmail: awesomecompany@company.com
+contactAddress: |-
+  123 Main Street<br/>
+
+  P.O Box 1234<br/>
+
+  Los Angeles, CA 90000
 ---
+
