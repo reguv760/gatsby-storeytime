@@ -140,4 +140,8 @@ collections:
 
           - { label: 'Contact Phone', name: 'contactPhone', widget: 'string' }
           - { label: 'Contact Email', name: 'contactEmail', widget: 'string' }
-          - { label: 'Contact Address', name: 'contactAddress', widget: 'body' }
+          - {
+              label: 'Contact Address',
+              name: 'contactAddress',
+              widget: 'markdown',
+            }
