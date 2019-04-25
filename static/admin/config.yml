@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
-  branch: cms2
+  branch: form
 
 media_folder: static/assets
 public_folder: assets
