@@ -5,9 +5,8 @@ const Contact = props => (
     <div className="inner">
       <section>
         <form
-          method="post"
+          method="POST"
           data-netlify="true"
-          data-netlify-recaptcha="true"
           action="/Success"
           name="contact"
         >
