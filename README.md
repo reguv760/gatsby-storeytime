@@ -30,7 +30,7 @@
 
    f. Once Aaron completes Contact form component, make it editable from CMS
 
-   - Email, Phone and Address editable as "Contact Information"
+   ~~- Email, Phone and Address editable as "Contact Information"~~
 
 2) Phil
 
@@ -47,10 +47,10 @@
    a. Contact
    Let's use Netlify's own form handling ([https://www.netlify.com/docs/form-handling/](https://www.netlify.com/docs/form-handling/)) to produce a better version.<br/>
 
-   - Create basic form + error checking and response on inputs and submit
+   ~~- Create basic form + error checking and response on inputs and submit~~
+   ~~- Feedback upon submission (i.e. message was sent!)~~
+
    - Integrate Captcha if possible
-   - Feedback upon submission (i.e. message was sent!)
-   - (Optional) Toggle button to send a copy of form submission to sender.
 
 b. Add Scrollable Anchor animation for Contact component in index from "Contact" in Nav.
 
