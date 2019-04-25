@@ -25,7 +25,9 @@ const Contact = props => (
             <textarea name="message" id="message" rows="6" />
           </div>
 
-          <div data-netlify-recaptcha="true" />
+          <div className="field">
+            <div data-netlify-recaptcha="true" />
+          </div>
           <ul className="actions">
             <li>
               <input type="submit" value="Send Message" className="special" />
