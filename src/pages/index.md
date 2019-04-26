@@ -13,6 +13,8 @@ bannerText: >-
   quis sapien gravida, condimentum ante id, interdum erat. In ultricies diam in
   tortor convallis, ac ultrices tortor sollicitudin. Phasellus porta enim et
   metus mattis, a sagittis nisi finibus. Ut non ligula metus.
+companyName: My Awesome Company
+companyLogo: /assets/storeytime-logo.png
 socialIcons:
   - socialEnabled: true
     socialLink: 'http://twitter.com'
