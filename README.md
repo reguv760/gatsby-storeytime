@@ -52,7 +52,7 @@
 
    - Integrate Captcha if possible
 
-b. Add Scrollable Anchor animation for Contact component in index from "Contact" in Nav.
+   ~~b. Add Scrollable Anchor animation for Contact component in index from "Contact" in Nav.~~
 
 Up for grabs
 
