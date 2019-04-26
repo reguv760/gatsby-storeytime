@@ -36,7 +36,7 @@ export const ContactInfo = ({ contactInfoData }) => {
 
 class Contact extends React.Component {
   componentDidMount() {
-    configureAnchors({ scrollDuration: 500 })
+    configureAnchors({ offset: -50, scrollDuration: 500 })
   }
   render() {
     return (
