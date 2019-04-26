@@ -7,19 +7,19 @@ import { FooterTemplate } from './../../components/footer'
 
 const BannerPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
+  const { socialIcons, designedBy, designLink, companyName } = data
 
-  const { socialIcons, designedBy, designLink } = data
-
-  console.log(socialIcons)
   return (
     <div className="previewPanel">
       <BannerTemplate bannerData={data} />
 
       <br />
+
       <FooterTemplate
         socialIconData={socialIcons}
         designedBy={designedBy}
         designLink={designLink}
+        companyName={companyName}
       />
 
       <br />

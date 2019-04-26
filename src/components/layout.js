@@ -34,13 +34,20 @@ export const LayoutTemplate = ({
             contactPhone
             contactEmail
             contactAddress
+            companyName
+            companyLogo
           }
         }
       }
     `}
     render={data => (
       <>
-        <Navbar drawerClickHandler={drawToggle} />
+        <Navbar
+          drawerClickHandler={drawToggle}
+          companyName={data.markdownRemark.frontmatter.companyName}
+          companyLogo={data.markdownRemark.frontmatter.companyLogo}
+        />
+
         <SideDrawer show={isDrawerOpen} />
         <div id="wrapper" style={{ height: '100%' }}>
           {bg}
@@ -53,10 +60,12 @@ export const LayoutTemplate = ({
               contactAddress={data.markdownRemark.frontmatter.contactAddress}
             />
           )}
+
           <Footer
             footerData={data.markdownRemark.frontmatter.socialIcons}
             designedBy={data.markdownRemark.frontmatter.designedBy}
             designLink={data.markdownRemark.frontmatter.designLink}
+            companyName={data.markdownRemark.frontmatter.companyName}
           />
         </div>
       </>

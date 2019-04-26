@@ -8,8 +8,8 @@ import DrawerToggleButton from './sidedrawer/DrawerToggleButton'
 const NavbarStyles = styled.header`
   position: fixed;
   width: 100%;
-  background: #521751;
-  height: 56px;
+  height: 100px;
+  background: #cfcfcf;
   z-index: 200;
 
   .navbar {
@@ -18,13 +18,16 @@ const NavbarStyles = styled.header`
     align-items: center;
 
     .nav-logo {
-      margin-left: 1rem;
+      margin: 1rem 3rem
     }
 
     .nav-logo a {
       text-decoration: none;
       font-size: 1.5rem;
       padding: 0 1rem;
+    }
+    .nav-logo a:hover {
+      opacity:0.75
     }
 
     .spacer {
@@ -39,17 +42,19 @@ const NavbarStyles = styled.header`
 
     .nav-items ul {
       list-style: none;
-      margin: 0;
+      margin: 1rem;
       padding: 0;
       display: flex;
     }
 
     .nav-items li {
+      margin: 0.5rem
       padding: 0 0.5rem;
     }
 
     .nav-items a {
       text-decoration: none;
+      text-shadow: 1px 1px 2px #000
     }
 
     .nav-items a:hover,
@@ -92,40 +97,48 @@ const ToggleButton = styled.div`
   }
 `
 
-const Navbar = props => (
-  <NavbarStyles>
-    <nav className="navbar">
-      <ToggleButton className="nav-toggle-button">
-        <DrawerToggleButton click={props.drawerClickHandler} />
-      </ToggleButton>
-      <div className="nav-logo">
-        <Link to="/">Storeytime Online</Link>
-      </div>
-      <div className="spacer" />
-      <div className="nav-items">
-        <ul>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/singers">The Singers</Link>
-          </li>
-          <li>
-            <Link to="/videos">Videos</Link>
-          </li>
-          <li>
-            <Link to="/events">Events</Link>
-          </li>
-          <li>
-            <Link to="/donate">Donate</Link>
-          </li>
-          <li>
-            <a href="#contact-form">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </NavbarStyles>
-)
+const Navbar = props => {
+  return (
+    <NavbarStyles>
+      <nav className="navbar">
+        <ToggleButton className="nav-toggle-button">
+          <DrawerToggleButton click={props.drawerClickHandler} />
+        </ToggleButton>
+        <div className="nav-logo">
+          <Link to="/">
+            <img
+              src={`${props.companyLogo}`}
+              alt={`${props.companyName}`}
+              style={{ width: '50%' }}
+            />
+          </Link>
+        </div>
+        <div className="spacer" />
+        <div className="nav-items">
+          <ul>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/singers">The Singers</Link>
+            </li>
+            <li>
+              <Link to="/videos">Videos</Link>
+            </li>
+            <li>
+              <Link to="/events">Events</Link>
+            </li>
+            <li>
+              <Link to="/donate">Donate</Link>
+            </li>
+            <li>
+              <a href="#contact-form">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </NavbarStyles>
+  )
+}
 
 export default Navbar
