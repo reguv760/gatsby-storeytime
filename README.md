@@ -32,6 +32,11 @@
 
    ~~- Email, Phone and Address editable as "Contact Information"~~
 
+   g. Make Navigation component editable from CMS
+
+   - ~~logo uploadable from CMS~~
+   - Optional: Enable/Disable pages
+
 2) Phil
 
    a. Events
@@ -54,16 +59,24 @@
 
    ~~b. Add Scrollable Anchor animation for Contact component in index from "Contact" in Nav.~~
 
-Up for grabs
-
-1. Make Navigation component editable from CMS
-
 # CMS Features
 
 1. ### use this [link](https://github.com/netlify-templates/gatsby-starter-netlify-cms/blob/master/static/admin/config.yml) for yml features
 
 2. Editable Homepage Banner
+
    - Enable/Disable banner on homepage
+
+3. Editable Company information
+
+   - Company Logo for Nav
+   - Company Name for Footer
+
+4. Editable Social Media Icons
+
+   - Enable/Disable Social Media Icons
+
+5. Dynamic List: Videos + Events
 
 # gatsby-starter-forty
 
