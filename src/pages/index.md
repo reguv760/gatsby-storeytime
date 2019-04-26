@@ -13,7 +13,7 @@ bannerText: >-
   quis sapien gravida, condimentum ante id, interdum erat. In ultricies diam in
   tortor convallis, ac ultrices tortor sollicitudin. Phasellus porta enim et
   metus mattis, a sagittis nisi finibus. Ut non ligula metus.
-companyName: 'Some Company Name'
+companyName: Awesome Company
 companyLogo: /assets/storeytime-logo.png
 socialIcons:
   - socialEnabled: true
@@ -26,7 +26,7 @@ socialIcons:
     socialLink: 'http://github.com'
   - socialEnabled: true
     socialLink: 'http://linkedin.com'
-designedBy: some company
+designedBy: webdesign company
 designLink: 'http://google.com'
 contactPhone: 999 321 1234
 contactEmail: awesomecompany@company.com
