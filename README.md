@@ -124,3 +124,9 @@ Linting tool for Gatsby Projects
 Add Google Analytics by using [gtag.js](https://developers.google.com/analytics/devguides/collection/gtagjs/)
 
 `npm install --save gatsby-plugin-gtag`
+
+**react-scrollable-anchor**
+
+Lightweight library for smooth scrolling anchors in React, tied to URL hash.
+
+`npm install --save react-scrollable-anchor`

@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+
 // custom styles
 import '../assets/scss/main.scss'
 
@@ -84,7 +85,7 @@ class Layout extends React.Component {
 
   render() {
     const { children } = this.props
-    const { sideDrawerOpen, contactEnabled } = this.state
+    const { sideDrawerOpen } = this.state
 
     let backdrop
 
