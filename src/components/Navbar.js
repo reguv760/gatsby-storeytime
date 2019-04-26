@@ -120,7 +120,7 @@ const Navbar = props => (
             <Link to="/donate">Donate</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <a href="#contact-form">Contact</a>
           </li>
         </ul>
       </div>
