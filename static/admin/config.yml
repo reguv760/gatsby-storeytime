@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
+  cms: logo
 
 media_folder: static/assets
 public_folder: assets
@@ -110,7 +111,7 @@ collections:
     delete: false
     files:
       - file: 'src/pages/index.md'
-        label: 'Banner + Footer + Contact Components'
+        label: 'Company Info, Banner, Footer and Contact Components'
         name: 'home'
         fields:
           - {
@@ -122,6 +123,9 @@ collections:
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
+
+          - { label: 'Company Name', name: 'companyName', widget: 'string' }
+          - { label: 'Company Logo', name: 'companyLogo', widget: 'image' }
 
           - label: 'Social Media Icons'
             name: 'socialIcons'
