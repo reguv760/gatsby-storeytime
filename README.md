@@ -127,7 +127,8 @@ Here is an example of using the grid, for a 3 column layout:
 5. Configure form
 
 - add "data-netlify-recaptcha="true" to <form>
-- define handleChange, handleRecaptcha and onSubmit functionality
+- define handleChange, handleRecaptcha and onSubmit functionality in component
+- import navigateTo
 
 ## Plugins Used
 
@@ -154,3 +155,7 @@ Add Google Analytics by using [gtag.js](https://developers.google.com/analytics/
 Lightweight library for smooth scrolling anchors in React, tied to URL hash.
 
 `npm install --save react-scrollable-anchor`
+
+**react-google-recaptcha**
+
+`npm install --save react-google-recaptcha`
