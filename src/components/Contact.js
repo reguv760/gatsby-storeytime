@@ -57,20 +57,20 @@ class Contact extends React.Component {
     this.setState({ 'g-recaptcha-response': value })
   }
 
-  handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error))
-  }
+  // handleSubmit = e => {
+  //   e.preventDefault()
+  //   const form = e.target
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({
+  //       'form-name': form.getAttribute('name'),
+  //       ...this.state,
+  //     }),
+  //   })
+  //     .then(() => navigateTo(form.getAttribute('action')))
+  //     .catch(error => alert(error))
+  // }
 
   render() {
     return (
@@ -84,7 +84,6 @@ class Contact extends React.Component {
                 data-netlify-recaptcha="true"
                 action="/Success"
                 name="contact"
-                onSubmit={this.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="field half first">
