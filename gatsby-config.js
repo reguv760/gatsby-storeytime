@@ -72,5 +72,6 @@ module.exports = {
         htmlTitle: 'StoreyTime CMS',
       },
     },
+    'gatsby-plugin-netlify',
   ],
 }
