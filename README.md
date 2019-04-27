@@ -161,21 +161,8 @@ Lightweight library for smooth scrolling anchors in React, tied to URL hash.
 
 `npm install --save react-scrollable-anchor`
 
-**react-google-recaptcha** amd **gatsby-plugin-recaptcha**
+**react-google-recaptcha**
 
-`npm install --save react-google-recaptcha gatsby-plugin-recaptcha`
+React component for Google reCAPTCHA v2. Custom Component used by Contact Form
 
-add to gatsby-config
-
-```
-plugins: [
-   {
-      resolve: `gatsby-plugin-recaptcha`,
-      options: {
-         async: false,
-         defer: false,
-         args: `?onload=onloadCallback&render=explicit`,
-      },
-   },
-]
-```
+`npm install --save react-google-recaptcha`

@@ -1,4 +1,4 @@
-require('dotenv').config()
+//require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
@@ -57,7 +57,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
-    `gatsby-plugin-recaptcha`,
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
