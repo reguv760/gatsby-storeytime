@@ -80,8 +80,9 @@ class Contact extends React.Component {
                 method="POST"
                 data-netlify="true"
                 data-netlify-recaptcha="true"
-                action="/Success"
+                action="/success"
                 name="contact"
+                onSubmit={this.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="field half first">
@@ -111,7 +112,6 @@ class Contact extends React.Component {
                       type="submit"
                       value="Send Message"
                       className="special"
-                      onSubmit={this.handleSubmit}
                     />
                   </li>
                   <li>
