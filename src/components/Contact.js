@@ -77,10 +77,10 @@ class Contact extends React.Component {
           <div className="inner">
             <section>
               <form
-                method="POST"
+                method="post"
                 data-netlify="true"
                 data-netlify-recaptcha="true"
-                action="/success"
+                action="/Success"
                 name="contact"
                 onSubmit={this.handleSubmit}
               >
