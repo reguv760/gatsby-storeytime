@@ -111,6 +111,7 @@ class Contact extends React.Component {
                       type="submit"
                       value="Send Message"
                       className="special"
+                      onSubmit={this.handleSubmit}
                     />
                   </li>
                   <li>

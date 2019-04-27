@@ -130,6 +130,8 @@ Here is an example of using the grid, for a 3 column layout:
 - define handleChange, handleRecaptcha and onSubmit functionality in component
 - import navigateTo
 
+6. After Preview on Branch deploy on Netlify, add new URL to Recapcha console to test
+
 ## Plugins Used
 
 **eslint-config-react-app**
