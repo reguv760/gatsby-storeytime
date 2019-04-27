@@ -132,6 +132,9 @@ Here is an example of using the grid, for a 3 column layout:
 
 6. After Preview on Branch deploy on Netlify, add new URL to Recapcha console to test
 
+7. Change Build command in Netlify to:
+   `echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && gatsby build`
+
 ## Plugins Used
 
 **eslint-config-react-app**
