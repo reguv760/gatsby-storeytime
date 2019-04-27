@@ -1,6 +1,10 @@
 import React from 'react'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
+import Recaptcha from 'react-google-recaptcha'
+
 import { HTMLContent } from './Content'
+
+const RECAPTCHA_KEY = '6Le0stsSAAAAAAL2JlT1Asx_McvSEx9GOdk6kTvc'
 
 export const ContactInfo = ({ contactInfoData }) => {
   const { contactEmail, contactPhone, contactAddress } = contactInfoData
@@ -47,6 +51,7 @@ class Contact extends React.Component {
               <form
                 method="POST"
                 data-netlify="true"
+                data-netlify-recaptcha="true"
                 action="/success"
                 name="contact"
               >
@@ -62,6 +67,10 @@ class Contact extends React.Component {
                 <div className="field">
                   <label htmlFor="message">Message</label>
                   <textarea name="message" id="message" rows="6" />
+                </div>
+
+                <div className="field">
+                  <Recaptcha ref="recaptcha" sitekey={RECAPTCHA_KEY} />
                 </div>
 
                 <ul className="actions">
