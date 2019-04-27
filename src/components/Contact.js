@@ -1,5 +1,4 @@
 import React from 'react'
-import DotEnv from 'dotenv'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import Recaptcha from 'react-google-recaptcha'
 
@@ -41,11 +40,10 @@ export const ContactInfo = ({ contactInfoData }) => {
 class Contact extends React.Component {
   componentDidMount() {
     configureAnchors({ offset: -50, scrollDuration: 500 })
-    DotEnv.config()
   }
 
   render() {
-    console.log(process.env.RECAPTCHA_KEY + ' is my sitekey')
+    //console.log(process.env.GATSBY_RECAPTCHA_KEY + ' is my sitekey')
     return (
       <section id="contact">
         <ScrollableAnchor id={'contact-form'}>
@@ -75,7 +73,7 @@ class Contact extends React.Component {
                 <div className="field">
                   <Recaptcha
                     ref="recaptcha"
-                    sitekey={process.env.RECAPTCHA_KEY}
+                    sitekey={process.env.GATSBY_RECAPTCHA_KEY}
                   />
                 </div>
 
