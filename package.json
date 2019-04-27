@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Hunter Chang",
   "dependencies": {
+    "dotenv": "^7.0.0",
     "gatsby": "^2.2.9",
     "gatsby-plugin-gtag": "^1.0.10",
     "gatsby-plugin-manifest": "^2.0.24",
