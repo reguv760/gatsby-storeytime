@@ -4,6 +4,12 @@ import Recaptcha from 'react-google-recaptcha'
 
 import { HTMLContent } from './Content'
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
 export const ContactInfo = ({ contactInfoData }) => {
   const { contactEmail, contactPhone, contactAddress } = contactInfoData
   const PageContent = HTMLContent
