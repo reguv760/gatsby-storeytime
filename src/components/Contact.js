@@ -8,6 +8,7 @@ import { HTMLContent } from './Content'
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
 
 function encode(data) {
+  console.log(data[key])
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
@@ -57,20 +58,20 @@ class Contact extends React.Component {
     this.setState({ 'g-recaptcha-response': value })
   }
 
-  // handleSubmit = e => {
-  //   e.preventDefault()
-  //   const form = e.target
-  //   fetch('/', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: encode({
-  //       'form-name': form.getAttribute('name'),
-  //       ...this.state,
-  //     }),
-  //   })
-  //     .then(() => navigateTo(form.getAttribute('action')))
-  //     .catch(error => alert(error))
-  // }
+  handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
+    })
+      .then(() => navigateTo(form.getAttribute('action')))
+      .catch(error => alert(error))
+  }
 
   render() {
     return (
@@ -79,24 +80,39 @@ class Contact extends React.Component {
           <div className="inner">
             <section>
               <form
+                name="contact"
                 method="post"
                 data-netlify="true"
                 data-netlify-recaptcha="true"
                 action="/Success"
-                name="contact"
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="field half first">
                   <label htmlFor="name">Name</label>
-                  <input type="text" name="name" id="name" />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    onChange={this.handleChange}
+                  />
                 </div>
                 <div className="field half">
                   <label htmlFor="email">Email</label>
-                  <input type="text" name="email" id="email" />
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    onChange={this.handleChange}
+                  />
                 </div>
                 <div className="field">
                   <label htmlFor="message">Message</label>
-                  <textarea name="message" id="message" rows="6" />
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="6"
+                    onChange={this.handleChange}
+                  />
                 </div>
 
                 <div className="field">
