@@ -101,7 +101,7 @@ class Contact extends React.Component {
                 <div className="field">
                   <Recaptcha
                     ref="recaptcha"
-                    sitekey={process.env.GATSBY_RECAPTCHA_KEY}
+                    sitekey={process.env.SITE_RECAPTCHA_KEY}
                     onChange={this.handleRecaptcha}
                   />
                 </div>
