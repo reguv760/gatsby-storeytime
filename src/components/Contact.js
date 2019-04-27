@@ -79,7 +79,7 @@ class Contact extends React.Component {
                 method="POST"
                 data-netlify="true"
                 data-netlify-recaptcha="true"
-                action="/success"
+                action="/Success"
                 onSubmit={this.handleSubmit}
                 name="contact"
               >

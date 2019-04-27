@@ -118,6 +118,17 @@ Here is an example of using the grid, for a 3 column layout:
 </div>
 ```
 
+## Notes for Recapcha + Gatsby (with .dotEnv) + Netlify
+
+1. Custom Recaptcha component _required_ with Gatsby + Netlify
+2. Signup for Recaptcha Site + Secret Keys
+3. Install dotenv + .env files.
+4. Define identical keynames in both .env file and Netlify's Build Environment settings.
+5. Configure form
+
+- add "data-netlify-recaptcha="true" to <form>
+- define handleChange, handleRecaptcha and onSubmit functionality
+
 ## Plugins Used
 
 **eslint-config-react-app**
