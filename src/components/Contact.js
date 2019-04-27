@@ -43,7 +43,6 @@ class Contact extends React.Component {
   }
 
   render() {
-    //console.log(process.env.GATSBY_RECAPTCHA_KEY + ' is my sitekey')
     return (
       <section id="contact">
         <ScrollableAnchor id={'contact-form'}>

@@ -1,5 +1,4 @@
 import React from 'react'
-//import DotEnv from 'dotenv'
 import { StaticQuery, graphql } from 'gatsby'
 
 // custom styles
@@ -13,7 +12,6 @@ import Contact from './Contact'
 import { Footer } from './footer/'
 
 //use staticquery for layout!!!
-
 export const LayoutTemplate = ({
   currentPage,
   bg,
