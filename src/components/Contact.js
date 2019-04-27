@@ -61,6 +61,13 @@ class Contact extends React.Component {
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
+
+    const recaptchaRef = React.createRef()
+
+    const recaptchaValue = recaptchaRef.current.getValue()
+
+    console.log(recaptchaValue)
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
