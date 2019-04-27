@@ -5,6 +5,8 @@ import Recaptcha from 'react-google-recaptcha'
 
 import { HTMLContent } from './Content'
 
+const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -101,7 +103,7 @@ class Contact extends React.Component {
                 <div className="field">
                   <Recaptcha
                     ref="recaptcha"
-                    sitekey={process.env.SITE_RECAPTCHA_KEY}
+                    sitekey={RecaptchaKey}
                     onChange={this.handleRecaptcha}
                   />
                 </div>
