@@ -38,8 +38,14 @@ export const ContactInfo = ({ contactInfoData }) => {
 }
 
 class Contact extends React.Component {
+  state = {}
+
   componentDidMount() {
     configureAnchors({ offset: -50, scrollDuration: 500 })
+  }
+
+  handleRecaptcha = value => {
+    this.setState({ 'g-recaptcha-response': value })
   }
 
   render() {
@@ -73,6 +79,7 @@ class Contact extends React.Component {
                   <Recaptcha
                     ref="recaptcha"
                     sitekey={process.env.GATSBY_RECAPTCHA_KEY}
+                    onChange={this.handleRecaptcha}
                   />
                 </div>
 
