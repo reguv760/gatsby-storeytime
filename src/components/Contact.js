@@ -47,21 +47,27 @@ export const ContactInfo = ({ contactInfoData }) => {
 }
 
 class Contact extends React.Component {
-  state = {}
+  state = {
+    recaptchaChecked: '',
+  }
 
   componentDidMount() {
     configureAnchors({ offset: -50, scrollDuration: 500 })
   }
 
   handleRecaptcha = value => {
-    this.setState({ 'g-recaptcha-response': value })
+    this.setState({ 'g-recaptcha-response': value, recaptchaChecked: 'true' })
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value })
   }
 
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
 
-    if (this.state['g-recaptcha-response']) {
+    if (this.state['g-recaptcha-response'] && this.state.recaptchaChecked) {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -73,7 +79,7 @@ class Contact extends React.Component {
         .then(() => navigateTo(form.getAttribute('action')))
         .catch(error => alert(error))
     } else {
-      console.log(this.state['g-recaptcha-response'] + ' is empty')
+      this.setState({ recaptchaChecked: 'false' })
     }
   }
 
@@ -141,6 +147,10 @@ class Contact extends React.Component {
                   </li>
                 </ul>
               </form>
+
+              {this.state.recaptchaChecked === 'false' && (
+                <p>Please Check Captcha</p>
+              )}
             </section>
             <ContactInfo contactInfoData={this.props} />
           </div>
