@@ -148,7 +148,10 @@ class Contact extends React.Component {
                 </ul>
               </form>
 
-              {!this.state.recaptchaChecked && <p>Please Check Captcha</p>}
+              {!this.state.recaptchaChecked &&
+                this.state.recaptchaChecked !== null && (
+                  <p style={{ color: 'red' }}>Please Check Captcha</p>
+                )}
             </section>
             <ContactInfo contactInfoData={this.props} />
           </div>
