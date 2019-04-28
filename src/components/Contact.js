@@ -61,7 +61,7 @@ class Contact extends React.Component {
     e.preventDefault()
     const form = e.target
 
-    if (!this.state['g-recaptcha-response']) {
+    if (this.state['g-recaptcha-response']) {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
