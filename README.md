@@ -37,6 +37,11 @@
    - ~~logo uploadable from CMS~~
    - Optional: Enable/Disable pages
 
+   h. Check for empty fields in Contact component
+
+   - response based on which field is empty
+   - all fields must not be empty to process form
+
 2) Phil
 
    a. Events
@@ -50,12 +55,12 @@
 3) Aaron
 
    a. Contact
-   Let's use Netlify's own form handling ([https://www.netlify.com/docs/form-handling/](https://www.netlify.com/docs/form-handling/)) to produce a better version.<br/>
+   ~~Let's use Netlify's own form handling ([https://www.netlify.com/docs/form-handling/](https://www.netlify.com/docs/form-handling/)) to produce a better version.<br/>~~
 
    ~~- Create basic form + error checking and response on inputs and submit~~
    ~~- Feedback upon submission (i.e. message was sent!)~~
 
-   - Integrate Captcha if possible
+   ~~- Integrate Captcha if possible~~
 
    ~~b. Add Scrollable Anchor animation for Contact component in index from "Contact" in Nav.~~
 
@@ -120,17 +125,19 @@ Here is an example of using the grid, for a 3 column layout:
 
 ## Notes for Recapcha + Gatsby (with .dotEnv) + Netlify
 
+This assumes forms built in Gatsby are received in Netlify's Form collection.
+
 1. Custom Recaptcha component _required_ with Gatsby + Netlify
 2. Signup for Recaptcha Site + Secret Keys
-3. Install dotenv + .env files.
-4. Define _SITE_RECAPTCHA_KEY_ and _SITE_RECAPTCHA_SECRET_ keynames in both .env file and Netlify's Build Environment settings.
+3. Add .env.development file to project root.
+4. Define _SITE_RECAPTCHA_KEY_ and _SITE_RECAPTCHA_SECRET_ keynames in both .env.development file and Netlify's Build Environment settings.
 5. Configure form
 
-- add "data-netlify-recaptcha="true" to <form>
+- import navigateTo from gatsby-link
+- add "data-netlify-recaptcha="true" to as form attribute
 - define handleChange, handleRecaptcha and onSubmit functionality in component
-- import navigateTo
 
-6. After Preview on Branch deploy on Netlify, add new URL to Recapcha console to test
+6. After Preview on Branch deploy on Netlify, add Deploy Preview URL to Recapcha console to test
 
 7. Change Build command in Netlify to:
    `echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && gatsby build`
