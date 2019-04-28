@@ -8,7 +8,6 @@ import { HTMLContent } from './Content'
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
 
 function encode(data) {
-  console.log(data[key])
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
@@ -63,21 +62,19 @@ class Contact extends React.Component {
     const form = e.target
 
     const recaptchaRef = React.createRef()
-
     const recaptchaValue = recaptchaRef.current.getValue()
-
     console.log(recaptchaValue)
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error))
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: encode({
+    //     'form-name': form.getAttribute('name'),
+    //     ...this.state,
+    //   }),
+    // })
+    //   .then(() => navigateTo(form.getAttribute('action')))
+    //   .catch(error => alert(error))
   }
 
   render() {
