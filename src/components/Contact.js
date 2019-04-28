@@ -62,18 +62,20 @@ class Contact extends React.Component {
     e.preventDefault()
     const form = e.target
 
-    console.log(this.state)
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error))
+    if (this.state === undefined) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...this.state,
+        }),
+      })
+        .then(() => navigateTo(form.getAttribute('action')))
+        .catch(error => alert(error))
+    } else {
+      console.log('cannot send form')
+    }
   }
 
   render() {
