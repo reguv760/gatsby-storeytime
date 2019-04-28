@@ -6,7 +6,6 @@ import Recaptcha from 'react-google-recaptcha'
 import { HTMLContent } from './Content'
 
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
-const recaptchaRef = React.createRef()
 
 function encode(data) {
   return Object.keys(data)
@@ -62,19 +61,20 @@ class Contact extends React.Component {
     e.preventDefault()
     const form = e.target
 
-    if (!this.state) {
-      console.log(this.state + ' state is empty')
+    if (!this.state['g-recaptcha-response']) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...this.state,
+        }),
+      })
+        .then(() => navigateTo(form.getAttribute('action')))
+        .catch(error => alert(error))
+    } else {
+      console.log(this.state['g-recaptcha-response'] + ' is empty')
     }
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body: encode({
-    //     'form-name': form.getAttribute('name'),
-    //     ...this.state,
-    //   }),
-    // })
-    //   .then(() => navigateTo(form.getAttribute('action')))
-    //   .catch(error => alert(error))
   }
 
   render() {
@@ -122,7 +122,7 @@ class Contact extends React.Component {
 
                 <div className="field">
                   <Recaptcha
-                    ref="recaptchaRef"
+                    ref="recaptcha"
                     sitekey={RecaptchaKey}
                     onChange={this.handleRecaptcha}
                   />
