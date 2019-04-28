@@ -7,11 +7,11 @@ import { HTMLContent } from './Content'
 
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
 
-// function encode(data) {
-//   return Object.keys(data)
-//     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-//     .join('&')
-// }
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 export const ContactInfo = ({ contactInfoData }) => {
   const { contactEmail, contactPhone, contactAddress } = contactInfoData
@@ -61,8 +61,8 @@ class Contact extends React.Component {
     e.preventDefault()
     const form = e.target
 
-    const recaptchaRef = React.createRef()
-    const recaptchaValue = recaptchaRef.current.getValue()
+    const recaptcha = React.createRef()
+    const recaptchaValue = recaptcha.current.getValue()
     //console.log(recaptchaValue)
 
     fetch('/', {
