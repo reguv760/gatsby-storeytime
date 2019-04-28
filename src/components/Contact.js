@@ -62,6 +62,8 @@ class Contact extends React.Component {
     e.preventDefault()
     const form = e.target
 
+    console.log(this.state)
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
