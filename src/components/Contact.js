@@ -6,6 +6,7 @@ import Recaptcha from 'react-google-recaptcha'
 import { HTMLContent } from './Content'
 
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
+const recaptcha = React.createRef()
 
 function encode(data) {
   return Object.keys(data)
@@ -61,7 +62,6 @@ class Contact extends React.Component {
     e.preventDefault()
     const form = e.target
 
-    const recaptcha = React.createRef()
     const recaptchaValue = recaptcha.current.getValue()
     //console.log(recaptchaValue)
 
