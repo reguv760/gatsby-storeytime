@@ -1,12 +1,12 @@
 import React from 'react'
-//import { navigateTo } from 'gatsby-link'
+import { navigateTo } from 'gatsby-link'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import Recaptcha from 'react-google-recaptcha'
 
 import { HTMLContent } from './Content'
 
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
-const recaptcha = React.createRef()
+const recaptchaRef = React.createRef()
 
 function encode(data) {
   return Object.keys(data)
@@ -62,9 +62,6 @@ class Contact extends React.Component {
     e.preventDefault()
     const form = e.target
 
-    const recaptchaValue = recaptcha.current.getValue()
-    //console.log(recaptchaValue)
-
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -74,7 +71,6 @@ class Contact extends React.Component {
       }),
     })
       .then(() => navigateTo(form.getAttribute('action')))
-      .then(console.log(recaptchaValue))
       .catch(error => alert(error))
   }
 
@@ -123,7 +119,7 @@ class Contact extends React.Component {
 
                 <div className="field">
                   <Recaptcha
-                    ref="recaptcha"
+                    ref="recaptchaRef"
                     sitekey={RecaptchaKey}
                     onChange={this.handleRecaptcha}
                   />
