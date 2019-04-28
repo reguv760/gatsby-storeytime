@@ -89,6 +89,7 @@ class Contact extends React.Component {
                 data-netlify="true"
                 data-netlify-recaptcha="true"
                 action="/Success"
+                onsubmit={this.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="field half first">
