@@ -118,6 +118,23 @@ Here is an example of using the grid, for a 3 column layout:
 </div>
 ```
 
+## Notes for Recapcha + Gatsby (with .dotEnv) + Netlify
+
+1. Custom Recaptcha component _required_ with Gatsby + Netlify
+2. Signup for Recaptcha Site + Secret Keys
+3. Install dotenv + .env files.
+4. Define _SITE_RECAPTCHA_KEY_ and _SITE_RECAPTCHA_SECRET_ keynames in both .env file and Netlify's Build Environment settings.
+5. Configure form
+
+- add "data-netlify-recaptcha="true" to <form>
+- define handleChange, handleRecaptcha and onSubmit functionality in component
+- import navigateTo
+
+6. After Preview on Branch deploy on Netlify, add new URL to Recapcha console to test
+
+7. Change Build command in Netlify to:
+   `echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && gatsby build`
+
 ## Plugins Used
 
 **eslint-config-react-app**
@@ -143,3 +160,9 @@ Add Google Analytics by using [gtag.js](https://developers.google.com/analytics/
 Lightweight library for smooth scrolling anchors in React, tied to URL hash.
 
 `npm install --save react-scrollable-anchor`
+
+**react-google-recaptcha**
+
+React component for Google reCAPTCHA v2. Custom Component used by Contact Form
+
+`npm install --save react-google-recaptcha`

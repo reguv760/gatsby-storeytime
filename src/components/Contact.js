@@ -1,10 +1,22 @@
 import React from 'react'
+import { navigateTo } from 'gatsby-link'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
+import Recaptcha from 'react-google-recaptcha'
+
 import { HTMLContent } from './Content'
+
+const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 export const ContactInfo = ({ contactInfoData }) => {
   const { contactEmail, contactPhone, contactAddress } = contactInfoData
   const PageContent = HTMLContent
+
   return (
     <section className="split">
       <section>
@@ -35,9 +47,45 @@ export const ContactInfo = ({ contactInfoData }) => {
 }
 
 class Contact extends React.Component {
+  state = {
+    recaptchaChecked: null,
+  }
+
   componentDidMount() {
     configureAnchors({ offset: -50, scrollDuration: 500 })
   }
+
+  handleRecaptcha = value => {
+    this.setState({ 'g-recaptcha-response': value, recaptchaChecked: true })
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+
+    if (
+      this.state['g-recaptcha-response'] &&
+      this.state.recaptchaChecked === true
+    ) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...this.state,
+        }),
+      })
+        .then(() => navigateTo(form.getAttribute('action')))
+        .catch(error => alert(error))
+    } else {
+      this.setState({ recaptchaChecked: false })
+    }
+  }
+
   render() {
     return (
       <section id="contact">
@@ -45,23 +93,48 @@ class Contact extends React.Component {
           <div className="inner">
             <section>
               <form
-                method="POST"
-                data-netlify="true"
-                action="/success"
                 name="contact"
+                method="post"
+                data-netlify="true"
+                data-netlify-recaptcha="true"
+                action="/Success/"
+                onSubmit={this.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="field half first">
                   <label htmlFor="name">Name</label>
-                  <input type="text" name="name" id="name" />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    onChange={this.handleChange}
+                  />
                 </div>
                 <div className="field half">
                   <label htmlFor="email">Email</label>
-                  <input type="text" name="email" id="email" />
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    onChange={this.handleChange}
+                  />
                 </div>
                 <div className="field">
                   <label htmlFor="message">Message</label>
-                  <textarea name="message" id="message" rows="6" />
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="6"
+                    onChange={this.handleChange}
+                  />
+                </div>
+
+                <div className="field">
+                  <Recaptcha
+                    ref="recaptcha"
+                    sitekey={RecaptchaKey}
+                    onChange={this.handleRecaptcha}
+                  />
                 </div>
 
                 <ul className="actions">
@@ -77,6 +150,11 @@ class Contact extends React.Component {
                   </li>
                 </ul>
               </form>
+
+              {!this.state.recaptchaChecked &&
+                this.state.recaptchaChecked !== null && (
+                  <p style={{ color: 'red' }}>Please Check Captcha</p>
+                )}
             </section>
             <ContactInfo contactInfoData={this.props} />
           </div>

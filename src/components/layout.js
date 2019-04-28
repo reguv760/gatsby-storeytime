@@ -12,7 +12,6 @@ import Contact from './Contact'
 import { Footer } from './footer/'
 
 //use staticquery for layout!!!
-
 export const LayoutTemplate = ({
   currentPage,
   bg,
@@ -84,6 +83,7 @@ class Layout extends React.Component {
   // Better Way: Pass a function to setState and in that function
   // you will receive the `prevState` as an argument to that function
   // This is passed to the function by React
+
   drawerToggleClickHandler = () => {
     this.setState(prevState => ({ sideDrawerOpen: !prevState.sideDrawerOpen }))
   }
