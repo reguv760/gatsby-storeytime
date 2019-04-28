@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigateTo } from 'gatsby-link'
+//import { navigateTo } from 'gatsby-link'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import Recaptcha from 'react-google-recaptcha'
 
@@ -7,11 +7,11 @@ import { HTMLContent } from './Content'
 
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
+// function encode(data) {
+//   return Object.keys(data)
+//     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//     .join('&')
+// }
 
 export const ContactInfo = ({ contactInfoData }) => {
   const { contactEmail, contactPhone, contactAddress } = contactInfoData
@@ -63,18 +63,19 @@ class Contact extends React.Component {
 
     const recaptchaRef = React.createRef()
     const recaptchaValue = recaptchaRef.current.getValue()
-    console.log(recaptchaValue)
+    //console.log(recaptchaValue)
 
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body: encode({
-    //     'form-name': form.getAttribute('name'),
-    //     ...this.state,
-    //   }),
-    // })
-    //   .then(() => navigateTo(form.getAttribute('action')))
-    //   .catch(error => alert(error))
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
+    })
+      .then(() => navigateTo(form.getAttribute('action')))
+      .then(console.log(recaptchaValue))
+      .catch(error => alert(error))
   }
 
   render() {
@@ -89,7 +90,7 @@ class Contact extends React.Component {
                 data-netlify="true"
                 data-netlify-recaptcha="true"
                 action="/Success"
-                onsubmit={this.handleSubmit}
+                onSubmit={this.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="field half first">
