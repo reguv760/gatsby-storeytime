@@ -6,7 +6,6 @@ import Recaptcha from 'react-google-recaptcha'
 import { HTMLContent } from './Content'
 
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
-const recaptchaRef = React.createRef()
 
 function encode(data) {
   return Object.keys(data)
@@ -62,20 +61,17 @@ class Contact extends React.Component {
     e.preventDefault()
     const form = e.target
 
-    if (this.state === undefined) {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': form.getAttribute('name'),
-          ...this.state,
-        }),
-      })
-        .then(() => navigateTo(form.getAttribute('action')))
-        .catch(error => alert(error))
-    } else {
-      console.log('cannot send form')
-    }
+    console.log(Recaptcha.getValue())
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: encode({
+    //     'form-name': form.getAttribute('name'),
+    //     ...this.state,
+    //   }),
+    // })
+    //   .then(() => navigateTo(form.getAttribute('action')))
+    //   .catch(error => alert(error))
   }
 
   render() {
