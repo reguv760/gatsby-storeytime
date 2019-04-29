@@ -142,7 +142,7 @@ collections:
             fields:
               - { label: 'Background Image', name: 'bgImage', widget: 'image' }
               - { label: 'Image Title', name: 'imageTitle', widget: 'string' }
-              - { label: 'Image Text', name: 'text', widget: 'string' }
+              - { label: 'Image Text', name: 'imageText', widget: 'string' }
 
           - { label: 'Company Name', name: 'companyName', widget: 'string' }
           - { label: 'Company Logo', name: 'companyLogo', widget: 'image' }
