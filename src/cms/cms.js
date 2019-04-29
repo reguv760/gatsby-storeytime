@@ -2,7 +2,7 @@ import CMS from 'netlify-cms'
 
 import AboutPreview from './preview-templates/AboutPreview'
 import DonatePreview from './preview-templates/DonatePreview'
-import EventPreview from './preview-templates/EventPreview'
+//import EventPreview from './preview-templates/EventPreview'
 import HomePreview from './preview-templates/HomePreview'
 import SingerListPreview from './preview-templates/SingerListPreview'
 import VideoListPreview from './preview-templates/VideoListPreview'
@@ -12,7 +12,7 @@ CMS.registerPreviewStyle(siteStyle)
 
 CMS.registerPreviewTemplate('about', AboutPreview)
 CMS.registerPreviewTemplate('donate', DonatePreview)
-CMS.registerPreviewTemplate('event', EventPreview)
+//CMS.registerPreviewTemplate('event', EventPreview)
 CMS.registerPreviewTemplate('home', HomePreview)
 CMS.registerPreviewTemplate('singerList', SingerListPreview)
 CMS.registerPreviewTemplate('videoList', VideoListPreview)
