@@ -46,8 +46,13 @@ collections:
           - label: 'Videos'
             name: 'videos'
             widget: 'list'
-          - { label: 'Video Title', name: 'videoTitle', widget: 'string' }
-          - { label: 'Youtube Embed URL', name: 'videoLink', widget: 'string' }
+            fields:
+              - { label: 'Video Title', name: 'videoTitle', widget: 'string' }
+              - {
+                  label: 'Youtube Embed URL',
+                  name: 'videoLink',
+                  widget: 'string',
+                }
 
       - file: 'src/pages/singers/index.md'
         label: 'Singer List'
@@ -62,9 +67,10 @@ collections:
           - label: 'Singer'
             name: singer
             widget: 'list'
-          - { label: 'Name', name: 'name', widget: 'string' }
-          - { label: 'Image', name: 'image', widget: 'image' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/events/index.md'
         label: 'Events'
@@ -79,22 +85,23 @@ collections:
           - label: 'Event'
             name: 'event'
             widget: 'list'
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - {
-              label: 'Event Date',
-              name: 'eventdate',
-              widget: 'date',
-              default: '',
-              format: 'MMM Do YY',
-            }
-          - {
-              label: 'Start time',
-              name: 'starttime',
-              widget: 'datetime',
-              default: '',
-              format: 'LLL',
-            }
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Body', name: 'body', widget: 'markdown' }
+              - {
+                  label: 'Event Date',
+                  name: 'eventdate',
+                  widget: 'date',
+                  default: '',
+                  format: 'MMM Do YY',
+                }
+              - {
+                  label: 'Start time',
+                  name: 'starttime',
+                  widget: 'datetime',
+                  default: '',
+                  format: 'LLL',
+                }
 
       - file: 'src/pages/donate/index.md'
         label: 'Donate'
