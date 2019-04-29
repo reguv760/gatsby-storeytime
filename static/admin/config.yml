@@ -123,7 +123,7 @@ collections:
     delete: false
     files:
       - file: 'src/pages/index.md'
-        label: 'Company Info, Banner, Footer and Contact Components'
+        label: 'Company Info, Banner, HomeNav, Footer and Contact Components'
         name: 'home'
         fields:
           - {
@@ -141,6 +141,7 @@ collections:
             widget: 'list'
             fields:
               - { label: 'Background Image', name: 'bgImage', widget: 'image' }
+              - { label: 'Image Title', name: 'imageTitle', widget: 'string' }
               - { label: 'Image Text', name: 'text', widget: 'string' }
 
           - { label: 'Company Name', name: 'companyName', widget: 'string' }

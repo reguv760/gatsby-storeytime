@@ -12,8 +12,8 @@ export const HomeNavTemplate = props => {
           style={{ backgroundImage: `url(${img.bgImage})` }}
         >
           <header className="major">
-            <h3>Aliquam</h3>
-            <p>{`${img.text}`}</p>
+            <h3>{`${img.imageTitle}`}</h3>
+            <p>{`${img.imageText}`}</p>
           </header>
           <Link to="/landing" className="link primary" />
         </article>

@@ -75,7 +75,8 @@ export const homeQuery = graphql`
         bannerText
         homeNavImages {
           bgImage
-          text
+          imageTitle
+          imageText
         }
       }
     }
