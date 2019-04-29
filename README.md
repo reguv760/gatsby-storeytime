@@ -83,6 +83,10 @@
 
 5. Dynamic List: Videos + Events
 
+6. Editable HomeNav component
+   - image upload
+   - header + text
+
 # gatsby-starter-forty
 
 **This is a starter for Gatsby.js V2.**
