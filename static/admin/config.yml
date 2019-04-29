@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
+  branch: homeNav
 
 media_folder: static/assets
 public_folder: assets
@@ -122,7 +123,7 @@ collections:
     delete: false
     files:
       - file: 'src/pages/index.md'
-        label: 'Company Info, Banner, Footer and Contact Components'
+        label: 'Company Info, Banner, HomeNav, Footer and Contact Components'
         name: 'home'
         fields:
           - {
@@ -134,6 +135,14 @@ collections:
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
+
+          - label: 'Home Nav Images'
+            name: 'homeNavImages'
+            widget: 'list'
+            fields:
+              - { label: 'Background Image', name: 'bgImage', widget: 'image' }
+              - { label: 'Image Title', name: 'imageTitle', widget: 'string' }
+              - { label: 'Image Text', name: 'imageText', widget: 'string' }
 
           - { label: 'Company Name', name: 'companyName', widget: 'string' }
           - { label: 'Company Logo', name: 'companyLogo', widget: 'image' }
