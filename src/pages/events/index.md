@@ -11,13 +11,12 @@ event:
       exercitation adipisicing. Duis mollit dolor mollit aliquip culpa.
     eventdate: Sep 2nd 07
     starttime: 'April 23, 2019 5:00 PM'
-    title: My First Event
+    name: My First Event
   - body: >-
       Incididunt excepteur minim laborum magna ut enim esse non sint. Et veniam
       sunt ea cillum nulla nostrud eiusmod aliqua exercitation adipisicing. Duis
       mollit dolor mollit aliquip culpa.
     eventdate: Sep 2nd 07
     starttime: 'April 23, 2019 5:00 PM'
-    title: My 2nd Event
+    name: My 2nd Event
 ---
-

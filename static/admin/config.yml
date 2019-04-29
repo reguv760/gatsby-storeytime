@@ -86,7 +86,8 @@ collections:
             name: 'event'
             widget: 'list'
             fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Title', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
               - { label: 'Body', name: 'body', widget: 'markdown' }
               - {
                   label: 'Event Date',
