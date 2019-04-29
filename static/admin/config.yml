@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
+  branch: paypal
 
 media_folder: static/assets
 public_folder: assets
@@ -45,8 +46,13 @@ collections:
           - label: 'Videos'
             name: 'videos'
             widget: 'list'
-          - { label: 'Video Title', name: 'videoTitle', widget: 'string' }
-          - { label: 'Youtube Embed URL', name: 'videoLink', widget: 'string' }
+            fields:
+              - { label: 'Video Title', name: 'videoTitle', widget: 'string' }
+              - {
+                  label: 'Youtube Embed URL',
+                  name: 'videoLink',
+                  widget: 'string',
+                }
 
       - file: 'src/pages/singers/index.md'
         label: 'Singer List'
@@ -61,13 +67,14 @@ collections:
           - label: 'Singer'
             name: singer
             widget: 'list'
-          - { label: 'Name', name: 'name', widget: 'string' }
-          - { label: 'Image', name: 'image', widget: 'image' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/events/index.md'
         label: 'Events'
-        name: 'event'
+        name: 'eventsList'
         fields:
           - {
               label: 'Template Key',
@@ -75,22 +82,27 @@ collections:
               widget: 'hidden',
               default: 'event-page',
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - {
-              label: 'Event Date',
-              name: 'eventdate',
-              widget: 'date',
-              default: '',
-              format: 'MMM Do YY',
-            }
-          - {
-              label: 'Start time',
-              name: 'starttime',
-              widget: 'datetime',
-              default: '',
-              format: 'LLL',
-            }
+          - label: 'Event'
+            name: 'event'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'name', widget: 'string' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Body', name: 'body', widget: 'markdown' }
+              - {
+                  label: 'Event Date',
+                  name: 'eventdate',
+                  widget: 'date',
+                  default: '',
+                  format: 'MMM Do YY',
+                }
+              - {
+                  label: 'Start time',
+                  name: 'starttime',
+                  widget: 'datetime',
+                  default: '',
+                  format: 'LLL',
+                }
 
       - file: 'src/pages/donate/index.md'
         label: 'Donate'
@@ -104,6 +116,7 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Paypal ID', name: 'paypalID', widget: 'string' }
 
   - name: 'layout'
     label: 'Page Layout'
