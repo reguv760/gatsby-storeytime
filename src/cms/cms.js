@@ -13,7 +13,7 @@ CMS.registerPreviewStyle(siteStyle)
 //preview template names has to match names in config.yml
 CMS.registerPreviewTemplate('about', AboutPreview)
 CMS.registerPreviewTemplate('donate', DonatePreview)
-CMS.registerPreviewTemplate('event', EventPreview)
+CMS.registerPreviewTemplate('eventsList', EventPreview)
 CMS.registerPreviewTemplate('home', HomePreview)
 CMS.registerPreviewTemplate('singerList', SingerListPreview)
 CMS.registerPreviewTemplate('videoList', VideoListPreview)

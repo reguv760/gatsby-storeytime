@@ -6,7 +6,7 @@ import { EventListTemplate } from './../../components/eventlist'
 const EventPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
 
-  //console.log(data)
+  console.log(data)
   return (
     <div className="previewPanel">
       <EventListTemplate eventListData={data} />
