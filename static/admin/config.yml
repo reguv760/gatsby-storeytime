@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
-  branch: paypal
 
 media_folder: static/assets
 public_folder: assets

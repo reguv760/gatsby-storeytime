@@ -123,6 +123,12 @@ Here is an example of using the grid, for a 3 column layout:
 </div>
 ```
 
+## Notes for Developing with Gatsby + Github + Netlify CMS
+
+1. Link github repo to Netlify CMS for Continuous Deployment
+2. Local repo "searches" for CMS data in Netlify deployment based on branch defined in config.yml (if none is defined, it default to _master_)
+3. Edits made in CMS must be pulled to local branch
+
 ## Notes for Recapcha + Gatsby (with .dotEnv) + Netlify
 
 This assumes forms built in Gatsby are received in Netlify's Form collection.
