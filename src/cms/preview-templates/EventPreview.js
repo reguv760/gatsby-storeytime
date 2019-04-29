@@ -6,8 +6,8 @@ import { EventPageTemplate } from './../../templates/event-page'
 const EventPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
 
-  const { event } = data
-  console.log(event)
+  //const { event } = data
+  console.log(data.event)
   return (
     <div className="previewPanel">
       {/* <EventPageTemplate eventListData={data} /> */}

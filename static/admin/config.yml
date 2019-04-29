@@ -76,6 +76,9 @@ collections:
               widget: 'hidden',
               default: 'event-page',
             }
+          - label: 'Events'
+            name: events
+            widget: 'list'
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - {
