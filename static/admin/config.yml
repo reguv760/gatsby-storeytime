@@ -68,7 +68,7 @@ collections:
 
       - file: 'src/pages/events/index.md'
         label: 'Events'
-        name: 'event'
+        name: 'events'
         fields:
           - {
               label: 'Template Key',
@@ -76,6 +76,9 @@ collections:
               widget: 'hidden',
               default: 'event-page',
             }
+          - label: 'Event'
+            name: 'event'
+            widget: 'list'
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - {
