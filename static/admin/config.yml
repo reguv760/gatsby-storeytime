@@ -135,6 +135,13 @@ collections:
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
 
+          - label: 'Home Nav Images'
+            name: 'homeNavImages'
+            widget: 'list'
+            fields:
+              - { label: 'Background Image', name: 'bgImage', widget: 'image' }
+              - { label: 'Image Text', name: 'text', widget: 'string' }
+
           - { label: 'Company Name', name: 'companyName', widget: 'string' }
           - { label: 'Company Logo', name: 'companyLogo', widget: 'image' }
 

@@ -5,19 +5,19 @@ import Helmet from 'react-helmet'
 
 import Layout from './../components/layout'
 import { Banner } from './../components/banner'
-import HomeNav from './../components/HomeNav'
+import { HomeNav } from './../components/homeNav/'
 import HomeContent from './../components/HomeContent'
 
 //this is my template for CMS:::
 //to access child component, parent component
 //has to be accessible.
-export const HomePageTemplate = ({ bannerData }) => {
+export const HomePageTemplate = ({ bannerData, homeNavImages }) => {
   const bannerEnabled = bannerData.bannerEnabled
   return (
     <>
       {bannerEnabled && <Banner bannerData={bannerData} />}
       <div id="main">
-        <HomeNav />
+        <HomeNav homeNavImages={homeNavImages} />
         <HomeContent />
       </div>
     </>
@@ -35,6 +35,7 @@ const HomeIndex = ({ data }) => {
   const { markdownRemark: post } = data
 
   //post.frontmatter to access data object:::
+
   return (
     <Layout contactEnabled={true}>
       <Helmet
@@ -44,7 +45,10 @@ const HomeIndex = ({ data }) => {
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
-      <HomePageTemplate bannerData={post.frontmatter} />
+      <HomePageTemplate
+        bannerData={post.frontmatter}
+        homeNavImages={post.frontmatter.homeNavImages}
+      />
     </Layout>
   )
 }
@@ -69,6 +73,10 @@ export const homeQuery = graphql`
         bannerEnabled
         bannerTitle
         bannerText
+        homeNavImages {
+          bgImage
+          text
+        }
       }
     }
   }
