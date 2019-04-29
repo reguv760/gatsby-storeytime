@@ -14,34 +14,34 @@ bannerText: >-
   tortor convallis, ac ultrices tortor sollicitudin. Phasellus porta enim et
   metus mattis, a sagittis nisi finibus. Ut non ligula metus.
 homeNavImages:
-  - bgImage: /assets/pic09.jpg
-    imageTitle: 'Title 1'
+  - bgImage: /assets/pic08.jpg
     imageText: This is my text in first image
+    imageTitle: Title 1
   - bgImage: /assets/pic02.jpg
-    imageTitle: 'Title 2'
     imageText: >-
       Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
       ornare, elementum ante vel, auctor elit.
+    imageTitle: Title 2
   - bgImage: /assets/pic03.jpg
-    imageTitle: 'Title 3'
     imageText: >-
       Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
       ornare, elementum ante vel, auctor elit.
+    imageTitle: Title 3
   - bgImage: /assets/pic04.jpg
-    imageTitle: 'Title 4'
     imageText: >-
       Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
       ornare, elementum ante vel, auctor elit.
+    imageTitle: Title 4
   - bgImage: /assets/pic05.jpg
-    imageTitle: 'Title 5'
     imageText: >-
       Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
       ornare, elementum ante vel, auctor elit.
+    imageTitle: Title 5
   - bgImage: /assets/pic06.jpg
-    imageTitle: 'Title 6'
     imageText: >-
       Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
       ornare, elementum ante vel, auctor elit.
+    imageTitle: Title 6
 companyName: Awesome Company
 companyLogo: /assets/storeytime-logo.png
 socialIcons:
@@ -66,3 +66,4 @@ contactAddress: |-
 
   Los Angeles, CA 90000
 ---
+
