@@ -70,33 +70,28 @@ collections:
         label: 'Events'
         name: 'event'
         fields:
-          - label: 'Events'
-            name: events
-            widget: 'list'
-            fields:
-              - {
-                  label: 'Template Key',
-                  name: 'templateKey',
-                  widget: 'hidden',
-                  default: 'event-page',
-                }
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - {
-                  label: 'Event Date',
-                  name: 'eventdate',
-                  widget: 'date',
-                  default: '',
-                  format: 'MMM Do YY',
-                }
-              - {
-                  label: 'Start time',
-                  name: 'starttime',
-                  widget: 'datetime',
-                  default: '',
-                  format: 'LLL',
-                }
-
-              - { label: 'Body', name: 'body', widget: 'markdown' }
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'event-page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - {
+              label: 'Event Date',
+              name: 'eventdate',
+              widget: 'date',
+              default: '',
+              format: 'MMM Do YY',
+            }
+          - {
+              label: 'Start time',
+              name: 'starttime',
+              widget: 'datetime',
+              default: '',
+              format: 'LLL',
+            }
 
       - file: 'src/pages/donate/index.md'
         label: 'Donate'
