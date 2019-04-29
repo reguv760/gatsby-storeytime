@@ -1,16 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { EventPageTemplate } from './../../templates/event-page'
+import { EventListTemplate } from './../../components/eventlist'
 
 const EventPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
 
-  //const { event } = data
-  //console.log(data.event)
+  //console.log(data)
   return (
     <div className="previewPanel">
-      <EventPageTemplate eventListData={data} />
+      <EventListTemplate eventListData={data} />
     </div>
   )
 }

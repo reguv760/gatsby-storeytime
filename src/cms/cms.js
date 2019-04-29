@@ -10,6 +10,7 @@ import siteStyle from './../assets/scss/main.scss'
 
 CMS.registerPreviewStyle(siteStyle)
 
+//preview template names has to match names in config.yml
 CMS.registerPreviewTemplate('about', AboutPreview)
 CMS.registerPreviewTemplate('donate', DonatePreview)
 CMS.registerPreviewTemplate('event', EventPreview)
