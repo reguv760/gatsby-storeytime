@@ -56,6 +56,7 @@ export const eventPageQuery = graphql`
       frontmatter {
         event {
           name
+          image
           body
           eventdate
           starttime
