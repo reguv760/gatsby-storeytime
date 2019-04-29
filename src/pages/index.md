@@ -13,27 +13,31 @@ bannerText: >-
   quis sapien gravida, condimentum ante id, interdum erat. In ultricies diam in
   tortor convallis, ac ultrices tortor sollicitudin. Phasellus porta enim et
   metus mattis, a sagittis nisi finibus. Ut non ligula metus.
+homeNavImages:
+  - bgImage: /assets/pic09.jpg
+    text: This is my text in first image
+  - bgImage: /assets/pic02.jpg
+    text: >-
+      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
+      ornare, elementum ante vel, auctor elit.
+  - bgImage: /assets/pic03.jpg
+    text: >-
+      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
+      ornare, elementum ante vel, auctor elit.
+  - bgImage: /assets/pic04.jpg
+    text: >-
+      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
+      ornare, elementum ante vel, auctor elit.
+  - bgImage: /assets/pic05.jpg
+    text: >-
+      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
+      ornare, elementum ante vel, auctor elit.
+  - bgImage: /assets/pic06.jpg
+    text: >-
+      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
+      ornare, elementum ante vel, auctor elit.
 companyName: Awesome Company
 companyLogo: /assets/storeytime-logo.png
-homeNavImages:
-  - bgImage: '/assets/pic01.jpg'
-    text: 'Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis ornare,
-  elementum ante vel, auctor elit.'
-  - bgImage: '/assets/pic02.jpg'
-    text: 'Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis ornare,
-  elementum ante vel, auctor elit.'
-  - bgImage: '/assets/pic03.jpg'
-    text: 'Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis ornare,
-  elementum ante vel, auctor elit.'
-  - bgImage: '/assets/pic04.jpg'
-    text: 'Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis ornare,
-  elementum ante vel, auctor elit.'
-  - bgImage: '/assets/pic05.jpg'
-    text: 'Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis ornare,
-  elementum ante vel, auctor elit.'
-  - bgImage: '/assets/pic06.jpg'
-    text: 'Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis ornare,
-  elementum ante vel, auctor elit.'
 socialIcons:
   - socialEnabled: true
     socialLink: 'http://twitter.com'
@@ -56,3 +60,4 @@ contactAddress: |-
 
   Los Angeles, CA 90000
 ---
+
