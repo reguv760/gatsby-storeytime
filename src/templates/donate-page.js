@@ -4,8 +4,15 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/Content'
 
+import { Paypal } from './../components/paypal/'
+
 //this is the container for CMS data for About.
-export const DonatePageTemplate = ({ title, content, contentComponent }) => {
+export const DonatePageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  paypalID,
+}) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -22,6 +29,8 @@ export const DonatePageTemplate = ({ title, content, contentComponent }) => {
               </div>
             </div>
           </div>
+
+          <Paypal paypalID={paypalID} />
         </div>
       </section>
     </div>
@@ -44,6 +53,7 @@ const DonatePage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        paypalID={post.frontmatter.paypalID}
       />
     </Layout>
   )
@@ -61,6 +71,7 @@ export const donatePageQuery = graphql`
       html
       frontmatter {
         title
+        paypalID
       }
     }
   }

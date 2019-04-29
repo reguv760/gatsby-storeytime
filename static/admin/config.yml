@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: reguv760/gatsby-storeytime
+  branch: paypal
 
 media_folder: static/assets
 public_folder: assets
@@ -104,6 +105,7 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Paypal ID', name: 'paypalID', widget: 'string' }
 
   - name: 'layout'
     label: 'Page Layout'
