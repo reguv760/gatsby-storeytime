@@ -2,13 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { BannerTemplate } from './../../components/banner'
-import { HomeNav } from './../../components/homeNav'
+import { HomeNavTemplate } from './../../components/homeNav'
 import { ContactInfo } from './../../components/Contact'
 import { FooterTemplate } from './../../components/footer'
 
 const HomePreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS()
-  const { socialIcons, designedBy, designLink, companyName } = data
+  const {
+    socialIcons,
+    designedBy,
+    designLink,
+    companyName,
+    homeNavImages,
+  } = data
 
   return (
     <div className="previewPanel">
@@ -16,7 +22,7 @@ const HomePreview = ({ entry }) => {
 
       <br />
 
-      <HomeNav homeNavImages={data} />
+      <HomeNavTemplate homeNavImages={homeNavImages} />
 
       <br />
 
