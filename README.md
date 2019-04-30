@@ -1,3 +1,16 @@
+# Demo Links
+
+Live: ([http://storeytime.netlify.com])(http://storeytime.netlify.com)
+Admin: ([http://storeytime.netlify.com/admin/]) http://storeytime.netlify.com/admin/
+
+_Notes to access Netlify CMS:_
+
+- User must have a Github account and a Contributor to project repo
+  <br/>
+  or
+  <br/>
+- User has a gmail account and requires an invite from Netlify owner/admin
+
 # Instructions / To-do:
 
 1. Reggie
@@ -15,8 +28,7 @@
 
    c. Create Paypal Button component
 
-   - Used by Events + Contact pages
-   - Conditional rendering for Fundraiser component based currentPage === "Contact"<br/>
+   - ~~Used by Events + Contact pages~~
 
    d. Singers
 
@@ -68,24 +80,19 @@
 
 1. ### use this [link](https://github.com/netlify-templates/gatsby-starter-netlify-cms/blob/master/static/admin/config.yml) for yml features
 
-2. Editable Homepage Banner
+2. Editable Homepage
 
-   - Enable/Disable banner on homepage
+   - Banner: Enable/Disable banner on homepage
+   - Company information: Logo for Navigation and Company Name for Footer
+   - Updatable HomeNav component: Headline, text and Image upload
+   - Social Media Icons: Enable/Disable Social Media Icons
 
-3. Editable Company information
+3. Paypal ID for "Donate" on the following pages:
 
-   - Company Logo for Nav
-   - Company Name for Footer
+   - Events
+   - Donate
 
-4. Editable Social Media Icons
-
-   - Enable/Disable Social Media Icons
-
-5. Dynamic List: Videos + Events
-
-6. Editable HomeNav component
-   - image upload
-   - header + text
+4. Dynamic List: Videos + Events
 
 # gatsby-starter-forty
 
@@ -160,7 +167,7 @@ Linting tool for Gatsby Projects
 
 `npm install --save-dev eslint-config-react-app`
 
-**gatsby-plugin-netlify-cms**
+**gatsby-plugin-netlify-cms** <br/>
 
 [gatsby-plugin-netlify-cms](https://www.gatsbyjs.org/packages/gatsby-plugin-netlify-cms/)Automatically generates an admin/index.html with a default [Netlify CMS](https://www.netlifycms.org/) implementation.
 
