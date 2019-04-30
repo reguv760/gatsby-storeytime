@@ -1,5 +1,6 @@
 ---
 templateKey: event-page
+paypalID: JE75UT9CF7ZH4
 event:
   - body: >-
       Qui pariatur laboris nostrud duis ea id ex proident. Sit cupidatat nisi
@@ -22,4 +23,3 @@ event:
     name: My 2nd Event
     starttime: 'April 23, 2019 5:00 PM'
 ---
-
