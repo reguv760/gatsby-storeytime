@@ -1,7 +1,7 @@
 # Demo Links
 
-Live: ([http://storeytime.netlify.com])(http://storeytime.netlify.com)
-Admin: ([http://storeytime.netlify.com/admin/]) http://storeytime.netlify.com/admin/
+Live: [http://storeytime.netlify.com](http://storeytime.netlify.com)<br/>
+Admin: [http://storeytime.netlify.com/admin/](http://storeytime.netlify.com/admin/)
 
 _Notes to access Netlify CMS:_
 
@@ -137,26 +137,26 @@ Here is an example of using the grid, for a 3 column layout:
 ## Notes for Developing with Gatsby + Github + Netlify CMS
 
 1. Link github repo to Netlify CMS for Continuous Deployment
-2. Local repo "searches" for CMS data in Netlify deployment based on branch defined in config.yml (if none is defined, it default to _master_)
+2. Local repo "searches" for CMS data in Netlify deployment based on branch defined in config.yml (if none is defined, it defaults to _master_)
 3. Edits made in CMS must be pulled to local branch
 
-## Notes for Recapcha + Gatsby (with .dotEnv) + Netlify
+## Notes for Recapcha + Gatsby + Netlify
 
 This assumes forms built in Gatsby are received in Netlify's Form collection.
 
 1. Custom Recaptcha component _required_ with Gatsby + Netlify
 2. Signup for Recaptcha Site + Secret Keys
 3. Add .env.development file to project root.
-4. Define _SITE_RECAPTCHA_KEY_ and _SITE_RECAPTCHA_SECRET_ keynames in both .env.development file and Netlify's Build Environment settings.
+4. Define _SITE_RECAPTCHA_KEY_ and/or _SITE_RECAPTCHA_SECRET_ keynames in both .env.development file and Netlify's Build Environment settings.
 5. Configure form
 
-- import navigateTo from gatsby-link
-- add "data-netlify-recaptcha="true" to as form attribute
-- define handleChange, handleRecaptcha and onSubmit functionality in component
+   - import navigateTo from gatsby-link
+   - add "data-netlify-recaptcha="true" to as form attribute
+   - define handleChange, handleRecaptcha and onSubmit functionality in component
 
 6. After Preview on Branch deploy on Netlify, add Deploy Preview URL to Recapcha console to test
 
-7. Change Build command in Netlify to:
+7. Change Build command in Netlify to:<br/>
    `echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && gatsby build`
 
 ## Plugins Used
