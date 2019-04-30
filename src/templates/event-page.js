@@ -54,6 +54,7 @@ export const eventPageQuery = graphql`
   query eventPage {
     markdownRemark(frontmatter: { templateKey: { eq: "event-page" } }) {
       frontmatter {
+        paypalID
         event {
           name
           image
