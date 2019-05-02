@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
@@ -49,6 +50,13 @@ const DonatePage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
+      <Helmet
+        title={`Donate : ${data.site.siteMetadata.title}`}
+        meta={[
+          { name: 'description', content: 'Sample' },
+          { name: 'keywords', content: 'sample, something' },
+        ]}
+      />
       <DonatePageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -67,6 +75,11 @@ export default DonatePage
 
 export const donatePageQuery = graphql`
   query DonatePage($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

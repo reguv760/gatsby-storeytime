@@ -26,11 +26,10 @@ SingerPageTemplate.propTypes = {
 const SingerPage = ({ data }) => {
   const { markdownRemark: post } = data
 
-  //console.log(post.frontmatter)
   return (
     <Layout contactEnabled={true}>
       <Helmet
-        title="Gatsby Starter - Forty"
+        title={`Singers : ${data.site.siteMetadata.title}`}
         meta={[
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
@@ -53,6 +52,11 @@ export default SingerPage
 
 export const singerPageQuery = graphql`
   query SingerPage {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(frontmatter: { templateKey: { eq: "singer-page" } }) {
       frontmatter {
         singer {

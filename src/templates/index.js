@@ -34,12 +34,10 @@ const HomeIndex = ({ data }) => {
   //store data as markdownRemarks: post
   const { markdownRemark: post } = data
 
-  //post.frontmatter to access data object:::
-
   return (
     <Layout contactEnabled={true}>
       <Helmet
-        title="Gatsby Starter - Forty"
+        title={data.site.siteMetadata.title}
         meta={[
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
@@ -68,6 +66,11 @@ export default HomeIndex
 //query for layout component to pass down to footer
 export const homeQuery = graphql`
   query IndexPageTemplate {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {
       frontmatter {
         bannerEnabled

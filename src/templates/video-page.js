@@ -34,7 +34,7 @@ const VideoPage = ({ data }) => {
   return (
     <Layout contactEnabled={true}>
       <Helmet
-        title="Gatsby Starter - Forty"
+        title={`Videos : ${data.site.siteMetadata.title}`}
         meta={[
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
@@ -59,6 +59,11 @@ export default VideoPage
 //find the data for child component
 export const videoListQuery = graphql`
   query VideoTemplate {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(frontmatter: { templateKey: { eq: "video-page" } }) {
       frontmatter {
         videos {

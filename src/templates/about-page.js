@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
@@ -40,6 +41,13 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
+      <Helmet
+        title={`About Us : ${data.site.siteMetadata.title}`}
+        meta={[
+          { name: 'description', content: 'Sample' },
+          { name: 'keywords', content: 'sample, something' },
+        ]}
+      />
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.aboutTitle}
@@ -57,6 +65,11 @@ export default AboutPage
 
 export const aboutPageQuery = graphql`
   query AboutPage {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
       frontmatter {
         aboutTitle
