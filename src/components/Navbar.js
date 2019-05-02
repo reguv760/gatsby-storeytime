@@ -54,7 +54,7 @@ const NavbarStyles = styled.header`
 
     .nav-items a {
       text-decoration: none;
-      text-shadow: 1px 1px 2px #000
+      color:#0f0f0f;
     }
 
     .nav-items a:hover,

@@ -3,6 +3,8 @@ import { navigateTo } from 'gatsby-link'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import Recaptcha from 'react-google-recaptcha'
 
+import { FormErrors } from './FormError'
+
 import { HTMLContent } from './Content'
 
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
@@ -13,6 +15,7 @@ function encode(data) {
     .join('&')
 }
 
+/* contact template */
 export const ContactInfo = ({ contactInfoData }) => {
   const { contactEmail, contactPhone, contactAddress } = contactInfoData
   const PageContent = HTMLContent
@@ -48,7 +51,15 @@ export const ContactInfo = ({ contactInfoData }) => {
 
 class Contact extends React.Component {
   state = {
+    name: '',
+    email: '',
+    message: '',
     recaptchaChecked: null,
+    formErrors: { name: '', email: '', message: '' },
+    nameValid: false,
+    emailValid: false,
+    messageValid: false,
+    formValid: false,
   }
 
   componentDidMount() {
@@ -60,7 +71,11 @@ class Contact extends React.Component {
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
+    const name = e.target.name
+    const value = e.target.value
+    this.setState({ [name]: value }, () => {
+      this.validateField(name, value)
+    })
   }
 
   handleSubmit = e => {
@@ -68,6 +83,7 @@ class Contact extends React.Component {
     const form = e.target
 
     if (
+      this.state.formValid &&
       this.state['g-recaptcha-response'] &&
       this.state.recaptchaChecked === true
     ) {
@@ -86,6 +102,55 @@ class Contact extends React.Component {
     }
   }
 
+  /* validate form */
+
+  validateField(fieldName, value) {
+    let fieldValidationErrors = this.state.formErrors
+    let nameValid = this.state.nameValid
+    let emailValid = this.state.emailValid
+    let messageValid = this.state.messageValid
+
+    switch (fieldName) {
+      case 'email':
+        emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)
+        fieldValidationErrors.email = emailValid ? '' : ' is invalid'
+        break
+      case 'name':
+        nameValid = value.length >= 1
+        fieldValidationErrors.name = nameValid ? '' : ' cannot be blank'
+        break
+
+      case 'message':
+        messageValid = value.length >= 1
+        fieldValidationErrors.message = messageValid ? '' : ' cannot be blank'
+      default:
+        break
+    }
+
+    this.setState(
+      {
+        formErrors: fieldValidationErrors,
+        nameValid: nameValid,
+        emailValid: emailValid,
+        messageValid: messageValid,
+      },
+      this.validateForm
+    )
+  }
+
+  validateForm() {
+    this.setState({
+      formValid:
+        this.state.nameValid &&
+        this.state.emailValid &&
+        this.state.messageValid,
+    })
+  }
+
+  errorClass(error) {
+    return error.length === 0 ? '' : 'has-error'
+  }
+
   render() {
     return (
       <section id="contact">
@@ -101,7 +166,11 @@ class Contact extends React.Component {
                 onSubmit={this.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
-                <div className="field half first">
+                <div
+                  className={`field half first ${this.errorClass(
+                    this.state.formErrors.name
+                  )}`}
+                >
                   <label htmlFor="name">Name</label>
                   <input
                     type="text"
@@ -110,7 +179,11 @@ class Contact extends React.Component {
                     onChange={this.handleChange}
                   />
                 </div>
-                <div className="field half">
+                <div
+                  className={`field half ${this.errorClass(
+                    this.state.formErrors.name
+                  )}`}
+                >
                   <label htmlFor="email">Email</label>
                   <input
                     type="text"
@@ -143,6 +216,7 @@ class Contact extends React.Component {
                       type="submit"
                       value="Send Message"
                       className="special"
+                      disabled={!this.state.formValid}
                     />
                   </li>
                   <li>
@@ -151,9 +225,13 @@ class Contact extends React.Component {
                 </ul>
               </form>
 
+              <FormErrors formErrors={this.state.formErrors} />
+
               {!this.state.recaptchaChecked &&
                 this.state.recaptchaChecked !== null && (
-                  <p style={{ color: 'red' }}>Please Check Captcha</p>
+                  <p style={{ color: 'red', fontWeight: 'bold' }}>
+                    Please Check Captcha
+                  </p>
                 )}
             </section>
             <ContactInfo contactInfoData={this.props} />
