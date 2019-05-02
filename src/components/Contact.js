@@ -98,7 +98,7 @@ class Contact extends React.Component {
         .then(() => navigateTo(form.getAttribute('action')))
         .catch(error => alert(error))
     } else {
-      this.setState({ formValid: false, recaptchaChecked: false })
+      this.setState({ recaptchaChecked: false })
     }
   }
 
