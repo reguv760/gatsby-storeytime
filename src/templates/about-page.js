@@ -11,7 +11,10 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <div id="main" className="alt">
-      <section className="section section--gradient">
+      <section
+        className="section section--gradient"
+        style={{ paddingTop: '2rem' }}
+      >
         <div className="inner">
           <div className="columns">
             <div className="column is-10 is-offset-1">

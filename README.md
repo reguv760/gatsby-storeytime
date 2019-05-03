@@ -47,12 +47,13 @@ _Notes to access Netlify CMS:_
    g. Make Navigation component editable from CMS
 
    - ~~logo uploadable from CMS~~
-   - Optional: Enable/Disable pages
 
    h. Check for empty fields in Contact component
 
-   - response based on which field is empty
-   - all fields must not be empty to process form
+   - ~~response based on which field is empty~~
+   - ~~all fields must not be empty to process form~~
+
+   i. Style site
 
 2) Phil
 
