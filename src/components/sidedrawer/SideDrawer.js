@@ -84,9 +84,7 @@ const SideDrawer = props => {
           </Link>
         </li>
         <li>
-          <Link to="/contact/" activeStyle={{ color: '#6699ff' }}>
-            Contact
-          </Link>
+          <a href="#contact-form">Contact</a>
         </li>
       </ul>
     </SideDrawerContainer>
