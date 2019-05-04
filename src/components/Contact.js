@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigateTo } from 'gatsby-link'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
-import Recaptcha from 'react-google-recaptcha'
+// import Recaptcha from 'react-google-recaptcha'
 
 import { FormErrors } from './FormError'
 
@@ -202,13 +202,13 @@ class Contact extends React.Component {
                   />
                 </div>
 
-                <div className="field">
-                  <Recaptcha
-                    ref="recaptcha"
-                    sitekey={RecaptchaKey}
-                    onChange={this.handleRecaptcha}
-                  />
-                </div>
+                {/* <div className="field"> */}
+                {/*   <Recaptcha */}
+                {/*     ref="recaptcha" */}
+                {/*     sitekey={RecaptchaKey} */}
+                {/*     onChange={this.handleRecaptcha} */}
+                {/*   /> */}
+                {/* </div> */}
 
                 <ul className="actions">
                   <li>
