@@ -117,19 +117,29 @@ const Navbar = props => {
         <div className="nav-items">
           <ul>
             <li>
-              <Link to="/about">About Us</Link>
+              <Link to="/about/" activeStyle={{ color: '#6699ff' }}>
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="/singers">The Singers</Link>
+              <Link to="/singers/" activeStyle={{ color: '#6699ff' }}>
+                The Singers
+              </Link>
             </li>
             <li>
-              <Link to="/videos">Videos</Link>
+              <Link to="/videos/" activeStyle={{ color: '#6699ff' }}>
+                Videos
+              </Link>
             </li>
             <li>
-              <Link to="/events">Events</Link>
+              <Link to="/events/" activeStyle={{ color: '#6699ff' }}>
+                Events
+              </Link>
             </li>
             <li>
-              <Link to="/donate">Donate</Link>
+              <Link to="/donate/" activeStyle={{ color: '#6699ff' }}>
+                Donate
+              </Link>
             </li>
             <li>
               <a href="#contact-form">Contact</a>

@@ -15,9 +15,9 @@ const SideDrawerContainer = styled.nav`
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
   h1 {
-    color: #521751;
+    color: #0f0f0f;
     padding: 1rem;
-    border-bottom: 1px solid #521751;
+    border-bottom: 1px solid #0f0f0f;
   }
   @media (min-width: 769px) {
     display: none;
@@ -35,12 +35,12 @@ const SideDrawerContainer = styled.nav`
   li {
     &:hover,
     &:active {
-      background-color: #521751;
+      background-color: #0f0f0f;
       color: #fff;
     }
   }
   a {
-    color: #521751;
+    color: #0f0f0f;
     text-decoration: none;
     font-size: 1.2rem;
     display: block;
@@ -59,22 +59,32 @@ const SideDrawer = props => {
       <h1>Storeytime Online</h1>
       <ul>
         <li>
-          <Link to="/about-us">About Us</Link>
+          <Link to="/about-us/" activeStyle={{ color: '#6699ff' }}>
+            About Us
+          </Link>
         </li>
         <li>
-          <Link to="/singers">The Singers</Link>
+          <Link to="/singers/" activeStyle={{ color: '#6699ff' }}>
+            The Singers
+          </Link>
         </li>
         <li>
-          <Link to="/videos">Videos</Link>
+          <Link to="/videos/" activeStyle={{ color: '#6699ff' }}>
+            Videos
+          </Link>
         </li>
         <li>
-          <Link to="/events">Events</Link>
+          <Link to="/events/" activeStyle={{ color: '#6699ff' }}>
+            Events
+          </Link>
         </li>
         <li>
-          <Link to="/donate">Donate</Link>
+          <Link to="/donate/" activeStyle={{ color: '#6699ff' }}>
+            Donate
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <a href="#contact-form">Contact</a>
         </li>
       </ul>
     </SideDrawerContainer>
