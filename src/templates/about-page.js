@@ -44,7 +44,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet title={'About Us :' + `${data.site.siteMetadata.title}`}>
+      <Helmet title={'About Us : ' + `${data.site.siteMetadata.title}`}>
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}
