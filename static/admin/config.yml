@@ -6,7 +6,6 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-
   - name: 'pages'
     label: 'Pages'
     files:
@@ -111,11 +110,27 @@ collections:
               - { label: 'City', name: 'eventCity', widget: 'string' }
               - { label: 'State', name: 'eventState', widget: 'string' }
               - { label: 'Zip', name: 'eventZip', widget: 'string' }
-              - { label: 'Contact Name', name: 'eventContactName', widget: 'string' }
-              - { label: 'Contact Phone', name: 'eventContactPhone', widget: 'string' }
-              - { label: 'Contact Email', name: 'eventContactEmail', widget: 'string' }
+              - {
+                  label: 'Contact Name',
+                  name: 'eventContactName',
+                  widget: 'string',
+                }
+              - {
+                  label: 'Contact Phone',
+                  name: 'eventContactPhone',
+                  widget: 'string',
+                }
+              - {
+                  label: 'Contact Email',
+                  name: 'eventContactEmail',
+                  widget: 'string',
+                }
               - { label: 'Event Desc', name: 'eventDesc', widget: 'string' }
-              - { label: 'Special Notes', name: 'eventSpecialNotes', widget: 'string' }
+              - {
+                  label: 'Special Notes',
+                  name: 'eventSpecialNotes',
+                  widget: 'string',
+                }
           - { label: 'Paypal ID', name: 'paypalID', widget: 'string' }
 
       - file: 'src/pages/donate/index.md'
