@@ -64,11 +64,21 @@ export const eventPageQuery = graphql`
       frontmatter {
         paypalID
         event {
-          name
-          image
-          body
-          eventdate
-          starttime
+          eventName
+          eventStatus
+          eventDate
+          eventStartTime
+          eventEndTime
+          eventImage
+          eventFee
+          eventStreet
+          eventCity
+          eventState
+          eventZip
+          eventContactName
+          eventContactPhone
+          eventDesc
+          eventSpecialNotes
         }
       }
     }
