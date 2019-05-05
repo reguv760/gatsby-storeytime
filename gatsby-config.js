@@ -48,6 +48,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Storeytime',
+        short_name: 'Storeytime',
+        start_url: '/',
+        background_color: '#000000',
+        theme_color: '#FFFFFF',
+        display: 'minimal-ui',
+        icon: 'src/assets/images/logos/300x300-ics-logo.png', // This path is relative to the root of the site.
+      },
+    },
+    'gatsby-plugin-offline',
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
