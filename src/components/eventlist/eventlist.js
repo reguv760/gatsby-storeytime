@@ -3,6 +3,9 @@ import { HTMLContent } from './../Content'
 
 import { Paypal } from './../paypal/'
 
+// styles
+import './eventlist.css'
+
 export const EventListTemplate = ({ eventListData }) => {
   const eventItems = [eventListData.event][0]
 
@@ -32,33 +35,46 @@ export const EventListTemplate = ({ eventListData }) => {
           />
         </div>
         <div className="col-9">
-          {eventItems.map((events, index) => (
-            <div
-              className="col-12"
-              key={events.name + index}
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                margin: '1rem 0',
-              }}
-            >
-              <div className="col-6" style={{ padding: '0 1rem' }}>
-                {events.image.length > 0 && <img src={`${events.image}`} />}
-              </div>
-              <div className="col-6" style={{ padding: '0 1rem' }}>
-                <h2>{events.name}</h2>
-                <p>
-                  <span>
-                    <strong>Event Date:</strong> {events.eventdate}
+          {eventItems.map((eventItem, index) => (
+            <>
+              <div className="card-media">
+                {/* media container */}
+                <div className="card-media-object-container">
+                  <div
+                    className="card-media-object"
+                    style={{
+                      backgroundImage: `url(${eventItem.eventImage})`,
+                    }}
+                  />
+                </div>
+                {/* body container */}
+                <div className="card-media-body">
+                  <div className="card-media-body-top">
+                    <span className="subtle">{eventItem.eventStartTime}</span>
+                  </div>
+                  <span className="card-media-body-heading">
+                    {eventItem.eventName}
                   </span>
-                  <br />
-                  <span>
-                    <strong>Event Start Time:</strong> {events.starttime}
-                  </span>
-                </p>
-                <PageContent className="singerDesc" content={events.body} />
+                  <div className="card-media-body-supporting-bottom">
+                    <span className="card-media-body-supporting-bottom-text subtle">
+                      {eventItem.eventStreet} {eventItem.eventCity}{' '}
+                      {eventItem.eventState} {eventItem.eventZip}
+                    </span>
+                    <span className="card-media-body-supporting-bottom-text subtle u-float-right">
+                      ${eventItem.eventFee}
+                    </span>
+                  </div>
+                  <div className="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
+                    <a
+                      href="#/"
+                      className="card-media-body-supporting-bottom-text card-media-link u-float-right"
+                    >
+                      VIEW EVENT
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
+            </>
           ))}
         </div>
       </div>

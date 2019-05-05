@@ -6,15 +6,6 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
 
   - name: 'pages'
     label: 'Pages'
@@ -86,24 +77,45 @@ collections:
             name: 'event'
             widget: 'list'
             fields:
-              - { label: 'Title', name: 'name', widget: 'string' }
-              - { label: 'Image', name: 'image', widget: 'image' }
-              - { label: 'Body', name: 'body', widget: 'markdown' }
+              - { label: 'Name', name: 'eventName', widget: 'string' }
+              - { label: 'Status', name: 'eventStatus', widget: 'string' }
               - {
                   label: 'Event Date',
-                  name: 'eventdate',
+                  name: 'eventDate',
                   widget: 'date',
                   default: '',
                   format: 'MMM Do YY',
                 }
               - {
-                  label: 'Start time',
-                  name: 'starttime',
+                  label: 'Event Start time',
+                  name: 'eventStartTime',
                   widget: 'datetime',
                   default: '',
-                  format: 'LLL',
+                  format: 'hh:mm a',
                 }
-
+              - {
+                  label: 'Event End time',
+                  name: 'eventEndTime',
+                  widget: 'datetime',
+                  default: '',
+                  format: 'hh:mm a',
+                }
+              - { label: 'Event Img', name: 'eventImage', widget: 'image' }
+              - {
+                  label: 'Event Fee',
+                  name: 'eventFee',
+                  widget: 'number',
+                  default: '0',
+                }
+              - { label: 'Street', name: 'eventStreet', widget: 'string' }
+              - { label: 'City', name: 'eventCity', widget: 'string' }
+              - { label: 'State', name: 'eventState', widget: 'string' }
+              - { label: 'Zip', name: 'eventZip', widget: 'string' }
+              - { label: 'Contact Name', name: 'eventContactName', widget: 'string' }
+              - { label: 'Contact Phone', name: 'eventContactPhone', widget: 'string' }
+              - { label: 'Contact Email', name: 'eventContactEmail', widget: 'string' }
+              - { label: 'Event Desc', name: 'eventDesc', widget: 'string' }
+              - { label: 'Special Notes', name: 'eventSpecialNotes', widget: 'string' }
           - { label: 'Paypal ID', name: 'paypalID', widget: 'string' }
 
       - file: 'src/pages/donate/index.md'
