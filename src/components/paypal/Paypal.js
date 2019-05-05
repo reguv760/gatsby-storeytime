@@ -8,6 +8,8 @@ import mastercardIcon from './../../assets/images/icons/mastercard-96.png'
 import paypalIcon from './../../assets/images/icons/paypal-96.png'
 import visaIcon from './../../assets/images/icons/visa-96.png'
 
+import donateButton from './../../assets/images/icons/donate-button_small.png'
+
 import donateIcon from './../../assets/images/icons/receive-cash-96.png'
 
 const DonateContainer = styled.div`
@@ -29,6 +31,12 @@ const DonateStyles = styled.ul`
       width: 100%;
     }
   }
+`
+
+const DonateIcons = styled.div`
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
 `
 
 const DonateButton = styled.p`
@@ -64,9 +72,13 @@ const Paypal = props => {
       </div>
       <br />
       <DonateContainer>
-        <div style={{ width: '100%', textAlign: 'center' }}>
+        <DonateIcons>
           <input type="image" src={donateIcon} />
-        </div>
+        </DonateIcons>
+
+        <DonateIcons>
+          <input type="image" src={donateButton} />
+        </DonateIcons>
 
         <DonateStyles>
           <li>
