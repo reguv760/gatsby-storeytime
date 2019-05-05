@@ -16,13 +16,6 @@ export const BannerTemplate = ({ bannerData }) => {
       </header>
       <div className="content">
         <PageContent className="bannerText" content={bannerText} />
-        {/* <ul className="actions">
-          <li>
-            <a href="#one" className="button next scrolly">
-              Get Started
-            </a>
-          </li>
-  </ul> */}
       </div>
     </div>
   )
