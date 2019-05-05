@@ -36,13 +36,12 @@ const HomeIndex = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
+      <Helmet title={data.site.siteMetadata.title}>
+        <meta
+          name="description"
+          content={`${data.site.siteMetadata.description}`}
+        />
+      </Helmet>
       <HomePageTemplate
         bannerData={post.frontmatter}
         homeNavImages={post.frontmatter.homeNavImages}
@@ -69,6 +68,7 @@ export const homeQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {

@@ -31,13 +31,12 @@ const SingerPage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet
-        title={`Singers : ${data.site.siteMetadata.title}`}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
+      <Helmet title={'Singers :' + `${data.site.siteMetadata.title}`}>
+        <meta
+          name="description"
+          content={`${data.site.siteMetadata.description}`}
+        />
+      </Helmet>
       <SingerPageTemplate singerListData={post.frontmatter} />
     </Layout>
   )
@@ -58,6 +57,7 @@ export const singerPageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     markdownRemark(frontmatter: { templateKey: { eq: "singer-page" } }) {

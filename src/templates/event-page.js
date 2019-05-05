@@ -31,13 +31,12 @@ const EventPage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet
-        title={`Events : ${data.site.siteMetadata.title}`}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
+      <Helmet title={'Events :' + `${data.site.siteMetadata.title}`}>
+        <meta
+          name="description"
+          content={`${data.site.siteMetadata.description}`}
+        />
+      </Helmet>
       <EventPageTemplate eventListData={post.frontmatter} />
     </Layout>
   )
@@ -58,6 +57,7 @@ export const eventPageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     markdownRemark(frontmatter: { templateKey: { eq: "event-page" } }) {

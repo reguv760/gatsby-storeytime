@@ -44,13 +44,12 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet
-        title={`About Us : ${data.site.siteMetadata.title}`}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
+      <Helmet title={'About Us :' + `${data.site.siteMetadata.title}`}>
+        <meta
+          name="description"
+          content={`${data.site.siteMetadata.description}`}
+        />
+      </Helmet>
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.aboutTitle}
@@ -71,6 +70,7 @@ export const aboutPageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
