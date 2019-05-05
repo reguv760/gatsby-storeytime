@@ -58,11 +58,11 @@ const SideDrawer = props => {
     <SideDrawerContainer className={drawerClasses}>
       <h1>Storeytime Online</h1>
       <ul>
-        <li>
+        {/* <li>
           <Link to="/about-us/" activeStyle={{ color: '#6699ff' }}>
             About Us
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/singers/" activeStyle={{ color: '#6699ff' }}>
             The Singers
