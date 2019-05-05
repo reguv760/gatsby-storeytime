@@ -1,18 +1,8 @@
 ---
 templateKey: index
 bannerEnabled: true
-bannerTitle: Hello Los Angeles!!!
-bannerText: >-
-  Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis ornare,
-  elementum ante vel, auctor elit. Vestibulum varius dui quis posuere euismod.
-  Aliquam finibus laoreet enim, in condimentum ipsum rhoncus quis. Quisque
-  molestie, nunc a elementum pulvinar, dolor urna interdum metus, quis
-  sollicitudin orci quam id ipsum. Aenean in elit a nisl ultricies malesuada
-  eget tristique quam. Mauris ut nulla pretium, tincidunt urna eu, mollis diam.
-  Suspendisse nibh risus, auctor ut dictum et, sodales hendrerit est. Phasellus
-  quis sapien gravida, condimentum ante id, interdum erat. In ultricies diam in
-  tortor convallis, ac ultrices tortor sollicitudin. Phasellus porta enim et
-  metus mattis, a sagittis nisi finibus. Ut non ligula metus.
+bannerTitle: About Us
+bannerText: ' Storeytime is a 5-voice group centered around Patrick Storey, an autistic singer with an incredible musical gift. The group shows what is possible for people with autism and other learning differences. Audiences are treated to an incredible, interactive performance where they can experience how Patrick communicates and thrives through his love for music. Through their inspiring presentation, audiences learn about patience, acceptance, nurturing, gratitude and more. Storeytime shares their story, music and message at autism events, schools and more. Contact Us to book Storeytime for your school or event.'
 homeNavImages:
   - bgImage: /assets/pic08.jpg
     imageText: This is my text in first image
