@@ -1,4 +1,5 @@
 import React from 'react'
+import './videolist.css'
 
 export const VideoListTemplate = ({ videoListData }) => {
   //this is my video array data location
@@ -11,14 +12,27 @@ export const VideoListTemplate = ({ videoListData }) => {
         style={{ listStyle: 'none', margin: '1rem' }}
       >
         {videoItems.map((videos, index) => (
-          <div className="col-4" key={videos.videoTitle + index}>
-            <iframe
-              title={`${videos.videoTitle}`}
-              src={`${videos.videoLink}`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            />
-            <h4>{videos.videoTitle}</h4>
+          <div className="col-12">
+            <div className="video-media" key={videos.videoTitle + index}>
+              <div className="video-media-object-container">
+                <iframe
+                  title={`${videos.videoTitle}`}
+                  src={`${videos.videoLink}`}
+                  className="video-media-object"
+                  frameBorder="0"
+                  width="100%"
+                  height="100%"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                />
+              </div>
+              <div className="video-media-body">
+                <h3>
+                  <span className="video-media-body-heading">
+                    {videos.videoTitle}
+                  </span>
+                </h3>
+              </div>
+            </div>
           </div>
         ))}
       </div>
