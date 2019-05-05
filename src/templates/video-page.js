@@ -36,13 +36,12 @@ const VideoPage = ({ data }) => {
   //post.frontmatter to access data object:::
   return (
     <Layout contactEnabled={true}>
-      <Helmet
-        title={`Videos : ${data.site.siteMetadata.title}`}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
+      <Helmet title={'Videos :' + `${data.site.siteMetadata.title}`}>
+        <meta
+          name="description"
+          content={`${data.site.siteMetadata.description}`}
+        />
+      </Helmet>
       <VideoPageTemplate videoListData={post.frontmatter} />
     </Layout>
   )
@@ -65,6 +64,7 @@ export const videoListQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     markdownRemark(frontmatter: { templateKey: { eq: "video-page" } }) {

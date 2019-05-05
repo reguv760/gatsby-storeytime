@@ -53,13 +53,12 @@ const DonatePage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet
-        title={`Donate : ${data.site.siteMetadata.title}`}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
+      <Helmet title={'Donate :' + `${data.site.siteMetadata.title}`}>
+        <meta
+          name="description"
+          content={`${data.site.siteMetadata.description}`}
+        />
+      </Helmet>
       <DonatePageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -81,6 +80,7 @@ export const donatePageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     markdownRemark(id: { eq: $id }) {
