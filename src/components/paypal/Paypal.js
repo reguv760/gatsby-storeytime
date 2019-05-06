@@ -15,7 +15,8 @@ import donateIcon from './../../assets/images/icons/receive-cash-96.png'
 const DonateContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
-  width: 325px;
+  align-items: center;
+  width: 300px;
 `
 
 const DonateStyles = styled.ul`
@@ -55,22 +56,17 @@ const Paypal = props => {
       method="post"
       target="_blank"
       style={{
-        display: 'flex',
-        flexFlow: 'row wrap',
-        justifyContent: 'center',
-        margin: '1rem 0',
+        display: 'block',
+        margin: '1rem auto',
       }}
     >
       <input name="cmd" type="hidden" value="_s-xclick" />
       <br />
       <input name="hosted_button_id" type="hidden" value={props.paypalID} />
-      <br />
 
-      <div>
-        <DonateButton>We accept donations through Paypal</DonateButton>
-      </div>
       <br />
       <DonateContainer>
+        <DonateButton>We accept donations through Paypal</DonateButton>
         <DonateIcons>
           <input type="image" src={donateIcon} />
         </DonateIcons>
