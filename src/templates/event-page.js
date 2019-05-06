@@ -11,9 +11,10 @@ import { EventList } from './../components/eventlist'
 export const EventPageTemplate = ({ eventListData }) => {
   return (
     <>
-      <section className="pageSection">
-        <EventList eventListData={eventListData} />
-      </section>
+      <header className="major">
+        <h1>Events</h1>
+      </header>
+      <EventList eventListData={eventListData} />
     </>
   )
 }

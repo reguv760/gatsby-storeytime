@@ -57,7 +57,6 @@ const Paypal = props => {
       style={{
         display: 'flex',
         flexFlow: 'row wrap',
-        width: '325px',
         justifyContent: 'center',
         margin: '1rem 0',
       }}

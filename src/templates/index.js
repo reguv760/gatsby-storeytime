@@ -13,13 +13,12 @@ import HomeContent from './../components/HomeContent'
 //has to be accessible.
 export const HomePageTemplate = ({ bannerData, homeNavImages }) => {
   const bannerEnabled = bannerData.bannerEnabled
+
   return (
     <section className="pageSection">
       {bannerEnabled && <Banner bannerData={bannerData} />}
-      <div id="main">
-        <HomeNav homeNavImages={homeNavImages} />
-        <HomeContent />
-      </div>
+      <HomeNav homeNavImages={homeNavImages} />
+      <HomeContent />
     </section>
   )
 }

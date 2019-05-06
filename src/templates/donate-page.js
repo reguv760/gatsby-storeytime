@@ -17,23 +17,16 @@ export const DonatePageTemplate = ({
   const PageContent = contentComponent || Content
 
   return (
-    <div id="main" className="alt">
-      <section className="pageSection">
-        <div className="inner">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
-                </h2>
-                <PageContent className="content" content={content} />
-              </div>
-            </div>
-          </div>
-
-          <Paypal paypalID={paypalID} />
-        </div>
-      </section>
+    <div className="grid-wrapper">
+      <div className="col-9">
+        <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+          {title}
+        </h2>
+        <PageContent className="content" content={content} />
+      </div>
+      <div className="col-3">
+        <Paypal paypalID={paypalID} />
+      </div>
     </div>
   )
 }

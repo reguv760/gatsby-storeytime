@@ -12,9 +12,7 @@ import { VideoList } from './../components/videolist'
 export const VideoPageTemplate = ({ videoListData }) => {
   return (
     <>
-      <section className="pageSection">
-        <VideoList videoListData={videoListData} />
-      </section>
+      <VideoList videoListData={videoListData} />
     </>
   )
 }
