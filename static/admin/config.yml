@@ -150,7 +150,7 @@ collections:
             }
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
-          - { label: 'Text', name: 'bannerText', widget: 'string' }
+          - { label: 'Text', name: 'bannerText', widget: 'markdown' }
           - { label: 'Slogan', name: 'bannerSlogan', widget: 'string' }
 
           - label: 'Home Nav Images'
