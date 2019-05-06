@@ -23,7 +23,7 @@ singer:
     image: /assets/patrick-on-mic.png
     name: Patrick Storey
   - body: >-
-      **Beth Rohde** has been singing and directing jazz ensembles for 15 years.
+      Beth Rohde has been singing and directing jazz ensembles for 15 years.
       After graduating from Berklee College of Music, Beth relocated to
       Minneapolis where she directed the voice department and jazz ensembles at
       McNally Smith College of Music. During that time, Beth maintained a busy
@@ -37,8 +37,8 @@ singer:
     image: /assets/beth-rohde.jpg
     name: Beth Rohde
   - body: >-
-      **Jamey Schrick** is a veteran singer and actor from Iowa, now living in
-      Los Angeles. He performs around the world with a number of vocal groups,
+      Jamey Schrick is a veteran singer and actor from Iowa, now living in Los
+      Angeles. He performs around the world with a number of vocal groups,
       including the doo-wop quartet The MoonRays, who were recently featured on
       FXX’s The League and on Disney Cruiselines; the Four Seasons tribute band
       Walk Like a Man, voted 2015 Entertainers of the Year on Princess Cruises;
