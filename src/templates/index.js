@@ -15,11 +15,11 @@ export const HomePageTemplate = ({ bannerData, homeNavImages }) => {
   const bannerEnabled = bannerData.bannerEnabled
 
   return (
-    <>
+    <section className="pageSection">
       {bannerEnabled && <Banner bannerData={bannerData} />}
       <HomeNav homeNavImages={homeNavImages} />
       <HomeContent />
-    </>
+    </section>
   )
 }
 
@@ -75,10 +75,12 @@ export const homeQuery = graphql`
         bannerEnabled
         bannerTitle
         bannerText
+        bannerSlogan
         homeNavImages {
           bgImage
           imageTitle
           imageText
+          pagePath
         }
       }
     }

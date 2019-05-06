@@ -1,0 +1,41 @@
+.singers-left {
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+
+.singers-left img {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.singers-right {
+  margin: 0;
+  padding: 0;
+  width: 70%;
+}
+
+.singers-right h2 {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+@media screen and (max-width: 980px) {
+  .singers-left,
+  .singers-right {
+    width: 100%;
+  }
+
+  .singers-left img {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .singers-left img {
+    width: 100%;
+    margin: 0;
+  }
+}
