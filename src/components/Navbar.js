@@ -9,7 +9,7 @@ const NavbarStyles = styled.header`
   position: fixed;
   width: 100%;
   height: 100px;
-  background: #cfcfcf;
+  background: #ffffff;
   z-index: 200;
 
   .navbar {
