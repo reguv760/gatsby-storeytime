@@ -9,10 +9,13 @@ export const VideoListTemplate = ({ videoListData }) => {
     <div className="inner">
       <div
         className="grid-wrapper"
-        style={{ listStyle: 'none', margin: '1rem' }}
+        style={{
+          listStyle: 'none',
+          margin: '2rem 0 1rem 0',
+        }}
       >
         {videoItems.map((videos, index) => (
-          <div className="col-12">
+          <div className="col-6">
             <div className="video-media" key={videos.videoTitle + index}>
               <div className="video-media-object-container">
                 <iframe
