@@ -49,51 +49,58 @@ const DonateButton = styled.p`
   padding: 0;
 `
 
+const FormContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 980px) {
+    justify-content: flex-start;
+  }
+`
+
 const Paypal = props => {
   return (
-    <form
-      action="https://www.paypal.com/cgi-bin/webscr"
-      method="post"
-      target="_blank"
-      style={{
-        display: 'block',
-        margin: '1rem auto',
-      }}
-    >
-      <input name="cmd" type="hidden" value="_s-xclick" />
-      <br />
-      <input name="hosted_button_id" type="hidden" value={props.paypalID} />
+    <FormContainer>
+      <form
+        action="https://www.paypal.com/cgi-bin/webscr"
+        method="post"
+        target="_blank"
+      >
+        <input name="cmd" type="hidden" value="_s-xclick" />
+        <br />
+        <input name="hosted_button_id" type="hidden" value={props.paypalID} />
 
-      <br />
-      <DonateContainer>
-        <DonateButton>We accept donations through Paypal</DonateButton>
-        <DonateIcons>
-          <input type="image" src={donateIcon} />
-        </DonateIcons>
+        <br />
+        <DonateContainer>
+          <DonateButton>We accept donations through Paypal</DonateButton>
+          <DonateIcons>
+            <input type="image" src={donateIcon} />
+          </DonateIcons>
 
-        <DonateIcons>
-          <input type="image" src={donateButton} />
-        </DonateIcons>
+          <DonateIcons>
+            <input type="image" src={donateButton} />
+          </DonateIcons>
 
-        <DonateStyles>
-          <li>
-            <input type="image" src={visaIcon} alt="Visa Icon" />
-          </li>
-          <li>
-            <input type="image" src={mastercardIcon} alt="Mastercard Icon" />
-          </li>
-          <li>
-            <input type="image" src={paypalIcon} alt="Paypal Icon" />
-          </li>
-          <li>
-            <input type="image" src={discoverIcon} alt="Discover Icon" />
-          </li>
-          <li>
-            <input type="image" src={amexIcon} alt="American Express Icon" />
-          </li>
-        </DonateStyles>
-      </DonateContainer>
-    </form>
+          <DonateStyles>
+            <li>
+              <input type="image" src={visaIcon} alt="Visa Icon" />
+            </li>
+            <li>
+              <input type="image" src={mastercardIcon} alt="Mastercard Icon" />
+            </li>
+            <li>
+              <input type="image" src={paypalIcon} alt="Paypal Icon" />
+            </li>
+            <li>
+              <input type="image" src={discoverIcon} alt="Discover Icon" />
+            </li>
+            <li>
+              <input type="image" src={amexIcon} alt="American Express Icon" />
+            </li>
+          </DonateStyles>
+        </DonateContainer>
+      </form>
+    </FormContainer>
   )
 }
 
