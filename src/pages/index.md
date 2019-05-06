@@ -4,35 +4,27 @@ bannerEnabled: true
 bannerTitle: About Us
 bannerText: ' Storeytime is a 5-voice group centered around Patrick Storey, an autistic singer with an incredible musical gift. The group shows what is possible for people with autism and other learning differences. Audiences are treated to an incredible, interactive performance where they can experience how Patrick communicates and thrives through his love for music. Through their inspiring presentation, audiences learn about patience, acceptance, nurturing, gratitude and more. Storeytime shares their story, music and message at autism events, schools and more. Contact Us to book Storeytime for your school or event.'
 homeNavImages:
-  - bgImage: /assets/pic08.jpg
-    imageText: This is my text in first image
-    imageTitle: Title 1
-  - bgImage: /assets/pic02.jpg
+  - bgImage: /assets/piano.jpg
     imageText: >-
-      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
-      ornare, elementum ante vel, auctor elit.
-    imageTitle: Title 2
-  - bgImage: /assets/pic03.jpg
-    imageText: >-
-      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
-      ornare, elementum ante vel, auctor elit.
-    imageTitle: Title 3
-  - bgImage: /assets/pic04.jpg
-    imageText: >-
-      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
-      ornare, elementum ante vel, auctor elit.
-    imageTitle: Title 4
-  - bgImage: /assets/pic05.jpg
-    imageText: >-
-      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
-      ornare, elementum ante vel, auctor elit.
-    imageTitle: Title 5
-  - bgImage: /assets/pic06.jpg
-    imageText: >-
-      Praesent in quam hendrerit quam vestibulum rhoncus. Nullam a turpis
-      ornare, elementum ante vel, auctor elit.
-    imageTitle: Title 6
-companyName: Awesome Company
+      Storeytime is a 5-voice group centered around Patrick Storey, an autistic
+      singer with an incredible musical gift
+    imageTitle: The Singers
+  - bgImage: /assets/guitar.jpg
+    imageText: Find out what people are saying
+    imageTitle: Testimonials
+  - bgImage: /assets/bass.jpg
+    imageText: Watch videos of Storeytime in action
+    imageTitle: Videos
+  - bgImage: /assets/drums.jpg
+    imageText: Find out when Storeytime is singing next
+    imageTitle: Events
+  - bgImage: /assets/microphone.jpg
+    imageText: Help keep Storeytime growing strong
+    imageTitle: Donate
+  - bgImage: /assets/audience.jpg
+    imageText: React out and connect with Storeytime
+    imageTitle: Contact
+companyName: Storeytime
 companyLogo: /assets/storeytime-logo.png
 socialIcons:
   - socialEnabled: true
