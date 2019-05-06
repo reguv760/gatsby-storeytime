@@ -15,7 +15,12 @@ export const HomeNavTemplate = props => {
             <h3>{`${img.imageTitle}`}</h3>
             <p>{`${img.imageText}`}</p>
           </header>
-          <Link to="/landing" className="link primary" />
+
+          {img.pagePath !== '#contact-form' ? (
+            <Link to={`${img.pagePath}`} className="link primary" />
+          ) : (
+            <a href={`${img.pagePath}`} />
+          )}
         </article>
       ))}
     </section>

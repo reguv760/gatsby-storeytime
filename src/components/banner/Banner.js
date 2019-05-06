@@ -5,6 +5,8 @@ export const BannerTemplate = ({ bannerData }) => {
   const bannerTitle = bannerData.bannerTitle
   const bannerText = bannerData.bannerText
 
+  const bannerSlogan = bannerData.bannerSlogan
+
   const PageContent = HTMLContent
 
   return (
@@ -15,7 +17,14 @@ export const BannerTemplate = ({ bannerData }) => {
         </h1>
       </header>
       <div className="content">
-        <PageContent className="bannerText" content={bannerText} />
+        <div className="grid-wrapper">
+          <div className="col-12">
+            <h2 style={{ width: '100%' }}>{bannerSlogan}</h2>
+          </div>
+          <div className="col-12">
+            <PageContent className="bannerText" content={bannerText} />
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -11,10 +11,7 @@ import { EventList } from './../components/eventlist'
 export const EventPageTemplate = ({ eventListData }) => {
   return (
     <>
-      <section
-        className="section section--gradient"
-        style={{ paddingTop: '2rem' }}
-      >
+      <section className="pageSection">
         <EventList eventListData={eventListData} />
       </section>
     </>
