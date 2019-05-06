@@ -116,14 +116,14 @@ const Navbar = props => {
         <div className="spacer" />
         <div className="nav-items">
           <ul>
-            {/* <li>
-              <Link to="/about/" activeStyle={{ color: '#6699ff' }}>
-                About Us
-              </Link>
-            </li> */}
             <li>
               <Link to="/singers/" activeStyle={{ color: '#6699ff' }}>
                 The Singers
+              </Link>
+            </li>
+            <li>
+              <Link to="/testimonials/" activeStyle={{ color: '#6699ff' }}>
+                About Us
               </Link>
             </li>
             <li>
