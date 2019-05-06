@@ -4,7 +4,8 @@ import { HTMLContent } from './../Content'
 import { Paypal } from './../paypal/'
 
 // styles
-import './eventlist.css'
+// import './eventlist.css'
+import { Card } from '../elements/Card'
 
 export const EventListTemplate = ({ eventListData }) => {
   const eventItems = [eventListData.event][0]
@@ -37,43 +38,43 @@ export const EventListTemplate = ({ eventListData }) => {
         <div className="col-9">
           {eventItems.map((eventItem, index) => (
             <>
-              <div className="card-media">
+              <Card>
                 {/* media container */}
-                <div className="card-media-object-container">
+                <div className="card-object-container">
                   <div
-                    className="card-media-object"
+                    className="card-object"
                     style={{
                       backgroundImage: `url(${eventItem.eventImage})`,
                     }}
                   />
                 </div>
                 {/* body container */}
-                <div className="card-media-body">
-                  <div className="card-media-body-top">
+                <div className="card-body">
+                  <div className="card-body-top">
                     <span className="subtle">{eventItem.eventStartTime}</span>
                   </div>
-                  <span className="card-media-body-heading">
+                  <span className="card-body-heading">
                     {eventItem.eventName}
                   </span>
-                  <div className="card-media-body-supporting-bottom">
-                    <span className="card-media-body-supporting-bottom-text subtle">
+                  <div className="card-body-supporting-bottom">
+                    <span className="card-body-supporting-bottom-text subtle">
                       {eventItem.eventStreet} {eventItem.eventCity}{' '}
                       {eventItem.eventState} {eventItem.eventZip}
                     </span>
-                    <span className="card-media-body-supporting-bottom-text subtle u-float-right">
+                    <span className="card-body-supporting-bottom-text subtle u-float-right">
                       ${eventItem.eventFee}
                     </span>
                   </div>
-                  <div className="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
+                  <div className="card-body-supporting-bottom card-body-supporting-bottom-reveal">
                     <a
                       href="#/"
-                      className="card-media-body-supporting-bottom-text card-media-link u-float-right"
+                      className="card-body-supporting-bottom-text card-media-link u-float-right"
                     >
                       VIEW EVENT
                     </a>
                   </div>
                 </div>
-              </div>
+              </Card>
             </>
           ))}
         </div>
