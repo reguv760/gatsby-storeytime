@@ -130,7 +130,6 @@ collections:
               widget: 'hidden',
               default: 'donate-page',
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: 'Paypal ID', name: 'paypalID', widget: 'string' }
 

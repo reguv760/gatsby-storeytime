@@ -12,6 +12,9 @@ import { VideoList } from './../components/videolist'
 export const VideoPageTemplate = ({ videoListData }) => {
   return (
     <>
+      <header className="major">
+        <h1>Videos</h1>
+      </header>
       <VideoList videoListData={videoListData} />
     </>
   )

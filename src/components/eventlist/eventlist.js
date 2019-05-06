@@ -16,7 +16,7 @@ export const EventListTemplate = ({ eventListData }) => {
 
   return (
     <div className="grid-wrapper">
-      <div className="col-3">
+      <div className="col-4">
         <h2>Donate Today</h2>
         <p>
           Storeytime shares their story, music and message at autism events,
@@ -28,7 +28,7 @@ export const EventListTemplate = ({ eventListData }) => {
         </p>
         <Paypal paypalID={paypalID} />
       </div>
-      <div className="col-9">
+      <div className="col-8">
         {eventItems.map((eventItem, index) => (
           <>
             <Card>

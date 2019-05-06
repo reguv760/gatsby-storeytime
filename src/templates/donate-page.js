@@ -8,26 +8,23 @@ import Content, { HTMLContent } from '../components/Content'
 import { Paypal } from './../components/paypal/'
 
 //this is the container for CMS data for About.
-export const DonatePageTemplate = ({
-  title,
-  content,
-  contentComponent,
-  paypalID,
-}) => {
+export const DonatePageTemplate = ({ content, contentComponent, paypalID }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <div className="grid-wrapper">
-      <div className="col-8">
-        <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-          {title}
-        </h2>
-        <PageContent className="content" content={content} />
+    <>
+      <header className="major">
+        <h1>Donate</h1>
+      </header>
+      <div className="grid-wrapper">
+        <div className="col-8">
+          <PageContent className="content" content={content} />
+        </div>
+        <div className="col-4">
+          <Paypal paypalID={paypalID} />
+        </div>
       </div>
-      <div className="col-4">
-        <Paypal paypalID={paypalID} />
-      </div>
-    </div>
+    </>
   )
 }
 
@@ -76,7 +73,6 @@ export const donatePageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
         paypalID
       }
     }

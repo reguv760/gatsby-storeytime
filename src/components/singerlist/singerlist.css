@@ -7,11 +7,12 @@
 .singers-left img {
   width: 80%;
   margin: 1rem auto;
+  border-radius: 1rem;
 }
 
 .singers-right {
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   width: 70%;
 }
 
@@ -28,7 +29,7 @@
   }
 
   .singers-left img {
-    margin: 0 auto;
+    margin: 1rem auto;
     width: 50%;
   }
 }
@@ -36,6 +37,6 @@
 @media screen and (max-width: 480px) {
   .singers-left img {
     width: 100%;
-    margin: 0;
+    margin: 1rem 0;
   }
 }

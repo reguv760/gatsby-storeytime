@@ -11,6 +11,9 @@ import { SingerList } from './../components/singerlist'
 export const SingerPageTemplate = ({ singerListData }) => {
   return (
     <>
+      <header className="major">
+        <h1>The Singers</h1>
+      </header>
       <SingerList singerListData={singerListData} />
     </>
   )
