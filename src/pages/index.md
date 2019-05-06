@@ -13,8 +13,8 @@ bannerText: >-
   schools and more. <br/><br/>
 
 
-  <a href="#contact-form">Contact Us</a> to book Storeytime for your school or
-  event.
+  <a href="#contact-form"><b>Contact Us</b></a> to book Storeytime for your
+  school or event.
 bannerSlogan: Creating Possibility Through Music
 homeNavImages:
   - bgImage: /assets/piano.jpg
@@ -67,3 +67,4 @@ contactAddress: |-
 
   Los Angeles, CA 90000
 ---
+
