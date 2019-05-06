@@ -19,7 +19,7 @@ export const HomeNavTemplate = props => {
           {img.pagePath !== '#contact-form' ? (
             <Link to={`${img.pagePath}`} className="link primary" />
           ) : (
-            <a href={`${img.pagePath}`} />
+            <a href={`${img.pagePath}`} className="link primary" />
           )}
         </article>
       ))}
