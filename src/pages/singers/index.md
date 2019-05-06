@@ -63,5 +63,26 @@ singer:
       California.
     image: /assets/kieran-moriah.jpg
     name: 'Kieran Moriah '
+  - body: >-
+      Singer, arranger and guitarist Michael Kohl hails from Milwaukee,
+      Wisconsin and received his degree in jazz guitar and composition from
+      Amherst College. He has performed professionally on over five continents
+      from concert halls and stadiums to Catholic high schools and Orthodox
+      synagogues.<br/>
+
+
+      In demand as a tenor, vocal percussionist and scat singer, Michael’s voice
+      can be heard on numerous film and TV scores. In addition to playing for
+      local artists in L.A. and beyond, Michael currently divides his time
+      between Storeytime, his ’90s cover band After School Heroes, and Extra
+      Lives, an instrumental quartet that makes live performance videos of
+      classic video game music.<br/>
+
+
+      Michael toured for many years with Dr.Iven, XY Unlimited and Cloudwalkers
+      and looks to the future with stars in his eyes and sweet five-part jazz
+      chords in his heart.
+    image: /assets/michael-kohl.jpg
+    name: Michael Kohl
 ---
 
