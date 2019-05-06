@@ -151,6 +151,7 @@ collections:
           - { label: 'Enable Banner', name: 'bannerEnabled', widget: 'boolean' }
           - { label: 'Title', name: 'bannerTitle', widget: 'string' }
           - { label: 'Text', name: 'bannerText', widget: 'string' }
+          - { label: 'Slogan', name: 'bannerSlogan', widget: 'string' }
 
           - label: 'Home Nav Images'
             name: 'homeNavImages'
@@ -159,6 +160,7 @@ collections:
               - { label: 'Background Image', name: 'bgImage', widget: 'image' }
               - { label: 'Image Title', name: 'imageTitle', widget: 'string' }
               - { label: 'Image Text', name: 'imageText', widget: 'string' }
+              - { label: 'Page Path', name: 'pagePath', widget: 'string' }
 
           - { label: 'Company Name', name: 'companyName', widget: 'string' }
           - { label: 'Company Logo', name: 'companyLogo', widget: 'image' }

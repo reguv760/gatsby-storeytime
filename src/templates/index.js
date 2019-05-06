@@ -14,13 +14,13 @@ import HomeContent from './../components/HomeContent'
 export const HomePageTemplate = ({ bannerData, homeNavImages }) => {
   const bannerEnabled = bannerData.bannerEnabled
   return (
-    <>
+    <section className="pageSection">
       {bannerEnabled && <Banner bannerData={bannerData} />}
       <div id="main">
         <HomeNav homeNavImages={homeNavImages} />
         <HomeContent />
       </div>
-    </>
+    </section>
   )
 }
 
@@ -76,10 +76,12 @@ export const homeQuery = graphql`
         bannerEnabled
         bannerTitle
         bannerText
+        bannerSlogan
         homeNavImages {
           bgImage
           imageTitle
           imageText
+          pagePath
         }
       }
     }

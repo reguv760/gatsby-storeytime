@@ -11,10 +11,7 @@ import { SingerList } from './../components/singerlist'
 export const SingerPageTemplate = ({ singerListData }) => {
   return (
     <>
-      <section
-        className="section section--gradient"
-        style={{ paddingTop: '2rem' }}
-      >
+      <section className="pageSection">
         <SingerList singerListData={singerListData} />
       </section>
     </>

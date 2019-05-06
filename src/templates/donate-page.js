@@ -18,10 +18,7 @@ export const DonatePageTemplate = ({
 
   return (
     <div id="main" className="alt">
-      <section
-        className="section section--gradient"
-        style={{ paddingTop: '2rem' }}
-      >
+      <section className="pageSection">
         <div className="inner">
           <div className="columns">
             <div className="column is-10 is-offset-1">

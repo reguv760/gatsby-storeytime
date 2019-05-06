@@ -12,10 +12,7 @@ import { VideoList } from './../components/videolist'
 export const VideoPageTemplate = ({ videoListData }) => {
   return (
     <>
-      <section
-        className="section section--gradient"
-        style={{ paddingTop: '2rem' }}
-      >
+      <section className="pageSection">
         <VideoList videoListData={videoListData} />
       </section>
     </>
