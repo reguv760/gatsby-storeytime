@@ -45,6 +45,7 @@ const NavbarStyles = styled.header`
       margin: 1rem;
       padding: 0;
       display: flex;
+      flex-flow: row wrap;
     }
 
     .nav-items li {
@@ -101,8 +102,7 @@ const LogoStyle = styled.div`
   margin: 1rem 0;
 
   & img {
-    width: 425px;
-    margin: 1rem;
+    margin: 1rem 0;
   }
 
   @media (max-width: 480px) {
@@ -119,6 +119,7 @@ const Navbar = props => {
         <ToggleButton className="nav-toggle-button">
           <DrawerToggleButton click={props.drawerClickHandler} />
         </ToggleButton>
+
         <div className="nav-logo">
           <Link to="/">
             <LogoStyle>
