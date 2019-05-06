@@ -69,6 +69,11 @@ const SideDrawer = props => {
           </Link>
         </li>
         <li>
+          <Link to="/testimonials/" activeStyle={{ color: '#6699ff' }}>
+            Videos
+          </Link>
+        </li>
+        <li>
           <Link to="/videos/" activeStyle={{ color: '#6699ff' }}>
             Videos
           </Link>
