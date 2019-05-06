@@ -105,7 +105,7 @@ const LogoStyle = styled.div`
     margin: 1rem;
   }
 
-  @media (max-width: 481px) {
+  @media (max-width: 480px) {
     & img {
       width: 275px;
     }
@@ -121,11 +121,6 @@ const Navbar = props => {
         </ToggleButton>
         <div className="nav-logo">
           <Link to="/">
-            {/* <img
-              src={`${props.companyLogo}`}
-              alt={`${props.companyName}`}
-              style={{ width: '50%' }}
-            /> */}
             <LogoStyle>
               <img
                 src={`${props.companyLogo}`}
