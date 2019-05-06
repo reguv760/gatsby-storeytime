@@ -125,3 +125,9 @@ Lightweight library for smooth scrolling anchors in React, tied to URL hash.
 React component for Google reCAPTCHA v2. Custom Component used by Contact Form
 
 `npm install --save react-google-recaptcha`
+
+**"gatsby-plugin-sitemap"**
+
+Gatsby plugin to auto-generate sitemap.xml in build
+
+`npm install --save gatsby-plugin-sitemap`
