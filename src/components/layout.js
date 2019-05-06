@@ -49,8 +49,14 @@ export const LayoutTemplate = ({
 
         <SideDrawer show={isDrawerOpen} />
         <div id="wrapper" style={{ height: '100%' }}>
-          {bg}
-          {currentPage}
+          <div id="main" className="alt">
+            <section>
+              <div className="inner">
+                {bg}
+                {currentPage}
+              </div>
+            </section>
+          </div>
 
           {contactEnabled && (
             <Contact
