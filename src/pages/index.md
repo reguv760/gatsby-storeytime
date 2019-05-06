@@ -2,8 +2,20 @@
 templateKey: index
 bannerEnabled: true
 bannerTitle: About Us
-bannerText: ' Storeytime is a 5-voice group centered around Patrick Storey, an autistic singer with an incredible musical gift. The group shows what is possible for people with autism and other learning differences. Audiences are treated to an incredible, interactive performance where they can experience how Patrick communicates and thrives through his love for music. Through their inspiring presentation, audiences learn about patience, acceptance, nurturing, gratitude and more. Storeytime shares their story, music and message at autism events, schools and more. Contact Us to book Storeytime for your school or event.'
-bannerSlogan: 'Creating Possibility Through Music'
+bannerText: >-
+  Storeytime is a 5-voice group centered around Patrick Storey, an autistic
+  singer with an incredible musical gift. The group shows what is possible for
+  people with autism and other learning differences. Audiences are treated to an
+  incredible, interactive performance where they can experience how Patrick
+  communicates and thrives through his love for music. Through their inspiring
+  presentation, audiences learn about patience, acceptance, nurturing, gratitude
+  and more. Storeytime shares their story, music and message at autism events,
+  schools and more. <br/><br/>
+
+
+  <a href="#contact-form">Contact Us</a> to book Storeytime for your school or
+  event.
+bannerSlogan: Creating Possibility Through Music
 homeNavImages:
   - bgImage: /assets/piano.jpg
     imageText: >-
@@ -55,3 +67,4 @@ contactAddress: |-
 
   Los Angeles, CA 90000
 ---
+
