@@ -8,7 +8,7 @@ import DrawerToggleButton from './sidedrawer/DrawerToggleButton'
 const NavbarStyles = styled.header`
   position: fixed;
   width: 100%;
-  min-height: 100px;
+  height: 100px;
   background: #fff;
   z-index: 200;
 
@@ -102,7 +102,7 @@ const LogoStyle = styled.div`
   margin: 1rem 0;
 
   & img {
-    margin: 1rem;
+    margin: 1rem 0;
   }
 
   @media (max-width: 480px) {
