@@ -109,37 +109,43 @@
 
 			&:nth-child(6n - 5) {
 				&:before {
-					background-color: _palette(accent1);
+					// background-color: _palette(accent1);
+          background-color: #708090;
 				}
 			}
 
 			&:nth-child(6n - 4) {
 				&:before {
-					background-color: _palette(accent2);
+					// background-color: _palette(accent2);
+          background-color: #778899;
 				}
 			}
 
 			&:nth-child(6n - 3) {
 				&:before {
-					background-color: _palette(accent3);
+					// background-color: _palette(accent3);
+          background-color: #778899;
 				}
 			}
 
 			&:nth-child(6n - 2) {
 				&:before {
-					background-color: _palette(accent4);
+					// background-color: _palette(accent4);
+          background-color: #696969;
 				}
 			}
 
 			&:nth-child(6n - 1) {
 				&:before {
-					background-color: _palette(accent5);
+					// background-color: _palette(accent5);
+          background-color: #808080;
 				}
 			}
 
 			&:nth-child(6n) {
 				&:before {
-					background-color: _palette(accent6);
+					// background-color: _palette(accent6);
+          background-color: #A9A9A9;
 				}
 			}
 		}
