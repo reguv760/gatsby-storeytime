@@ -35,7 +35,7 @@ const SideDrawerContainer = styled.nav`
   li {
     &:hover,
     &:active {
-      background-color: #0f0f0f;
+      background-color: #ccc;
       color: #fff;
     }
   }
@@ -58,33 +58,28 @@ const SideDrawer = props => {
     <SideDrawerContainer className={drawerClasses}>
       <h1>Storeytime Online</h1>
       <ul>
-        {/* <li>
-          <Link to="/about-us/" activeStyle={{ color: '#6699ff' }}>
-            About Us
-          </Link>
-        </li> */}
         <li>
-          <Link to="/singers/" activeStyle={{ color: '#6699ff' }}>
+          <Link to="/singers/" activeStyle={{ color: '#00aaff' }}>
             The Singers
           </Link>
         </li>
         <li>
-          <Link to="/testimonials/" activeStyle={{ color: '#6699ff' }}>
+          <Link to="/testimonials/" activeStyle={{ color: '#00aaff' }}>
+            Testimonials
+          </Link>
+        </li>
+        <li>
+          <Link to="/videos/" activeStyle={{ color: '#00aaff' }}>
             Videos
           </Link>
         </li>
         <li>
-          <Link to="/videos/" activeStyle={{ color: '#6699ff' }}>
-            Videos
-          </Link>
-        </li>
-        <li>
-          <Link to="/events/" activeStyle={{ color: '#6699ff' }}>
+          <Link to="/events/" activeStyle={{ color: '#00aaff' }}>
             Events
           </Link>
         </li>
         <li>
-          <Link to="/donate/" activeStyle={{ color: '#6699ff' }}>
+          <Link to="/donate/" activeStyle={{ color: '#00aaff' }}>
             Donate
           </Link>
         </li>
