@@ -8,7 +8,7 @@ import DrawerToggleButton from './sidedrawer/DrawerToggleButton'
 const NavbarStyles = styled.header`
   position: fixed;
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   background: #fff;
   z-index: 200;
 
@@ -45,6 +45,7 @@ const NavbarStyles = styled.header`
       margin: 1rem;
       padding: 0;
       display: flex;
+      flex-flow: row wrap;
     }
 
     .nav-items li {
@@ -101,7 +102,6 @@ const LogoStyle = styled.div`
   margin: 1rem 0;
 
   & img {
-    width: 425px;
     margin: 1rem;
   }
 
@@ -119,6 +119,7 @@ const Navbar = props => {
         <ToggleButton className="nav-toggle-button">
           <DrawerToggleButton click={props.drawerClickHandler} />
         </ToggleButton>
+
         <div className="nav-logo">
           <Link to="/">
             <LogoStyle>
