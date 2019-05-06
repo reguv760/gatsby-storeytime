@@ -40,11 +40,11 @@ homeNavImages:
     imageTitle: Donate
     pagePath: donate/
   - bgImage: /assets/audience.jpg
-    imageText: React out and connect with Storeytime
+    imageText: Reach out and connect with Storeytime
     imageTitle: Contact
     pagePath: '#contact-form'
 companyName: Storeytime
-companyLogo: /assets/storeytime-logo.svg
+companyLogo: /assets/storeytime-logo.png
 socialIcons:
   - socialEnabled: true
     socialLink: 'http://twitter.com'
