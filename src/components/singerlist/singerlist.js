@@ -1,6 +1,8 @@
 import React from 'react'
 import { HTMLContent } from './../Content'
 
+import './singerlist.css'
+
 export const SingerListTemplate = ({ singerListData }) => {
   //this is my video array data location
   const singerItems = [singerListData.singer][0]
@@ -19,14 +21,15 @@ export const SingerListTemplate = ({ singerListData }) => {
             key={singers.name + index}
             style={{
               display: 'flex',
+              flexFlow: 'row wrap',
               justifyContent: 'center',
-              margin: '1rem 0',
+              margin: '2rem 0',
             }}
           >
-            <div className="col-6" style={{ padding: '0 1rem' }}>
+            <div className="singers-left">
               {singers.image.length > 0 && <img src={`${singers.image}`} />}
             </div>
-            <div className="col-6" style={{ padding: '0 1rem' }}>
+            <div className="singers-right">
               <h2>{singers.name}</h2>
               <PageContent className="singerDesc" content={singers.body} />
             </div>
