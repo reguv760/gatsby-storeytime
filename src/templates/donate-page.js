@@ -18,13 +18,13 @@ export const DonatePageTemplate = ({
 
   return (
     <div className="grid-wrapper">
-      <div className="col-9">
+      <div className="col-8">
         <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
           {title}
         </h2>
         <PageContent className="content" content={content} />
       </div>
-      <div className="col-3">
+      <div className="col-4">
         <Paypal paypalID={paypalID} />
       </div>
     </div>
