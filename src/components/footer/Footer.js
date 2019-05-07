@@ -16,6 +16,7 @@ export const FooterTemplate = ({
               href={`${socialIconData[0].socialLink}`}
               className="icon alt fa-twitter"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="label">Twitter</span>
             </a>
@@ -28,6 +29,7 @@ export const FooterTemplate = ({
               href={`${socialIconData[1].socialLink}`}
               className="icon alt fa-facebook"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="label">Facebook</span>
             </a>
@@ -40,6 +42,7 @@ export const FooterTemplate = ({
               href={`${socialIconData[2].socialLink}`}
               className="icon alt fa-instagram"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="label">Instagram</span>
             </a>
@@ -52,6 +55,7 @@ export const FooterTemplate = ({
               href={`${socialIconData[3].socialLink}`}
               className="icon alt fa-github"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="label">GitHub</span>
             </a>
@@ -64,6 +68,7 @@ export const FooterTemplate = ({
               href={`${socialIconData[4].socialLink}`}
               className="icon alt fa-linkedin"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="label">LinkedIn</span>
             </a>
