@@ -10,7 +10,10 @@ const Success = ({ data }) => {
   //post.frontmatter to access data object:::
   return (
     <Layout contactEnabled={false}>
-      <Helmet title={'Success : ' + `${data.site.siteMetadata.title}`}>
+      <Helmet
+        title={'Success : ' + `${data.site.siteMetadata.title}`}
+        htmlAttributes={'en'}
+      >
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}
