@@ -34,12 +34,14 @@ const VideoPage = ({ data }) => {
   //post.frontmatter to access data object:::
   return (
     <Layout contactEnabled={true}>
-      <Helmet title={'Videos : ' + `${data.site.siteMetadata.title}`}>
+      <Helmet
+        title={'Videos : ' + `${data.site.siteMetadata.title}`}
+        htmlAttributes={{ lang: 'en' }}
+      >
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}
         />
-        <html lang="en" />
       </Helmet>
       <VideoPageTemplate videoListData={post.frontmatter} />
     </Layout>

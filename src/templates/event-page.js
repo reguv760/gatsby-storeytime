@@ -29,12 +29,14 @@ const EventPage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet title={'Events : ' + `${data.site.siteMetadata.title}`}>
+      <Helmet
+        title={'Events : ' + `${data.site.siteMetadata.title}`}
+        htmlAttributes={{ lang: 'en' }}
+      >
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}
         />
-        <html lang="en" />
       </Helmet>
       <EventPageTemplate eventListData={post.frontmatter} />
     </Layout>

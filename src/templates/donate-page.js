@@ -40,12 +40,14 @@ const DonatePage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet title={'Donate : ' + `${data.site.siteMetadata.title}`}>
+      <Helmet
+        title={'Donate : ' + `${data.site.siteMetadata.title}`}
+        htmlAttributes={{ lang: 'en' }}
+      >
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}
         />
-        <html lang="en" />
       </Helmet>
       <DonatePageTemplate
         contentComponent={HTMLContent}
