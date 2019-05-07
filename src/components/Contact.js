@@ -217,10 +217,11 @@ class Contact extends React.Component {
                       value="Send Message"
                       className="special"
                       disabled={!this.state.formValid}
+                      aria-label="Submit"
                     />
                   </li>
                   <li>
-                    <input type="reset" value="Clear" />
+                    <input type="reset" value="Clear" aria-label="Clear" />
                   </li>
                 </ul>
               </form>
