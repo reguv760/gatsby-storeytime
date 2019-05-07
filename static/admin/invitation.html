@@ -1,9 +1,15 @@
 <h2>You have been invited</h2>
 
+<p>You have been invited to create a user on {{ .SiteURL }}.</p>
 <p>
-  You have been invited to create a user on {{ .SiteURL }}. Follow this link to
-  accept the invite:
+  Follow this link to accept the invite: <br /><b
+    ><a href="{{ .ConfirmationURL }}">Accept the invite</a></b
+  >
 </p>
+
 <p>
-  <a href="{{ .ConfirmationURL }}">Accept the invite</a>
+  <b>Disclaimer:</b><br />
+  This is a personalized link to access your site's Content Management System
+  (CMS).<br />
+  Save this e-mail for record keeping.
 </p>
