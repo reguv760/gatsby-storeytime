@@ -35,11 +35,12 @@ const HomeIndex = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet title={data.site.siteMetadata.title} htmlAttributes={'en'}>
+      <Helmet title={data.site.siteMetadata.title}>
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}
         />
+        <html lang="en" />
       </Helmet>
       <HomePageTemplate
         bannerData={post.frontmatter}

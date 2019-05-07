@@ -29,14 +29,12 @@ const SingerPage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet
-        title={'Singers : ' + `${data.site.siteMetadata.title}`}
-        htmlAttributes={'en'}
-      >
+      <Helmet title={'Singers : ' + `${data.site.siteMetadata.title}`}>
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}
         />
+        <html lang="en" />
       </Helmet>
       <SingerPageTemplate singerListData={post.frontmatter} />
     </Layout>
