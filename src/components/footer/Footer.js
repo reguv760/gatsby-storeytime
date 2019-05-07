@@ -74,7 +74,7 @@ export const FooterTemplate = ({
         <li>&copy; {`${companyName}`}</li>
         <li>
           Design: {''}
-          <a href={`${designLink}`} target="_blank">
+          <a href={`${designLink}`} target="_blank" rel="noopener noreferrer">
             {`${designedBy}`}
           </a>
         </li>
