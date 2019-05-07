@@ -29,6 +29,12 @@ _Notes to access Netlify CMS:_
 
 4. Dynamic List: Videos + Events
 
+# Speed Test
+
+<img src="src/assets/images/storeytime-speedtest-050719.jpg"/>
+
+Using Windows 10 PC using Chrome Browser : 5 / 7 / 19
+
 # gatsby-starter-forty
 
 **This is a starter for Gatsby.js V2.**
