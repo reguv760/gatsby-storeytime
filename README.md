@@ -32,8 +32,10 @@ _Notes to access Netlify CMS:_
 # Speed Test
 
 <img src="src/assets/images/storeytime-speedtest-050719.jpg"/>
+Using using Chrome Browser in Windows 10 (Mobile): 5 / 7 / 19
 
-Using Windows 10 PC using Chrome Browser : 5 / 7 / 19
+<img src="src/assets/images/storeytime-speedtest-DESK-050719.png">
+Using using Chrome Browser in Windows 10 (Desktop): 5 / 7 / 19
 
 # gatsby-starter-forty
 
