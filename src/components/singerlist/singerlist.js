@@ -27,7 +27,9 @@ export const SingerListTemplate = ({ singerListData }) => {
             }}
           >
             <div className="singers-left">
-              {singers.image.length > 0 && <img src={`${singers.image}`} />}
+              {singers.image.length > 0 && (
+                <img src={`${singers.image}`} alt={`${singers.name} image`} />
+              )}
             </div>
             <div className="singers-right">
               <h2>{singers.name}</h2>
