@@ -1,7 +1,7 @@
 ---
 templateKey: index
 bannerEnabled: true
-bannerTitle: About Us
+bannerTitle: Storeytime
 bannerText: >-
   Storeytime is a 5-voice group centered around Patrick Storey, an autistic
   singer with an incredible musical gift. The group shows what is possible for
