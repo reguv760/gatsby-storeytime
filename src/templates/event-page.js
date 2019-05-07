@@ -29,7 +29,10 @@ const EventPage = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet title={'Events : ' + `${data.site.siteMetadata.title}`}>
+      <Helmet
+        title={'Events : ' + `${data.site.siteMetadata.title}`}
+        htmlAttributes={'en'}
+      >
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}

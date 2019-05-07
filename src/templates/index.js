@@ -35,7 +35,8 @@ const HomeIndex = ({ data }) => {
 
   return (
     <Layout contactEnabled={true}>
-      <Helmet title={data.site.siteMetadata.title}>
+      <Helmet title={data.site.siteMetadata.title} 
+        htmlAttributes={"en"}>
         <meta
           name="description"
           content={`${data.site.siteMetadata.description}`}
