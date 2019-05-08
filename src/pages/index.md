@@ -44,7 +44,7 @@ homeNavImages:
     imageTitle: Contact
     pagePath: '#contact-form'
 companyName: Storeytime
-companyLogo: /assets/300x300-ics-logo.png
+companyLogo: /assets/storeytime-logo.png
 socialIcons:
   - socialEnabled: true
     socialLink: 'http://twitter.com'
