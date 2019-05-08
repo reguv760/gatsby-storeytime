@@ -14,7 +14,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
-              name: 'uploads',
+              name: 'assets',
             },
           },
           {
@@ -23,7 +23,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048,
+              //maxWidth: 2048,
             },
           },
           {
@@ -53,6 +53,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: 'assets',
       },
     },
     'gatsby-plugin-sass',
