@@ -79,14 +79,9 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
         htmlTitle: 'StoreyTime CMS',
+        publicPath: 'admin',
       },
     },
     'gatsby-plugin-sitemap',
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        publicPath: "admin"
-      },
-    },
   ],
 }
