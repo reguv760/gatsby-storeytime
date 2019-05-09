@@ -82,6 +82,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-netlify',
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        publicPath: "admin"
+      },
+    },
   ],
 }
