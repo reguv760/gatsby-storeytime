@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: reguv760/gatsby-storeytime
 
 media_folder: static/assets
