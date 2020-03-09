@@ -23,10 +23,6 @@ homeNavImages:
       singer with an incredible musical gift
     imageTitle: The Singers
     pagePath: singers/
-  - bgImage: /assets/guitar.jpg
-    imageText: Find out what people are saying
-    imageTitle: Testimonials
-    pagePath: testimonials/
   - bgImage: /assets/bass.jpg
     imageText: Watch videos of Storeytime in action
     imageTitle: Videos
